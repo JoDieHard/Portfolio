@@ -16,7 +16,7 @@
   top: 30px;
 }
 .side-menu .container .profile-img {
-  background: black url("../../../assets/profile-img.png") no-repeat center;
+  background: black url("../assets/profile-img.png") no-repeat center;
   background-size: contain;
   border-radius: 50%;
   margin: 0px auto;
@@ -124,7 +124,7 @@
 .projects .container .project .img-container {
   overflow: hidden;
   position: relative;
-  background: #eee url("../../../assets/img/placeholder.jpg") no-repeat center;
+  background: #eee url("../assets/img/placeholder.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 70%;
@@ -301,7 +301,7 @@ button:active {
 .wrapper .cover-image .container {
   height: 100vh;
   padding: 500px auto;
-  background: rgba(200, 200, 200, 0.2) url(../../assets/img/mountain.jpg);
+  background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
   background-size: cover;
   background-position: 0%;
   text-align: center;
