@@ -1,0 +1,32 @@
+
+//------ PARTIAL IMPORTS ---------------------------------------------
+
+@import "partials/flexbox";             // FLEXBOX MIXINS  - This is used for Flexbox cross-compatibility. (Created By  Zilbert97 AKA Zach G)
+@import "partials/styles";              // GENERAL STYLES
+@import "partials/layout";              // LAYOUT
+@import "partials/elements";            // ELEMENT MIXINS
+@import "partials/responsive";          // RESPONSIVE MEDIA QUERIES
+
+
+//------ GLOBAL STYLES ---------------------------------------------
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+:link, :visited {
+    color: inherit;
+}
+
+html {
+    height: 100%;
+}

@@ -1,0 +1,77 @@
+
+.side-menu {
+    .container {
+        // position: sticky;
+        width: 200px;
+        height: 100%;
+        // position: absolute;
+        float: left;
+
+    }
+}
+
+.wrapper {
+
+    width: 80%;
+    position: absolute;
+    left: 336px;
+
+    @include flexbox;
+    @include flex-direction(column);
+    
+
+    .cover-image {
+        .container {
+            height: 100vh;
+            padding: 500px auto;
+
+            background: rgba(200, 200, 200, 0.2) url(../../assets/img/mountain.jpg);
+            background-size: cover;
+            background-position: 0%;
+            text-align: center;
+            color: white;
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center);
+
+            p {
+                margin-bottom: auto;
+                filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+            }
+
+            h1 {
+                margin-top: auto;
+                // color: $primary-colour;
+                filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+            }
+
+            button {
+                color: white;
+            }
+            
+        }
+    }
+
+    .projects {
+        .container {
+            padding: 50px auto;
+            
+        }
+    }
+
+    .contact {
+        .container {
+            padding: 200px auto;
+            margin-top: 50px;
+            margin-bottom: 5px 0px;
+
+            
+        }
+    }
+
+    .footer {
+        width: 100%;
+       
+    }
+}
+ 
