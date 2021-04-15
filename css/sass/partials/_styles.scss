@@ -27,7 +27,7 @@ $light-grey: #eee;
         top: 30px;
 
         .profile-img {
-            background: black url("../../../assets/profile-img.png") no-repeat center;
+            background: black url("../assets/profile-img.png") no-repeat center;
             background-size: contain;
             border-radius: 50%;
             margin: 0px auto;
@@ -146,7 +146,7 @@ $light-grey: #eee;
             .img-container {
                 overflow: hidden;
                 position: relative;
-                background: $light-grey url("../../../assets/img/placeholder.jpg") no-repeat center;
+                background: $light-grey url("../assets/img/placeholder.jpg") no-repeat center;
                 background-size: cover;
                 width: 100%;
                 height: 70%;
