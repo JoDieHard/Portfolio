@@ -1,2 +1,2 @@
 # Portfolio
- This project will demonstrate all of my coding progress and display all of my design/coding work.
+ This project is dedicated to the demonstration of my coding knowledge and will feature most of my coding projects.
