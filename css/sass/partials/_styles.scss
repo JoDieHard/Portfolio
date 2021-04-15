@@ -117,7 +117,6 @@ $light-grey: #eee;
                         0% { transform: translate3d(0px, 5px, 0px) }
                         50% { transform: translate3d(0px, -5px, 0px) }
                         100% { transform: translate3d(0px, 5px, 0px) }
-
                     }
 
                 
@@ -232,7 +231,7 @@ $light-grey: #eee;
 
                     border: none;
                     border-radius: 4px;
-                    background: $light-grey;
+                    background: white;
                     resize: none;           //This removes resize in bottom right
     ;
                 }
@@ -243,20 +242,25 @@ $light-grey: #eee;
 
                     border: none;
                     border-radius: 4px;
-                    background: $light-grey;
+                    background: white;
                     font-size: .9rem;
                 }
 
                 input[type="submit"] {
                     display: inline-block;
-                    background: #fff;
-                    border: solid black 2px;
+                    background: $primary-colour;
+                    // border: solid black 2px;
+                    border: none;
                     padding: 1rem;
                     margin: 10px;
                     width: 150px;
                     border-radius: 4px;
                     cursor: pointer;
+
                     font-size: .9rem;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: .15rem;
                 }
 
 
@@ -278,9 +282,11 @@ $light-grey: #eee;
             background: transparent;
             color: black;
             text-decoration: none;
+            opacity: 0.25;
 
             i {
                 padding-bottom: 10px;
+                animation: hop 1s infinite;
             }
 
             :visited, :link {
