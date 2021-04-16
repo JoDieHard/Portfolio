@@ -93,8 +93,14 @@ $light-grey: #eee;
                 a {
                     @include flexbox;
                     @include justify-content (center);
-                    opacity: 75%;
+                    opacity: 60%;
                     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+                    width: 150px;
+                    align-self: center;
+
+                    &:hover {
+                        opacity: 85%;
+                    }
 
                 button {
                     @include flexbox;
@@ -113,7 +119,7 @@ $light-grey: #eee;
                         animation: hop 1s infinite;
                     }
 
-                    @keyframes hop {
+                    @keyframes hop {                                            // THIS IS MY HOP ANIMATION 
                         0% { transform: translate3d(0px, 5px, 0px) }
                         50% { transform: translate3d(0px, -5px, 0px) }
                         100% { transform: translate3d(0px, 5px, 0px) }
@@ -137,10 +143,17 @@ $light-grey: #eee;
         .project {
             width: 30%;
             height: 300px;
-            // padding: 6%;
             margin: 10px;
-            // text-align: center;
             background: $light-grey;
+
+            @media (max-width: $media-l) {              // LARGE BREAKPOINT CHANGE 
+                width: 45%;
+            }
+
+            @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+                width: 90%;
+                height: 500px;   
+            }
 
             .img-container {
                 overflow: hidden;
@@ -153,7 +166,6 @@ $light-grey: #eee;
 
             h2 {
                 font-size: 1.2rem;
-                // margin: 0;
                 margin-left: 2rem;
             }
 
@@ -177,7 +189,11 @@ $light-grey: #eee;
         @include flexbox;
         @include flex-direction(row);
         @include flex-wrap(nowrap);
-        @include justify-content(space-between);
+        @include justify-content(space-between);    
+
+        @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+            flex-direction: column; 
+        }
 
 
         .contact-info {
@@ -194,10 +210,23 @@ $light-grey: #eee;
                 font-weight: 400;
                 color: $primary-colour;
             }
+
+            @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                width: 100%; 
+            }
+
+            @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+                text-align: center; 
+            }
+            
         }
 
         .contact-form {
             margin-right: 20px;
+
+            @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+                margin: 0px 38px;       
+            }
         
             form {
                 @include flexbox;
@@ -205,14 +234,26 @@ $light-grey: #eee;
                 @include flex-wrap(wrap);
                 padding: 20px auto;
 
+                @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                    flex-basis: 100%; 
+                }
+
                 
 
                 :nth-child(1) {
-                    flex-basis: 47%;
+                    flex-basis: 46%;
+
+                    @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                        flex-basis: 95.5%; 
+                    }
                 }
 
                 :nth-child(2) {
                     flex-basis: 46%;
+
+                    @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                        flex-basis: 95.5%; 
+                    }
                 }
 
                 :nth-child(3) {
@@ -261,6 +302,10 @@ $light-grey: #eee;
                     color: white;
                     text-transform: uppercase;
                     letter-spacing: .15rem;
+
+                    @media (max-width: $media-m) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                        margin: 10px auto; 
+                    }
                 }
 
 
@@ -292,12 +337,16 @@ $light-grey: #eee;
             :visited, :link {
                 text-decoration: none;
             }
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
         
         a {
             display: inline-flex;
             text-align: center;
-            margin: 20px auto;
+            margin: 0px auto 30px auto;
         }
     }
 }

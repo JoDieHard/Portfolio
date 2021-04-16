@@ -1,23 +1,28 @@
 
 .side-menu {
     .container {
-        // position: sticky;
         width: 200px;
         height: 100%;
-        // position: absolute;
-        float: left;
+    }
 
+    @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+        visibility: hidden;
     }
 }
 
 .wrapper {
 
-    width: 80%;
-    position: absolute;
-    left: 336px;
+    width: 100%;
+    // position: absolute;
+    // left: 336px;
+    padding-left: 336px;
 
     @include flexbox;
     @include flex-direction(column);
+
+    @media (max-width: $media-s) {              // 1325px CUSTOM BREAKPOINT CHANGE
+        padding-left: 0px;
+    }
     
 
     .cover-image {
@@ -35,14 +40,16 @@
             @include justify-content(center);
 
             p {
-                margin-bottom: auto;
+                margin: 0px auto auto;
                 filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+                width: 80%;
             }
 
             h1 {
-                margin-top: auto;
+                margin: auto auto 20px;
                 // color: $primary-colour;
                 filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+                width: 80%;
             }
 
             button {
