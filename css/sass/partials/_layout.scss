@@ -40,14 +40,16 @@
             @include justify-content(center);
 
             p {
-                margin-bottom: auto;
+                margin: 0px auto auto;
                 filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+                width: 80%;
             }
 
             h1 {
-                margin-top: auto;
+                margin: auto auto 20px;
                 // color: $primary-colour;
                 filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
+                width: 80%;
             }
 
             button {

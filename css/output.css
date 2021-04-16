@@ -387,12 +387,14 @@ button:active {
   justify-content: center;
 }
 .wrapper .cover-image .container p {
-  margin-bottom: auto;
+  margin: 0px auto auto;
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
+  width: 80%;
 }
 .wrapper .cover-image .container h1 {
-  margin-top: auto;
+  margin: auto auto 20px;
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
+  width: 80%;
 }
 .wrapper .cover-image .container button {
   color: white;
