@@ -250,6 +250,9 @@
 .footer .container button :visited, .footer .container button :link {
   text-decoration: none;
 }
+.footer .container button:hover {
+  opacity: 0.5;
+}
 .footer .container a {
   display: inline-flex;
   text-align: center;
@@ -290,13 +293,11 @@ button:active {
 .side-menu .container {
   width: 200px;
   height: 100%;
-  float: left;
 }
 
 .wrapper {
-  width: 80%;
-  position: absolute;
-  left: 336px;
+  width: 100%;
+  padding-left: 336px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;

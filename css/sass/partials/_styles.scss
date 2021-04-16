@@ -292,6 +292,10 @@ $light-grey: #eee;
             :visited, :link {
                 text-decoration: none;
             }
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
         
         a {

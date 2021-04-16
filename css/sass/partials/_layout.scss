@@ -1,20 +1,17 @@
 
 .side-menu {
     .container {
-        // position: sticky;
         width: 200px;
         height: 100%;
-        // position: absolute;
-        float: left;
-
     }
 }
 
 .wrapper {
 
-    width: 80%;
-    position: absolute;
-    left: 336px;
+    width: 100%;
+    // position: absolute;
+    // left: 336px;
+    padding-left: 336px;
 
     @include flexbox;
     @include flex-direction(column);
