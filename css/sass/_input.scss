@@ -1,11 +1,12 @@
 
 //------ PARTIAL IMPORTS ---------------------------------------------
 
+@import "partials/responsive";          // RESPONSIVE MEDIA QUERIES
 @import "partials/flexbox";             // FLEXBOX MIXINS  - This is used for Flexbox cross-compatibility. (Created By  Zilbert97 AKA Zach G)
 @import "partials/styles";              // GENERAL STYLES
 @import "partials/layout";              // LAYOUT
 @import "partials/elements";            // ELEMENT MIXINS
-@import "partials/responsive";          // RESPONSIVE MEDIA QUERIES
+
 
 
 //------ GLOBAL STYLES ---------------------------------------------

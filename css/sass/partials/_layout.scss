@@ -4,6 +4,10 @@
         width: 200px;
         height: 100%;
     }
+
+    @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+        visibility: hidden;
+    }
 }
 
 .wrapper {
@@ -15,6 +19,10 @@
 
     @include flexbox;
     @include flex-direction(column);
+
+    @media (max-width: $media-s) {              // 1325px CUSTOM BREAKPOINT CHANGE
+        padding-left: 0px;
+    }
     
 
     .cover-image {
