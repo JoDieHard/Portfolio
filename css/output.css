@@ -240,7 +240,7 @@
   }
 }
 .contact .container .contact-form form :nth-child(1) {
-  flex-basis: 46%;
+  flex-basis: 46.5%;
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(1) {
@@ -248,7 +248,7 @@
   }
 }
 .contact .container .contact-form form :nth-child(2) {
-  flex-basis: 46%;
+  flex-basis: 46.75%;
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(2) {

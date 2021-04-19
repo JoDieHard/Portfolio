@@ -268,7 +268,7 @@ $light-grey: #eee;
                 
 
                 :nth-child(1) {
-                    flex-basis: 46%;
+                    flex-basis: 46.5%;
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
                         flex-basis: 95.5%; 
@@ -276,7 +276,7 @@ $light-grey: #eee;
                 }
 
                 :nth-child(2) {
-                    flex-basis: 46%;
+                    flex-basis: 46.75%;
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
                         flex-basis: 95.5%; 
