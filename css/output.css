@@ -37,7 +37,10 @@
   color: #f06856;
   cursor: pointer;
 }
-.side-menu .container ul .page-link :hover:after {
+.side-menu .container ul .current-page {
+  color: #f06856;
+}
+.side-menu .container ul .page-link :hover:after, .side-menu .container ul .current-page :after {
   content: "";
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -48,6 +51,7 @@
   font-weight: 900;
   margin-left: 10px;
   margin-top: 3px;
+  color: #f06856;
 }
 .side-menu .container ul .socials {
   display: -ms-flexbox;
@@ -58,12 +62,17 @@
   -ms-flex-pack: center;
   justify-content: center;
   width: 200px;
-  margin: 10px auto;
+  margin: 10px 15px;
   color: #f06856;
   margin-left: 15px;
 }
 .side-menu .container ul .socials li {
-  padding-right: 30px;
+  padding: 10px 15px;
+  transition: 0.2s ease-in-out;
+}
+.side-menu .container ul .socials li:hover {
+  color: #d95c4c;
+  transform: scale(1.1);
 }
 
 .cover-image .container a {
@@ -125,6 +134,13 @@
   height: 300px;
   margin: 10px;
   background: #eee;
+  border-bottom: solid 0px #f06856;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.projects .container .project:hover {
+  transform: scale(1.05);
+  border-bottom: solid 5px #f06856;
 }
 @media (max-width: 1260px) {
   .projects .container .project {
@@ -276,6 +292,9 @@
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
+.contact .container .contact-form form input[type=submit]:hover {
+  background: #d95c4c;
+}
 @media (max-width: 992px) {
   .contact .container .contact-form form input[type=submit] {
     margin: 10px auto;
@@ -313,6 +332,78 @@
   display: inline-flex;
   text-align: center;
   margin: 0px auto 30px auto;
+}
+
+body {
+  height: 100%;
+}
+
+.bg-fix {
+  height: 100%;
+}
+
+.secondary-wrapper {
+  margin: 0px auto 0px 336px;
+  padding: 50px 0px;
+  background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
+  background-size: cover;
+}
+
+.box-section {
+  width: 60%;
+  margin: 20px auto;
+  padding: 25px;
+  background: #eee;
+  border-radius: 2px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.2rem;
+  border-bottom: solid #f06856 5px;
+}
+.box-section h1 {
+  color: #f06856;
+}
+.box-section a {
+  opacity: 40%;
+}
+.box-section a:after {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-size: 0.5rem;
+  padding-left: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-left: 10px;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  position: relative;
+  bottom: 2px;
+}
+.box-section a:hover {
+  color: #f06856;
+  opacity: 100%;
+}
+
+.placeholder {
+  text-align: center;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: auto;
+}
+.img-box img {
+  width: 400px;
+  height: 400px;
+  border: solid 5px #eee;
+  border-radius: 50%;
+  transition: 0.7s cubic-bezier(0.72, -0.55, 0.23, 1.79);
+}
+.img-box img:hover {
+  transform: rotate3d(0, 0, 1, 15deg) scale(1.1);
 }
 
 button {
@@ -406,6 +497,7 @@ button:active {
   margin-top: 30px;
   margin-bottom: 30px;
   background: #eee;
+  border-bottom: solid #f06856 5px;
 }
 .wrapper .contact .container {
   padding: 200px auto;
