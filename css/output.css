@@ -321,6 +321,7 @@
 .footer .container button i {
   padding-bottom: 10px;
   animation: hop 1s infinite;
+  margin: auto auto;
 }
 .footer .container button :visited, .footer .container button :link {
   text-decoration: none;
