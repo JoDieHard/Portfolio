@@ -280,6 +280,7 @@
   font-size: 0.9rem;
 }
 .contact .container .contact-form form input[type=submit] {
+  -webkit-appearance: none;
   display: inline-block;
   background: #f06856;
   border: none;

@@ -315,7 +315,7 @@ $light-grey: #eee;
                 }
 
                 input[type="submit"] {
-                    // -webkit-appearance: none;        //This was supposed to remove IOS Button styles. 
+                    -webkit-appearance: none;                  //This was supposed to remove IOS Button styles. 
                     display: inline-block;
                     background: $primary-colour;
                     // border: solid black 2px;
