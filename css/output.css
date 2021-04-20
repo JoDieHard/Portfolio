@@ -358,7 +358,7 @@ body {
 }
 
 .box-section {
-  width: 60%;
+  width: 600px;
   margin: 20px auto;
   padding: 25px;
   background: #eee;
@@ -371,6 +371,11 @@ body {
   .box-section {
     width: 450px;
     line-height: 1.7rem;
+  }
+}
+@media (max-width: 450px) {
+  .box-section {
+    width: 90%;
   }
 }
 .box-section h1 {
@@ -409,6 +414,11 @@ body {
   margin-top: 80px;
   margin-bottom: auto;
 }
+@media (max-width: 992px) {
+  .img-box {
+    margin-top: 40px;
+  }
+}
 .img-box img {
   width: 400px;
   height: auto;
@@ -423,6 +433,7 @@ body {
 @media (max-width: 992px) {
   .img-box img {
     width: 50%;
+    height: 50%;
   }
 }
 .img-box img:hover {

@@ -411,7 +411,7 @@ body {
 }
 
 .box-section {
-    width: 60%;
+    width: 600px;
     margin: 20px auto;
     padding: 25px;
     background: $light-grey;
@@ -423,6 +423,10 @@ body {
     @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
         width: 450px;      
         line-height: 1.7rem;
+    }
+
+    @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
+        width: 90%;
     }
 
 
@@ -458,6 +462,10 @@ body {
     margin-top: 80px;
     margin-bottom: auto;
 
+    @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+        margin-top: 40px;
+    }
+
     img {
         width: 400px;
         height: auto;
@@ -469,6 +477,7 @@ body {
 
         @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
             width: 50%;
+            height: 50%;
         }
 
         border: solid 5px $light-grey;
