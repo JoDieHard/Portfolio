@@ -369,6 +369,7 @@ body {
 }
 
 .secondary-wrapper {
+  height: 100%;
   margin: 0px auto 0px 336px;
   padding: 50px 0px;
   background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
