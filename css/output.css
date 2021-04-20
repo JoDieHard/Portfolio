@@ -503,6 +503,12 @@ button:active {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  visibility: hidden;
+}
+@media (max-width: 767px) {
+  .menu-toggle {
+    visibility: visible;
+  }
 }
 
 #menu-check {
