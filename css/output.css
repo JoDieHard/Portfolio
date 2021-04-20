@@ -555,10 +555,11 @@ button:active {
   font-size: 1.5rem;
 }
 
-.side-menu:hover ~ .close-menu {
-  visibility: visible;
+@media (max-width: 450px) {
+  .side-menu:hover ~ .close-menu {
+    visibility: visible;
+  }
 }
-
 .side-menu .container {
   width: 200px;
   height: 100%;

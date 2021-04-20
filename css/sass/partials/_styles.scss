@@ -625,9 +625,12 @@ button:active {
 
 }
 
-.side-menu:hover ~ .close-menu {
+@media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
+    .side-menu:hover ~ .close-menu {
     visibility: visible;
 }
+}
+
 
 
 // input[type="checkbox"]:checked ~ .side-menu {
