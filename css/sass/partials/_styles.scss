@@ -241,7 +241,8 @@ $light-grey: #eee;
         @include justify-content(space-between);    
 
         @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
-            flex-direction: column; 
+            @include flex-direction(column);
+
         }
 
 
@@ -480,8 +481,9 @@ body {
 }
 
 .img-box {
-    display: flex;
-    justify-content: center;
+    @include flexbox;
+    @include justify-content(center);
+
     margin-top: 80px;
     margin-bottom: auto;
 
