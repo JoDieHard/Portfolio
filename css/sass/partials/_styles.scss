@@ -403,6 +403,10 @@ body {
     padding: 50px 0px;
     background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
     background-size: cover;
+
+    @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+        margin: 0px auto 0px auto;
+    }
     
 }
 
@@ -415,6 +419,12 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, .2) ;
     line-height: 1.2rem;
     border-bottom: solid $primary-colour 5px;
+
+    @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+        width: 450px;      
+        line-height: 1.7rem;
+    }
+
 
     h1 {
         color: $primary-colour;
@@ -450,7 +460,16 @@ body {
 
     img {
         width: 400px;
-        height: 400px;
+        height: auto;
+
+        max-height: 400px;
+        min-height: 150px;
+        max-width: 400px;
+        min-width: 150px;
+
+        @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+            width: 50%;
+        }
 
         border: solid 5px $light-grey;
         border-radius: 50%;

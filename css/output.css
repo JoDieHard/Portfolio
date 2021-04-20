@@ -351,6 +351,11 @@ body {
   background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .secondary-wrapper {
+    margin: 0px auto 0px auto;
+  }
+}
 
 .box-section {
   width: 60%;
@@ -361,6 +366,12 @@ body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   line-height: 1.2rem;
   border-bottom: solid #f06856 5px;
+}
+@media (max-width: 992px) {
+  .box-section {
+    width: 450px;
+    line-height: 1.7rem;
+  }
 }
 .box-section h1 {
   color: #f06856;
@@ -400,10 +411,19 @@ body {
 }
 .img-box img {
   width: 400px;
-  height: 400px;
+  height: auto;
+  max-height: 400px;
+  min-height: 150px;
+  max-width: 400px;
+  min-width: 150px;
   border: solid 5px #eee;
   border-radius: 50%;
   transition: 0.7s cubic-bezier(0.72, -0.55, 0.23, 1.79);
+}
+@media (max-width: 992px) {
+  .img-box img {
+    width: 50%;
+  }
 }
 .img-box img:hover {
   transform: rotate3d(0, 0, 1, 15deg) scale(1.1);
