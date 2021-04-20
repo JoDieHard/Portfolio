@@ -518,6 +518,7 @@ button:active {
 @media (max-width: 450px) {
   .menu-toggle {
     margin-top: -20px;
+    padding-bottom: 15px;
   }
 }
 
