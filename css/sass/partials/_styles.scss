@@ -602,6 +602,10 @@ button:active {
     padding-top: 10px;
     text-transform: uppercase;
     color: white;
+
+    @media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
+        padding-bottom: 5px;
+    }
 }
 
 

@@ -542,6 +542,11 @@ button:active {
   text-transform: uppercase;
   color: white;
 }
+@media (max-width: 450px) {
+  .menu-btn {
+    padding-bottom: 5px;
+  }
+}
 
 .close-menu {
   height: 50px;
