@@ -37,7 +37,7 @@ $light-grey: #eee;
     //     transform: translateY(-200px);
     // }
 
-    @media (max-width: $media-xs) {              // EXTRA SMALL BREAKPOINT CHANGE
+    @media (max-width: $media-s) {              // EXTRA SMALL BREAKPOINT CHANGE
         transform: translateY(-445px);           // THIS CURRENTLY MOVES MENU TO TOP WHEN ON PHONES
         transition: ease-in-out .5s;             // CURRENTLY CHECKBOX BUTTON DOES NOT AFFECT THIS BUT IT WILL.. When I figure out how. 
 
