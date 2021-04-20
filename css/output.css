@@ -513,12 +513,11 @@ button:active {
 @media (max-width: 767px) {
   .menu-toggle {
     visibility: visible;
-    margin-top: -10px;
   }
 }
 @media (max-width: 450px) {
   .menu-toggle {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 }
 

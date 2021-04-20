@@ -573,12 +573,10 @@ button:active {
 
     @media (max-width: $media-s) {              //  SMALL BREAKPOINT CHANGE
         visibility: visible;
-        margin-top: -10px;
     }
 
     @media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
-
-        margin-top: -10px;
+        margin-top: -15px;
     }
     
 }
