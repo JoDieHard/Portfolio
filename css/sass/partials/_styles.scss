@@ -33,12 +33,32 @@ $light-grey: #eee;
 
     box-shadow: 0px 5px 10px rgba(0, 0, 0, .6);
 
+    // .container input[type="checkbox"]:checked {        /* Checkbox element, when checked */
+    //     transform: translateY(-200px);
+    // }
+
+    @media (max-width: $media-xs) {              // EXTRA SMALL BREAKPOINT CHANGE
+        transform: translateY(-445px);           // THIS CURRENTLY MOVES MENU TO TOP WHEN ON PHONES
+        transition: ease-in-out .5s;             // CURRENTLY CHECKBOX BUTTON DOES NOT AFFECT THIS BUT IT WILL.. When I figure out how. 
+
+        &:hover {
+            transform: translateY(0px); 
+        }
+    }
+
     .container {
         height: 100%;
         width: 60%;
         position: relative;
         left: 22.5%;
         top: 30px;
+
+        @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+            // visibility: hidden;
+            width: 100%;
+            height: 450px;
+            left: 0px;
+        }
 
         .profile-img {
             background: black url("../assets/profile-img.png") no-repeat center;
@@ -86,6 +106,10 @@ $light-grey: #eee;
                 margin: 10px 15px;
                 color: $primary-colour;
                 margin-left: 15px;
+
+                @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+                    margin: 10px auto;
+                }
 
                 li {
                     padding: 10px 15px;
@@ -142,9 +166,7 @@ $light-grey: #eee;
                         0% { transform: translate3d(0px, 5px, 0px) }
                         50% { transform: translate3d(0px, -5px, 0px) }
                         100% { transform: translate3d(0px, 5px, 0px) }
-                    }
-
-                
+                    }  
             }
         }
     }
@@ -525,3 +547,49 @@ button:focus {
 button:active {
     transform: scale(0.99);
 }
+
+//----------------------------------------------------------------------------------
+
+// CUSTOM CHECKBOX FOR MENU OPEN/CLOSE BUTTON 
+
+
+.menu-toggle {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+
+#menu-check {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+
+    background-color: $primary-colour;
+    text-align: center; 
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+// input[type="checkbox"]:checked {
+
+// }
+

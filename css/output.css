@@ -8,12 +8,28 @@
   z-index: 15;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
 }
+@media (max-width: 450px) {
+  .side-menu {
+    transform: translateY(-445px);
+    transition: ease-in-out 0.5s;
+  }
+  .side-menu:hover {
+    transform: translateY(0px);
+  }
+}
 .side-menu .container {
   height: 100%;
   width: 60%;
   position: relative;
   left: 22.5%;
   top: 30px;
+}
+@media (max-width: 767px) {
+  .side-menu .container {
+    width: 100%;
+    height: 450px;
+    left: 0px;
+  }
 }
 .side-menu .container .profile-img {
   background: black url("../assets/profile-img.png") no-repeat center;
@@ -65,6 +81,11 @@
   margin: 10px 15px;
   color: #f06856;
   margin-left: 15px;
+}
+@media (max-width: 767px) {
+  .side-menu .container ul .socials {
+    margin: 10px auto;
+  }
 }
 .side-menu .container ul .socials li {
   padding: 10px 15px;
@@ -471,13 +492,58 @@ button:active {
   transform: scale(0.99);
 }
 
+.menu-toggle {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#menu-check {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #f06856;
+  text-align: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
 .side-menu .container {
   width: 200px;
   height: 100%;
 }
 @media (max-width: 767px) {
+  .side-menu .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
   .side-menu {
-    visibility: hidden;
+    width: 100%;
+    height: 450px;
+    left: 0px;
+    background: white;
+    border-bottom: solid 5px #f06856;
   }
 }
 
@@ -532,6 +598,7 @@ button:active {
   margin-bottom: 30px;
   background: #eee;
   border-bottom: solid #f06856 5px;
+  width: 100%;
 }
 .wrapper .contact .container {
   padding: 200px auto;
