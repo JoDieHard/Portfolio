@@ -569,8 +569,16 @@ button:active {
     user-select: none;
     visibility: hidden;
 
+    
+
     @media (max-width: $media-s) {              //  SMALL BREAKPOINT CHANGE
         visibility: visible;
+        margin-top: -10px;
+    }
+
+    @media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
+
+        margin-top: -10px;
     }
     
 }

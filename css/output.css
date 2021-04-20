@@ -513,6 +513,12 @@ button:active {
 @media (max-width: 767px) {
   .menu-toggle {
     visibility: visible;
+    margin-top: -10px;
+  }
+}
+@media (max-width: 450px) {
+  .menu-toggle {
+    margin-top: -10px;
   }
 }
 
@@ -582,7 +588,7 @@ button:active {
     height: 450px;
     left: 0px;
     background: white;
-    border-bottom: solid 20px #f06856;
+    border-bottom: solid 5px #f06856;
   }
 }
 
