@@ -270,8 +270,8 @@
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(1) {
-    -ms-flex: 1 0 99.5%;
-    flex: 1 0 99.5%;
+    -ms-flex: 1 0 95.5%;
+    flex: 1 0 95.5%;
   }
 }
 .contact .container .contact-form form :nth-child(2) {
