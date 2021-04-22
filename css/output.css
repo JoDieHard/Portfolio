@@ -365,12 +365,11 @@ body {
   height: 100%;
 }
 
-.bg-fix {
+.bg-fix, .bg-fix2 {
   height: 100%;
 }
 
 .secondary-wrapper {
-  height: 100%;
   margin: 0px auto 0px 336px;
   padding: 50px 0px;
   background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
@@ -638,6 +637,11 @@ button:active {
   margin: auto auto 20px;
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
   width: 80%;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .wrapper .cover-image .container h1 {
+    margin: 10px auto 20px;
+  }
 }
 .wrapper .cover-image .container button {
   color: white;
