@@ -379,8 +379,8 @@ body {
   height: 100%;
 }
 
-#bg-fix3 {
-  height: auto;
+.bg-fix3 {
+  height: auto !important;
 }
 
 .secondary-wrapper {

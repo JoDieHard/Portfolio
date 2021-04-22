@@ -431,14 +431,11 @@ body {
     height: 100%;
 }
 
-#bg-fix3 {
-    height: auto;
+.bg-fix3 {
+    height: auto !important;
 }
 
 .secondary-wrapper {
-    // width: 100%;
-    // margin-left: 336px;
-    // height: 100%;
 
     margin: 0px auto 0px 336px;
     padding: 50px 0px;
