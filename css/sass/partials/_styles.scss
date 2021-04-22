@@ -286,37 +286,47 @@ $light-grey: #eee;
                 padding: 20px auto;
 
                 @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                    flex-basis: 100%; 
+                    // flex-basis: 100%; 
+
+                    @include flex($f-basis: 100%);      // ALL FLEXBASIS HAVE BEEN REPLACED WITH THIS VENDOR FRIENDLY MIXIN.
                 }
 
                 
 
                 :nth-child(1) {
-                    flex-basis: 46.5%;
+                    // flex-basis: 46.5%;
+                    @include flex($f-basis: 46.5%);
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                        flex-basis: 95.5%; 
+                        // flex-basis: 95.5%;
+                        @include flex($f-basis: 99.5%); 
                     }
                 }
 
                 :nth-child(2) {
-                    flex-basis: 46.75%;
+                    // flex-basis: 46.75%;
+                    @include flex($f-basis: 46.75%);
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                        flex-basis: 95.5%; 
+                        // flex-basis: 95.5%; 
+                        @include flex($f-basis: 95.5%);
                     }
                 }
 
                 :nth-child(3) {
-                    flex-basis: 95.5%;
+                    // flex-basis: 95.5%;
+                    @include flex($f-basis: 95.5%);
                 }
 
                 :nth-child(4) {
-                    flex-basis: 95.5%;
+                    // flex-basis: 95.5%;
+                    @include flex($f-basis: 95.5%);
                 }
 
                 :nth-child(5) {
-                    flex-basis: 95.5%;
+                    // flex-basis: 95.5%;
+                    @include flex($f-basis: 95.5%);
+
                     height: 200px;
                     padding: 15px;
                     margin: 10px;
@@ -375,13 +385,16 @@ $light-grey: #eee;
     @include flexbox;
     @include justify-content(center);
 
+    background: rgb(73, 70, 70);
+    padding-top: 30px;
+
     .container {
 
         button {
             @include flexbox;
             @include flex-direction(column);
             background: transparent;
-            color: black;
+            color: white;
             text-decoration: none;
             opacity: 0.25;
 

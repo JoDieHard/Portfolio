@@ -260,33 +260,41 @@
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form {
-    flex-basis: 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
   }
 }
 .contact .container .contact-form form :nth-child(1) {
-  flex-basis: 46.5%;
+  -ms-flex: 1 0 46.5%;
+  flex: 1 0 46.5%;
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(1) {
-    flex-basis: 95.5%;
+    -ms-flex: 1 0 99.5%;
+    flex: 1 0 99.5%;
   }
 }
 .contact .container .contact-form form :nth-child(2) {
-  flex-basis: 46.75%;
+  -ms-flex: 1 0 46.75%;
+  flex: 1 0 46.75%;
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(2) {
-    flex-basis: 95.5%;
+    -ms-flex: 1 0 95.5%;
+    flex: 1 0 95.5%;
   }
 }
 .contact .container .contact-form form :nth-child(3) {
-  flex-basis: 95.5%;
+  -ms-flex: 1 0 95.5%;
+  flex: 1 0 95.5%;
 }
 .contact .container .contact-form form :nth-child(4) {
-  flex-basis: 95.5%;
+  -ms-flex: 1 0 95.5%;
+  flex: 1 0 95.5%;
 }
 .contact .container .contact-form form :nth-child(5) {
-  flex-basis: 95.5%;
+  -ms-flex: 1 0 95.5%;
+  flex: 1 0 95.5%;
   height: 200px;
   padding: 15px;
   margin: 10px;
@@ -332,6 +340,8 @@
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+  background: #494646;
+  padding-top: 30px;
 }
 .footer .container button {
   display: -ms-flexbox;
@@ -340,7 +350,7 @@
   -moz-flex-direction: column;
   flex-direction: column;
   background: transparent;
-  color: black;
+  color: white;
   text-decoration: none;
   opacity: 0.25;
 }
@@ -651,7 +661,6 @@ button:active {
 }
 .wrapper .contact {
   margin-top: 30px;
-  margin-bottom: 30px;
   background: #eee;
   border-bottom: solid #f06856 5px;
   width: 100%;
