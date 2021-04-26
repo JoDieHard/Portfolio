@@ -304,7 +304,7 @@ $light-grey: #eee;
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
                         // flex-basis: 95.5%;
-                        @include flex($f-basis: 96%); 
+                        @include flex($f-basis: 95.5%); 
                     }
 
                     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) { 
