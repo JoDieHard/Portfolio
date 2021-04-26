@@ -81,7 +81,7 @@
   width: 200px;
   margin: 10px 15px;
   color: #f06856;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 @media (max-width: 767px) {
   .side-menu .container ul .socials {

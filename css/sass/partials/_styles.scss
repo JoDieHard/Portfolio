@@ -106,7 +106,7 @@ $light-grey: #eee;
                 width: 200px;
                 margin: 10px 15px;
                 color: $primary-colour;
-                margin-left: 15px;
+                margin-left: 0px;
 
                 @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
                     margin: 10px auto;
