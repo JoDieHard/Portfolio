@@ -248,6 +248,12 @@
     margin: 0px 38px;
   }
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 1260px) {
+  .contact .container .contact-form {
+    margin-right: 30px;
+    width: 70%;
+  }
+}
 .contact .container .contact-form form {
   display: -ms-flexbox;
   display: flex;
@@ -270,6 +276,12 @@
 }
 @media (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(1) {
+    -ms-flex: 1 0 96%;
+    flex: 1 0 96%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) {
+  .contact .container .contact-form form :nth-child(1) {
     -ms-flex: 1 0 95.5%;
     flex: 1 0 95.5%;
   }
@@ -279,6 +291,12 @@
   flex: 1 0 46.75%;
 }
 @media (max-width: 1325px) {
+  .contact .container .contact-form form :nth-child(2) {
+    -ms-flex: 1 0 95.5%;
+    flex: 1 0 95.5%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) {
   .contact .container .contact-form form :nth-child(2) {
     -ms-flex: 1 0 95.5%;
     flex: 1 0 95.5%;
@@ -639,6 +657,11 @@ button:active {
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
   width: 80%;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .wrapper .cover-image .container p {
+    margin: 0px auto 320px;
+  }
+}
 .wrapper .cover-image .container h1 {
   margin: auto auto 20px;
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
@@ -646,7 +669,7 @@ button:active {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .wrapper .cover-image .container h1 {
-    margin: 10px auto 20px;
+    margin: 450px auto 20px;
   }
 }
 .wrapper .cover-image .container button {

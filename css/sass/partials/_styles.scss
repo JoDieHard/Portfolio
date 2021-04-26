@@ -278,6 +278,11 @@ $light-grey: #eee;
             @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
                 margin: 0px 38px;       
             }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: $media-l) { 
+                margin-right: 30px;
+                width: 70%;
+            }        //IE11 specific media query
         
             form {
                 @include flexbox;
@@ -299,8 +304,12 @@ $light-grey: #eee;
 
                     @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
                         // flex-basis: 95.5%;
-                        @include flex($f-basis: 95.5%); 
+                        @include flex($f-basis: 96%); 
                     }
+
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) { 
+                        @include flex($f-basis: 95.5%);
+                    }        //IE11 specific media query
                 }
 
                 :nth-child(2) {
@@ -311,6 +320,12 @@ $light-grey: #eee;
                         // flex-basis: 95.5%; 
                         @include flex($f-basis: 95.5%);
                     }
+
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) { 
+                        @include flex($f-basis: 95.5%);
+                    }        //IE11 specific media query
+
+                    
                 }
 
                 :nth-child(3) {

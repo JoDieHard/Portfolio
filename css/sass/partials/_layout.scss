@@ -55,6 +55,10 @@
                 margin: 0px auto auto;
                 filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
                 width: 80%;
+
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                    margin: 0px auto 320px;
+                }        //IE11 specific media query
             }
 
             h1 {
@@ -64,7 +68,7 @@
                 width: 80%;
 
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
-                    margin: 10px auto 20px;
+                    margin: 450px auto 20px;
                 }        //IE11 specific media query
             }
 
