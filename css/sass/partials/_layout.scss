@@ -1,17 +1,35 @@
 
+.menu-icon {
+    position: absolute;
+    right: -45px;
+    top: -20px;
+    // top: 40vh;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: ease-in-out .2s;
+    color: white;
+}
+
+.side-menu.active .container .menu-icon {
+    opacity: 0.2;
+}
 .side-menu {
+    background: white;
+    transition: ease-in-out .5s;
 
     .container {
         width: 200px;
         height: 100%;
 
+        /*
         @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
             margin-left: auto;
             margin-right: auto;
             width: 100%;
-        }
+        } */
     }
 
+    /*
     @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
         // visibility: hidden;
         width: 100%;
@@ -19,7 +37,13 @@
         left: 0px;
         background: white;
         border-bottom: solid 5px $primary-colour;
-    }
+    } */
+}
+
+.side-menu.active {
+    transform: translateX(-285px);
+    background: #262626;
+    
 }
 
 .wrapper {
@@ -29,15 +53,17 @@
     // left: 336px;
     padding-left: 336px;
 
+    transition: ease-in-out .5s;
+
     @include flexbox;
     @include flex-direction(column);
 
     @media (max-width: $media-s) {              // 1325px CUSTOM BREAKPOINT CHANGE
         padding-left: 0px;
     }
-    
 
     .cover-image {
+        overflow: hidden;
         .container {
             height: 100vh;
             padding: 500px auto;
@@ -106,5 +132,9 @@
         width: 100%;
        
     }
+}
+
+.wrapper.active {
+    padding-left: 50px;
 }
  

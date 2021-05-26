@@ -9,28 +9,19 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
   background: white;
 }
-@media (max-width: 767px) {
-  .side-menu {
-    transform: translateY(-445px);
-    transition: ease-in-out 0.5s;
-  }
-  .side-menu:hover {
-    transform: translateY(0px);
-  }
-}
 .side-menu .container {
   height: 100%;
   width: 60%;
   position: relative;
   left: 22.5%;
   top: 30px;
-}
-@media (max-width: 767px) {
-  .side-menu .container {
-    width: 100%;
-    height: 450px;
-    left: 0px;
-  }
+  /*
+  @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+      // visibility: hidden;
+      width: 100%;
+      height: 450px;
+      left: 0px;
+  } */
 }
 .side-menu .container .profile-img {
   background: black url("../assets/profile-img.png") no-repeat center;
@@ -358,7 +349,7 @@
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #494646;
+  background: white;
   padding-top: 30px;
 }
 .footer .container button {
@@ -368,7 +359,7 @@
   -moz-flex-direction: column;
   flex-direction: column;
   background: transparent;
-  color: white;
+  color: black;
   text-decoration: none;
   opacity: 0.25;
 }
@@ -522,57 +513,62 @@ button:active {
   transform: scale(0.99);
 }
 
+/*
+// CUSTOM CHECKBOX FOR MENU OPEN/CLOSE BUTTON 
+
+
 .menu-toggle {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  visibility: hidden;
-}
-@media (max-width: 767px) {
-  .menu-toggle {
-    visibility: visible;
-  }
-}
-@media (max-width: 450px) {
-  .menu-toggle {
-    margin-top: -20px;
-    padding-bottom: 15px;
-  }
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    visibility: hidden;
+
+
+
+    @media (max-width: $media-s) {              //  SMALL BREAKPOINT CHANGE
+        visibility: visible;
+    }
+
+    @media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
+        margin-top: -20px;
+        padding-bottom: 15px;
+    }
+
 }
 
 #menu-check {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
 .menu-btn {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 100%;
-  background-color: #f06856;
-  text-align: center;
-  padding-top: 10px;
-  text-transform: uppercase;
-  color: white;
-}
-@media (max-width: 450px) {
-  .menu-btn {
-    padding-bottom: 5px;
-  }
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
 
+    background-color: $primary-colour;
+    text-align: center; 
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: white;
+
+    @media (max-width: $media-xs) {              //  SMALL BREAKPOINT CHANGE
+        padding-bottom: 5px;
+    }
+}
+*/
 .close-menu {
   height: 50px;
   width: 50px;
@@ -601,30 +597,53 @@ button:active {
     visibility: visible;
   }
 }
+.menu-icon {
+  position: absolute;
+  right: -45px;
+  top: -20px;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+  color: white;
+}
+
+.side-menu.active .container .menu-icon {
+  opacity: 0.2;
+}
+
+.side-menu {
+  background: white;
+  transition: ease-in-out 0.5s;
+  /*
+  @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+      // visibility: hidden;
+      width: 100%;
+      height: 450px;
+      left: 0px;
+      background: white;
+      border-bottom: solid 5px $primary-colour;
+  } */
+}
 .side-menu .container {
   width: 200px;
   height: 100%;
+  /*
+  @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+  } */
 }
-@media (max-width: 767px) {
-  .side-menu .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .side-menu {
-    width: 100%;
-    height: 450px;
-    left: 0px;
-    background: white;
-    border-bottom: solid 5px #f06856;
-  }
+
+.side-menu.active {
+  transform: translateX(-285px);
+  background: #262626;
 }
 
 .wrapper {
   width: 100%;
   padding-left: 336px;
+  transition: ease-in-out 0.5s;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -635,6 +654,9 @@ button:active {
   .wrapper {
     padding-left: 0px;
   }
+}
+.wrapper .cover-image {
+  overflow: hidden;
 }
 .wrapper .cover-image .container {
   height: 100vh;
@@ -693,6 +715,10 @@ button:active {
   width: 100%;
 }
 
+.wrapper.active {
+  padding-left: 50px;
+}
+
 * {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
@@ -712,4 +738,5 @@ a {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
