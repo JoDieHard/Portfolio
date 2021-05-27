@@ -406,6 +406,7 @@ body {
   padding: 50px 0px;
   background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
   background-size: cover;
+  transition: ease-in-out 0.5s;
 }
 @media (max-width: 767px) {
   .secondary-wrapper {
