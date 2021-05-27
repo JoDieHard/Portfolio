@@ -167,6 +167,11 @@
     height: 500px;
   }
 }
+@media (max-width: 450px) {
+  .projects .container .project {
+    height: 300px;
+  }
+}
 .projects .container .project .img-container {
   overflow: hidden;
   position: relative;
@@ -235,6 +240,11 @@
 @media (max-width: 992px) {
   .contact .container .contact-info {
     text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .contact .container .contact-info :nth-child(4) {
+    transform: translateX(-17.5px);
   }
 }
 .contact .container .contact-form {

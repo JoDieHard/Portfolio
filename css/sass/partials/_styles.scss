@@ -205,6 +205,11 @@ $light-grey: #eee;
                 height: 500px;   
             }
 
+            @media (max-width: $media-xs) {              // EXTRA SMALL BREAKPOINT CHANGE
+
+                height: 300px;   
+            }
+
             .img-container {
                 overflow: hidden;
                 position: relative;
@@ -273,6 +278,12 @@ $light-grey: #eee;
 
             @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
                 text-align: center; 
+            }
+
+            @media (max-width: 380px ) {              // CUSTOM 380px BREAKPOINT CHANGE
+                :nth-child(4) {
+                    transform: translateX(-17.5px);
+                }
             }
             
         }
