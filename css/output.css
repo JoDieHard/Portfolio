@@ -221,6 +221,12 @@
   font-weight: 400;
   color: #f06856;
 }
+@media (max-width: 450px) {
+  .contact .container .contact-info h2 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
 @media (max-width: 1325px) {
   .contact .container .contact-info {
     width: 100%;
@@ -304,6 +310,7 @@
 .contact .container .contact-form form :nth-child(5) {
   -ms-flex: 1 0 95.5%;
   flex: 1 0 95.5%;
+  font-size: 0.9rem;
   height: 200px;
   padding: 15px;
   margin: 10px;
@@ -569,34 +576,6 @@ button:active {
     }
 }
 */
-.close-menu {
-  height: 50px;
-  width: 50px;
-  padding: 15px;
-  border-radius: 50%;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 15;
-  background: #f06856;
-  visibility: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.close-menu i {
-  color: white;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 450px) {
-  .side-menu:hover ~ .close-menu {
-    visibility: visible;
-  }
-}
 .menu-icon {
   position: absolute;
   right: -45px;

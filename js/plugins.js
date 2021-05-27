@@ -1,22 +1,22 @@
 
 // Scroll Reveal Plugin Functions ------------------------------
-ScrollReveal().reveal('.project', { delay: 300, interval: 8, reset: true });
-ScrollReveal().reveal('.contact', { delay: 300, reset: true });
+ScrollReveal().reveal('.project', { delay: 250, interval: 8, reset: true });
+ScrollReveal().reveal('.contact', { delay: 250, reset: false });
 
 // Choreographer Plugin Functions ------------------------------
 
  let choreographer = new Choreographer({
     animations: [
       {
-        range: [-1, 1000],
+        range: [100, 500],
         selector: '.cover-image',
         type: 'scale',
         style: 'transform:scaleY',
         from: 1,
-        to: 1.2
+        to: 1.15
       }, 
       {
-        range: [-1, 1000],
+        range: [100, 500],
         selector: '.scroll-down-btn',
         type: 'scale',
         style: 'transform:translateY',
@@ -41,12 +41,35 @@ ScrollReveal().reveal('.contact', { delay: 300, reset: true });
         from: 1,
         to: 1.5,
       },
+      {
+        range: [250, 500],
+        selector: '.intro-text, .scroll-down-btn',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0
+      }
     ]
   })
   
+//   function breakpointS(windowX) {
+//   window.addEventListener('scroll', () => {
+
+//     if (!windowX.matches) { // If media query matches
+//     choreographer.runAnimationsAt(window.pageYOffset)
+//     }
+//   })
+// };
+
+//   const windowX = window.matchMedia("(max-width: 400px)");
+//   breakpointS(windowX) // Call listener function at run time
+// windowX.addListener(breakpointS) // Attach listener function on state changes
+
+
   window.addEventListener('scroll', () => {
     choreographer.runAnimationsAt(window.pageYOffset)
-  })
+  });
+
 
 // ----------------------------------------------------
 
@@ -69,3 +92,16 @@ menu.on('click tap', function(){
     
   }
 });
+
+
+// function myFunction(x) {
+//   if (x.matches) { // If media query matches
+    
+//   } else {
+    
+//   }
+// }
+
+
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction) // Attach listener function on state changes
