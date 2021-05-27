@@ -108,7 +108,7 @@ typewriterTwo
 // Custom Side Menu Code ------------------------------
 
 const menu = $('#menu');
-const wrap = $('.wrapper');
+const wrap = $('.wrapper, .secondary-wrapper');
 
 menu.on('click tap', function(){
   if ( $(this).hasClass('active')) {

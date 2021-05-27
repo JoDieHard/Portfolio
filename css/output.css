@@ -499,6 +499,10 @@ body {
   transform: rotate3d(0, 0, 1, 15deg) scale(1.1);
 }
 
+.secondary-wrapper.active {
+  margin: 0px auto 0px 50px;
+}
+
 button {
   display: inline-block;
   border: none;

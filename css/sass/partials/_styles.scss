@@ -555,6 +555,10 @@ body {
     }
 }
 
+.secondary-wrapper.active {
+    margin: 0px auto 0px 50px;
+}
+
 //----------------------------------------------------------------------------------
 
 // BUTTON CLASS TO REMOVE DEFAULT STYLES  link: https://css-tricks.com/overriding-default-button-styles/
