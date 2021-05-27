@@ -106,12 +106,16 @@ typewriterTwo
 // ----------------------------------------------------
 
 // Custom Side Menu Code ------------------------------
-
+const menuLinks = $('.page-link');
 const menu = $('#menu');
 const wrap = $('.wrapper, .secondary-wrapper');
 
+
 menu.on('click tap', function(){
-  if ( $(this).hasClass('active')) {
+  console.log(event.target);
+  if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {
+    return;
+  } else if ( $(this).hasClass('active')) {
     $(this).removeClass('active');
     wrap.removeClass('active');
     // $(this).css('transform', 'translateX( 0px )');
