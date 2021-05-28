@@ -81,6 +81,14 @@ typewriterTwo
         style: 'opacity',
         from: 1,
         to: 0,
+      },
+      {
+        range: [750, 850],
+        selector: '.scroll-down-btn',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0,
       }
 
       // {
