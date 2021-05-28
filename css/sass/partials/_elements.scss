@@ -4,4 +4,8 @@
 .animsition-overlay-slide {
   z-index: 1000;
   background-color: #f06856;
+
+  @media (max-width: $media-s ) {         // SMALL BREAKPOINT
+    display: none;                        // This is only because Animsition isn't working on iOS
+  }
 }

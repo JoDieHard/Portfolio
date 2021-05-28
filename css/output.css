@@ -724,6 +724,11 @@ button:active {
   z-index: 1000;
   background-color: #f06856;
 }
+@media (max-width: 767px) {
+  .animsition-overlay-slide {
+    display: none;
+  }
+}
 
 * {
   box-sizing: border-box;
