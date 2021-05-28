@@ -73,6 +73,14 @@ typewriterTwo
         style: 'transform:scale',
         from: 1,
         to: 1.5,
+      },
+      {
+        range: [500, 600],
+        selector: '.intro-text',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0,
       }
 
       // {
