@@ -5,7 +5,7 @@
   z-index: 1000;
   background-color: #f06856;
 
-  @media (max-width: $media-m ) {         // SMALL BREAKPOINT
-    opacity: 0;                        // This is only because Animsition isn't working on iOS
-  }
+  // @media (max-width: $media-m ) {         // SMALL BREAKPOINT
+  //   opacity: 0;                        // This is only because Animsition isn't working on iOS
+  // }
 }
