@@ -119,12 +119,12 @@ menu.on('click tap', function(){
   if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {
     return;
   } else if ( $(this).hasClass('active')) {
-    $(this).removeClass('active');
+    $(this).delay(200).removeClass('active');
     wrap.removeClass('active');
     // $(this).css('transform', 'translateX( 0px )');
     console.log('menu is closed.');
   } else {
-    $(this).addClass('active');
+    $(this).delay(200).addClass('active');
     wrap.addClass('active');
     // $(this).css('transform', 'translateX( -300px )');
     console.log('menu is open.');
