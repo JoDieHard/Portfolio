@@ -720,6 +720,11 @@ button:active {
   padding-left: 50px;
 }
 
+.animsition-overlay-slide {
+  z-index: 1000;
+  background-color: #f06856;
+}
+
 * {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
