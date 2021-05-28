@@ -265,6 +265,7 @@ $light-grey: #eee;
                 font-size: 1.2rem;
                 font-weight: 400;
                 color: $primary-colour;
+                overflow: auto;
 
                 @media (max-width: $media-xs ) {              // EXTRA SMALL BREAKPOINT CHANGE
                     font-size: 1rem;
@@ -282,7 +283,7 @@ $light-grey: #eee;
 
             @media (max-width: 380px ) {              // CUSTOM 380px BREAKPOINT CHANGE
                 :nth-child(4) {
-                    transform: translateX(-17.5px);
+                    // transform: translateX(-17.5px);
                 }
             }
             

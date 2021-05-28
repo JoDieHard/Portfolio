@@ -112,26 +112,38 @@ typewriterTwo
 const menuLinks = $('.page-link');
 const menu = $('#menu');
 const wrap = $('.wrapper, .secondary-wrapper');
+let isRunning;
 
 
-menu.on('click tap', function(){
-  console.log(event.target);
-  if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {
+menu.on('click tap', function(event){
+  // console.log(event.target);
+  if ( isRunning ) {
     return;
-  } else if ( $(this).hasClass('active')) {
-    $(this).delay(200).removeClass('active');
-    wrap.removeClass('active');
-    // $(this).css('transform', 'translateX( 0px )');
-    console.log('menu is closed.');
-  } else {
-    $(this).delay(200).addClass('active');
-    wrap.addClass('active');
-    // $(this).css('transform', 'translateX( -300px )');
-    console.log('menu is open.');
-    
-  }
-});
 
+  } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+    return;   
+  } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
+    $(this).removeClass('active');
+    wrap.delay( 350 ).queue(function(){
+      wrap.removeClass('active');
+      wrap.dequeue();
+    });
+    console.log('menu is open.');
+
+  } else {  // ELSE CLOSE MENU
+    $(this).delay( 350 ).queue(function(){
+      $(this).addClass('active');
+      $(this).dequeue();
+    });
+    wrap.addClass('active');          
+    console.log('menu is closed.');
+  }
+
+  isRunning = true;
+  console.log( isRunning );
+
+  setTimeout(function(){ isRunning = false; console.log( isRunning ); }, 500 );
+});
 
 // function myFunction(x) {
 //   if (x.matches) { // If media query matches
