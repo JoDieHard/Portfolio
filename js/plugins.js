@@ -114,7 +114,7 @@ typewriterTwo
 
 
 
-// Custom Side Menu Code ------------------------------
+// Animsition Plugin Functions ------------------------------
   $(document).ready(function() {
     $(".animsition-overlay").animsition({
       inClass: 'overlay-slide-in-top',
