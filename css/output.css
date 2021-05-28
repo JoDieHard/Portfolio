@@ -724,9 +724,9 @@ button:active {
   z-index: 1000;
   background-color: #f06856;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .animsition-overlay-slide {
-    display: none;
+    opacity: 0;
   }
 }
 
