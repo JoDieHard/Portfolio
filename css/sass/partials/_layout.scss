@@ -64,6 +64,8 @@
 
     .cover-image {
         overflow: hidden;
+        z-index: 100;
+
         .container {
             height: 100vh;
             padding: 500px auto;
@@ -85,6 +87,10 @@
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
                     margin: 0px auto 320px;
                 }        //IE11 specific media query
+
+                @media (max-width: $media-xs) {
+                    font-size: .6rem;
+                }
             }
 
             h1 {
@@ -96,6 +102,10 @@
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
                     margin: 450px auto 20px;
                 }        //IE11 specific media query
+
+                @media (max-width: $media-xs) {
+                    font-size: 1.5rem;
+                }
             }
 
             button {

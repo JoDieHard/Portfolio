@@ -37,32 +37,33 @@ typewriterTwo
 
 // Choreographer Plugin Functions ------------------------------
 
- let choreographer = new Choreographer({
+ let headerAnim = new Choreographer({
     animations: [
       {
-        range: [100, 500],
+        range: [100, 400],
         selector: '.cover-image',
         type: 'scale',
-        style: 'transform:scaleY',
-        from: 1,
-        to: 1.15
+        style: 'transform:translateY',
+        from: 0,
+        to: 230,
+        unit: 'px'
       }, 
       {
-        range: [100, 500],
+        range: [100, 400],
         selector: '.scroll-down-btn',
         type: 'scale',
         style: 'transform:translateY',
         from: 0,
-        to: -60,
+        to: -210,
         unit: 'px'
       },
       {
-        range: [-1, 500],
+        range: [-1, 250],
         selector: '.intro-text',
         type: 'scale',
         style: 'transform:translateY',
         from: 0,
-        to: 250,
+        to: 80,
         unit: 'px'
       },
       {
@@ -72,15 +73,16 @@ typewriterTwo
         style: 'transform:scale',
         from: 1,
         to: 1.5,
-      },
-      {
-        range: [250, 500],
-        selector: '.intro-text, .scroll-down-btn',
-        type: 'scale',
-        style: 'opacity',
-        from: 1,
-        to: 0
       }
+
+      // {
+      //   range: [450, 550],
+      //   selector: '.intro-text, .scroll-down-btn',
+      //   type: 'scale',
+      //   style: 'opacity',
+      //   from: 1,
+      //   to: 0
+      // }
     ]
   })
   
@@ -99,8 +101,9 @@ typewriterTwo
 
 
   window.addEventListener('scroll', () => {
-    choreographer.runAnimationsAt(window.pageYOffset)
+    headerAnim.runAnimationsAt(window.pageYOffset)
   });
+  
 
 
 // ----------------------------------------------------
