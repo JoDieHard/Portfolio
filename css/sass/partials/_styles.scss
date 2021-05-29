@@ -397,8 +397,12 @@ $light-grey: #eee;
                     text-transform: uppercase;
                     letter-spacing: .15rem;
 
-                    &:hover {
+                    transition: ease-in-out .25s;
+
+                    &:hover, &:focus {
                         background: #d95c4c;
+                        outline: none;
+                        // border: 2px solid #d95c4c;
                     }
 
                     @media (max-width: $media-m) {              // 1325px CUSTOM BREAKPOINT CHANGE
@@ -406,6 +410,13 @@ $light-grey: #eee;
                     }
                 }
 
+                input[type="text"]:focus, textarea:focus {
+                    transform: scale(1.025);
+                    transition: ease-in-out .25s;
+                    outline: none;
+                    border: 2px solid $primary-colour;
+                    
+                }
 
             }
         }
@@ -463,11 +474,12 @@ body {
 
 .secondary-wrapper {
 
-    margin: 0px auto 0px 336px;
+    // margin: 0px auto 0px 336px;
+    margin: 0px auto;
     padding: 50px 0px;
     background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
     background-size: cover;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .25s;
 
     @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
         margin: 0px auto 0px auto;
@@ -557,9 +569,10 @@ body {
     }
 }
 
-.secondary-wrapper.active {
-    margin: 0px auto 0px 50px;
-}
+// .secondary-wrapper.active {
+//     margin: 0px auto 0px 50px;
+// }
+
 
 //----------------------------------------------------------------------------------
 

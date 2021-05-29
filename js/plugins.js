@@ -1,10 +1,10 @@
 
 // Scroll Reveal Plugin Functions ------------------------------
-ScrollReveal().reveal('.project', { delay: 250, interval: 8, reset: true });
+ScrollReveal().reveal('.project', { delay: 250, interval: 8, reset: false });
 ScrollReveal().reveal('.contact', { delay: 250, reset: false });
 
 // TypeWriterJS Plugin Functions ------------------------------
-
+/*
 var app = document.getElementById('t1');
  
 var typewriterOne = new Typewriter(app, {
@@ -19,7 +19,7 @@ typewriterOne
   .pauseFor(300)
   .deleteChars(11)
   .typeString(' Bowman')
-  .pauseFor(500)
+  .pauseFor(500) */
 
 //------------------------------------------
 
@@ -31,7 +31,7 @@ var typewriterTwo = new Typewriter(app, {
 });
  
 typewriterTwo
-  .pauseFor(4000)
+  .pauseFor(300)
   .typeString('I am a Web Developer and Graphic Designer')
   .start()
 
@@ -121,7 +121,7 @@ typewriterTwo
   });
 
 
-
+/*
 // Animsition Plugin Functions ------------------------------
   $(document).ready(function() {
     $(".animsition-overlay").animsition({
@@ -147,7 +147,7 @@ typewriterTwo
       transition: function(url){ window.location.href = url; }
     });
   });
-
+*/
 
 
 
@@ -158,9 +158,13 @@ typewriterTwo
 // ----------------------------------------------------
 
 // Custom Side Menu Code ------------------------------
+
+const menuJS = function () {
+
 const menuLinks = $('.page-link');
 const menu = $('#menu');
-const wrap = $('.wrapper, .secondary-wrapper');
+// const wrap = $('.wrapper, .secondary-wrapper');
+const wrap = $('#pageContainer');
 let isRunning;
 
 
@@ -177,7 +181,7 @@ menu.on('click tap', function(event){
       wrap.removeClass('active');
       wrap.dequeue();
     });
-    console.log('menu is open.');
+    // console.log('menu is open.');
 
   } else {  // ELSE CLOSE MENU
     $(this).delay( 350 ).queue(function(){
@@ -185,13 +189,13 @@ menu.on('click tap', function(event){
       $(this).dequeue();
     });
     wrap.addClass('active');          
-    console.log('menu is closed.');
+    // console.log('menu is closed.');
   }
 
   isRunning = true;
-  console.log( isRunning );
+  // console.log( isRunning );
 
-  setTimeout(function(){ isRunning = false; console.log( isRunning ); }, 500 );
+  setTimeout(function(){ isRunning = false; /* console.log( isRunning ); */ }, 400 );
 });
 
 // function myFunction(x) {
@@ -205,3 +209,7 @@ menu.on('click tap', function(event){
 
 // myFunction(x) // Call listener function at run time
 // x.addListener(myFunction) // Attach listener function on state changes
+
+};
+
+menuJS();

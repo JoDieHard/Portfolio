@@ -15,7 +15,7 @@
 }
 .side-menu {
     background: white;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .25s;
 
     .container {
         width: 200px;
@@ -43,7 +43,11 @@
 .side-menu.active {
     transform: translateX(-285px);
     background: #262626;
-    
+}
+
+.side-menu.active:hover {
+    background: #666666;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -51,9 +55,9 @@
     width: 100%;
     // position: absolute;
     // left: 336px;
-    padding-left: 336px;
+    // padding-left: 336px;
 
-    transition: ease-in-out .5s;
+    transition: ease-in-out .25s;
 
     @include flexbox;
     @include flex-direction(column);
@@ -144,7 +148,7 @@
     }
 }
 
-.wrapper.active {
-    padding-left: 50px;
-}
+// .wrapper.active {
+//     padding-left: 50px;
+// }
  

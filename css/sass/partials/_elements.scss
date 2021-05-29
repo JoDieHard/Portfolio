@@ -9,3 +9,18 @@
   //   opacity: 0;                        // This is only because Animsition isn't working on iOS
   // }
 }
+
+
+
+// Menu Animation CSS
+
+#pageContainer {
+  height: 100%;
+  margin: 0px auto 0px 336px;
+
+  transition: ease-in-out .25s;
+}
+
+#pageContainer.active {
+  margin: 0px auto 0px 50px;
+}
