@@ -1,5 +1,5 @@
 
-$('.ajaxition-link').on('click', function( event ){
+$(' #menu').on('click', '.ajaxition-link', function( event ){
 
     const link = $(this).attr('href');
     const linkContent = link + ' .ajaxition';
