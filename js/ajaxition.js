@@ -35,10 +35,9 @@ setTimeout (function() {
     setupJsPlugins();
     console.log('Plugins have been Reinitialized.');
     if (link === 'https://joseph-bowman.netmatters-scs.co.uk/#contact-me') {
-    $('#pageContainer #contact-me').scrollIntoView();
+    $('#pageContainer #contact-me')[0].scrollIntoView();
 }
 }, 1050);
-
 
 
 });
