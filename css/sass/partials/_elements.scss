@@ -19,11 +19,17 @@
   margin: 0px auto 0px 336px;
 
   transition: ease-in-out .25s;
+
+  @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+    margin: 0px auto 0px 50px;
+}
 }
 
 #pageContainer.active {
   margin: 0px auto 0px 50px;
 }
+
+// Page Transition CSS
 
 #pageContainer::before {
   content: " ";

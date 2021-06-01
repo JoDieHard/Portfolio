@@ -5,6 +5,8 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
     const linkContent = link + ' .ajaxition';
     const container = $('#pageContainer');
 
+
+
 container.delay( 50 ).queue(function(){   // Adds class to Transition Psuedo-Element 
     container.addClass('in');
     container.dequeue();
@@ -32,6 +34,9 @@ container.delay( 1010 ).queue(function(){
 setTimeout (function() {
     setupJsPlugins();
     console.log('Plugins have been Reinitialized.');
+    if (link === 'https://joseph-bowman.netmatters-scs.co.uk/#contact-me') {
+    $('#pageContainer #contact-me').scrollIntoView();
+}
 }, 1050);
 
 

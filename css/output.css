@@ -774,6 +774,11 @@ button:active {
   margin: 0px auto 0px 336px;
   transition: ease-in-out 0.25s;
 }
+@media (max-width: 992px) {
+  #pageContainer {
+    margin: 0px auto 0px 50px;
+  }
+}
 
 #pageContainer.active {
   margin: 0px auto 0px 50px;
