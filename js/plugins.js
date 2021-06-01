@@ -1,4 +1,7 @@
 
+// This can be used to RE-INITIALIZE all JavaScript when the page is reloaded by AJAX.
+const setupJsPlugins = function() {
+
 // Scroll Reveal Plugin Functions ------------------------------
 ScrollReveal().reveal('#pageContainer .project', { delay: 250, interval: 8, reset: false });
 ScrollReveal().reveal('#pageContainer .contact', { delay: 250, reset: false });
@@ -25,7 +28,7 @@ typewriterOne
 
 var app = document.getElementById('t2');
  
-var typewriterTwo = new Typewriter(app, {
+var typewriterTwo = new Typewriter(app, {        //REMOVED FOR TEST
   loop: false,
   delay: 45,
 });
@@ -151,7 +154,7 @@ typewriterTwo
 
 
 
-
+};
   
 
 
@@ -213,3 +216,5 @@ menu.on('click tap', function(event){
 };
 
 menuJS();
+setupJsPlugins();
+// setupTypewriter();
