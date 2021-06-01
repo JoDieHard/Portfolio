@@ -232,7 +232,6 @@
   font-size: 2rem;
   font-weight: 600;
   color: #f06856;
-  overflow: auto;
 }
 @media (max-width: 450px) {
   .contact .container .contact-info h2 {

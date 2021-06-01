@@ -270,7 +270,7 @@ $light-grey: #eee;
                 font-size: 2rem;
                 font-weight: 600;
                 color: $primary-colour;
-                overflow: auto;
+                // overflow: auto;
 
                 @media (max-width: $media-xs ) {              // EXTRA SMALL BREAKPOINT CHANGE
                     font-size: 1.8rem;
