@@ -28,7 +28,7 @@
 #pageContainer::before {
   content: " ";
   position: fixed;
-  width: 100%;
+  width: 150%;
   height: 100%;
   background: white;
   z-index: 2000;
@@ -37,5 +37,5 @@
 }
 
 #pageContainer.in::before {
-  transform: translateX(0);
+  transform: translateX(-30%);
 }

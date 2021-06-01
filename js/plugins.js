@@ -28,7 +28,7 @@ typewriterOne
 
 var app = document.getElementById('t2');
  
-var typewriterTwo = new Typewriter(app, {        //REMOVED FOR TEST
+var typewriterTwo = new Typewriter(app, {       
   loop: false,
   delay: 45,
 });
@@ -153,7 +153,6 @@ typewriterTwo
 */
 
 
-
 };
   
 
@@ -200,18 +199,6 @@ menu.on('click tap', function(event){
 
   setTimeout(function(){ isRunning = false; /* console.log( isRunning ); */ }, 400 );
 });
-
-// function myFunction(x) {
-//   if (x.matches) { // If media query matches
-    
-//   } else {
-    
-//   }
-// }
-
-
-// myFunction(x) // Call listener function at run time
-// x.addListener(myFunction) // Attach listener function on state changes
 
 };
 
