@@ -126,6 +126,10 @@ $light-grey: #eee;
 
 
             }
+            span {
+                opacity: 0.3;
+                pointer-events: none;
+            }
         }
     }
 }
@@ -140,17 +144,18 @@ $light-grey: #eee;
                     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .6));
                     width: 150px;
                     align-self: center;
+                    padding-bottom: 20px;
 
                     &:hover {
                         opacity: 85%;
                     }
 
-                button {
+                .scrollButton {
                     @include flexbox;
                     @include flex-direction(column);
 
                     background: transparent;
-                    color: black;
+                    color: white;
                     text-decoration: none;
 
                     :visited, :link {
@@ -256,20 +261,54 @@ $light-grey: #eee;
             width: 400px;
             padding: 0px 47px 50px;
             line-height: 1.5rem;
-
-            h1 {
-                color: $primary-colour;
-            }
+            // display: flex;
+            // flex-direction: column;
+            @include flexbox;
+            @include flex-direction(column);
 
             h2 {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $primary-colour;
+                overflow: auto;
+
+                @media (max-width: $media-xs ) {              // EXTRA SMALL BREAKPOINT CHANGE
+                    font-size: 1.8rem;
+                    font-weight: 700; 
+                }
+            }
+
+            .c-text {
                 font-size: 1.2rem;
                 font-weight: 400;
                 color: $primary-colour;
                 overflow: auto;
 
-                @media (max-width: $media-xs ) {              // EXTRA SMALL BREAKPOINT CHANGE
-                    font-size: 1rem;
-                    font-weight: 700; 
+                @media (max-width: $media-m ) {              // EXTRA SMALL BREAKPOINT CHANGE
+                    display: none;
+                }
+            }
+
+            .c-button {
+                padding: 15px;
+                margin: 10px 10px 10px 0px;
+                width: 190px;
+                border-radius: 3px;
+                background: $primary-colour;
+                color: white;
+                transition: ease-in-out .25s;
+                display: none;
+                &:hover {
+                    background: #d95c4c;
+                }
+
+                i {
+                    padding-left: 10px;
+                }
+
+                @media (max-width: $media-m ) {              // EXTRA SMALL BREAKPOINT CHANGE
+                    display: block;
+                    align-self: center;
                 }
             }
 
@@ -367,17 +406,18 @@ $light-grey: #eee;
                     border-radius: 4px;
                     background: white;
                     resize: none;           //This removes resize in bottom right
-    ;
+    
                 }
 
                 input[type="text"] {
                     padding: 15px;
                     margin: 10px;
-
-                    border: none;
+                    border: 2px solid transparent;
+                    // border: none;
                     border-radius: 4px;
                     background: white;
                     font-size: .9rem;
+                    transition: ease-in-out .25s;
                 }
 
                 input[type="submit"] {
@@ -386,6 +426,7 @@ $light-grey: #eee;
                     background: $primary-colour;
                     // border: solid black 2px;
                     border: none;
+                    border: 2px solid transparent;
                     padding: 1rem;
                     margin: 10px;
                     width: 150px;
@@ -402,7 +443,7 @@ $light-grey: #eee;
                     &:hover, &:focus {
                         background: #d95c4c;
                         outline: none;
-                        // border: 2px solid #d95c4c;
+                        border: 2px solid #d95c4c;
                     }
 
                     @media (max-width: $media-m) {              // 1325px CUSTOM BREAKPOINT CHANGE
@@ -411,8 +452,8 @@ $light-grey: #eee;
                 }
 
                 input[type="text"]:focus, textarea:focus {
-                    transform: scale(1.025);
-                    transition: ease-in-out .25s;
+                    // transform: scale(1.025);
+                    // transition: ease-in-out .25s;
                     outline: none;
                     border: 2px solid $primary-colour;
                     
@@ -434,7 +475,7 @@ $light-grey: #eee;
 
     .container {
 
-        button {
+        .scrollButton {
             @include flexbox;
             @include flex-direction(column);
             background: transparent;

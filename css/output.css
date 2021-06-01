@@ -87,6 +87,10 @@
   color: #d95c4c;
   transform: scale(1.1);
 }
+.side-menu .container ul span {
+  opacity: 0.3;
+  pointer-events: none;
+}
 
 .cover-image .container a {
   display: -ms-flexbox;
@@ -97,24 +101,25 @@
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.6));
   width: 150px;
   align-self: center;
+  padding-bottom: 20px;
 }
 .cover-image .container a:hover {
   opacity: 85%;
 }
-.cover-image .container a button {
+.cover-image .container a .scrollButton {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
   background: transparent;
-  color: black;
+  color: white;
   text-decoration: none;
 }
-.cover-image .container a button :visited, .cover-image .container a button :link {
+.cover-image .container a .scrollButton :visited, .cover-image .container a .scrollButton :link {
   text-decoration: none;
 }
-.cover-image .container a button i {
+.cover-image .container a .scrollButton i {
   padding-top: 10px;
   margin: auto auto;
   animation: hop 1s infinite;
@@ -217,20 +222,55 @@
   width: 400px;
   padding: 0px 47px 50px;
   line-height: 1.5rem;
-}
-.contact .container .contact-info h1 {
-  color: #f06856;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
 }
 .contact .container .contact-info h2 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 600;
   color: #f06856;
   overflow: auto;
 }
 @media (max-width: 450px) {
   .contact .container .contact-info h2 {
-    font-size: 1rem;
+    font-size: 1.8rem;
     font-weight: 700;
+  }
+}
+.contact .container .contact-info .c-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f06856;
+  overflow: auto;
+}
+@media (max-width: 992px) {
+  .contact .container .contact-info .c-text {
+    display: none;
+  }
+}
+.contact .container .contact-info .c-button {
+  padding: 15px;
+  margin: 10px 10px 10px 0px;
+  width: 190px;
+  border-radius: 3px;
+  background: #f06856;
+  color: white;
+  transition: ease-in-out 0.25s;
+  display: none;
+}
+.contact .container .contact-info .c-button:hover {
+  background: #d95c4c;
+}
+.contact .container .contact-info .c-button i {
+  padding-left: 10px;
+}
+@media (max-width: 992px) {
+  .contact .container .contact-info .c-button {
+    display: block;
+    align-self: center;
   }
 }
 @media (max-width: 1325px) {
@@ -328,16 +368,18 @@
 .contact .container .contact-form form input[type=text] {
   padding: 15px;
   margin: 10px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 4px;
   background: white;
   font-size: 0.9rem;
+  transition: ease-in-out 0.25s;
 }
 .contact .container .contact-form form input[type=submit] {
   -webkit-appearance: none;
   display: inline-block;
   background: #f06856;
   border: none;
+  border: 2px solid transparent;
   padding: 1rem;
   margin: 10px;
   width: 150px;
@@ -352,6 +394,7 @@
 .contact .container .contact-form form input[type=submit]:hover, .contact .container .contact-form form input[type=submit]:focus {
   background: #d95c4c;
   outline: none;
+  border: 2px solid #d95c4c;
 }
 @media (max-width: 992px) {
   .contact .container .contact-form form input[type=submit] {
@@ -359,8 +402,6 @@
   }
 }
 .contact .container .contact-form form input[type=text]:focus, .contact .container .contact-form form textarea:focus {
-  transform: scale(1.025);
-  transition: ease-in-out 0.25s;
   outline: none;
   border: 2px solid #f06856;
 }
@@ -373,7 +414,7 @@
   background: white;
   padding-top: 30px;
 }
-.footer .container button {
+.footer .container .scrollButton {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -384,15 +425,15 @@
   text-decoration: none;
   opacity: 0.25;
 }
-.footer .container button i {
+.footer .container .scrollButton i {
   padding-bottom: 10px;
   animation: hop 1s infinite;
   margin: auto auto;
 }
-.footer .container button :visited, .footer .container button :link {
+.footer .container .scrollButton :visited, .footer .container .scrollButton :link {
   text-decoration: none;
 }
-.footer .container button:hover {
+.footer .container .scrollButton:hover {
   opacity: 0.5;
 }
 .footer .container a {

@@ -1,7 +1,7 @@
 
 // Scroll Reveal Plugin Functions ------------------------------
-ScrollReveal().reveal('.project', { delay: 250, interval: 8, reset: false });
-ScrollReveal().reveal('.contact', { delay: 250, reset: false });
+ScrollReveal().reveal('#pageContainer .project', { delay: 250, interval: 8, reset: false });
+ScrollReveal().reveal('#pageContainer .contact', { delay: 250, reset: false });
 
 // TypeWriterJS Plugin Functions ------------------------------
 /*
@@ -41,7 +41,7 @@ typewriterTwo
     animations: [
       {
         range: [100, 400],
-        selector: '.cover-image',
+        selector: '#pageContainer .cover-image',
         type: 'scale',
         style: 'transform:translateY',
         from: 0,
@@ -50,7 +50,7 @@ typewriterTwo
       }, 
       {
         range: [100, 400],
-        selector: '.scroll-down-btn',
+        selector: '#pageContainer .scroll-down-btn',
         type: 'scale',
         style: 'transform:translateY',
         from: 0, 
@@ -59,7 +59,7 @@ typewriterTwo
       },
       {
         range: [-1, 250],
-        selector: '.intro-text',
+        selector: '#pageContainer .intro-text',
         type: 'scale',
         style: 'transform:translateY',
         from: 0,
@@ -68,7 +68,7 @@ typewriterTwo
       },
       {
         range: [-1, 500],
-        selector: '.intro-text',
+        selector: '#pageContainer .intro-text',
         type: 'scale',
         style: 'transform:scale',
         from: 1,
@@ -76,7 +76,7 @@ typewriterTwo
       },
       {
         range: [500, 600],
-        selector: '.intro-text',
+        selector: '#pageContainer .intro-text',
         type: 'scale',
         style: 'opacity',
         from: 1,
@@ -84,7 +84,7 @@ typewriterTwo
       },
       {
         range: [750, 850],
-        selector: '.scroll-down-btn',
+        selector: '#pageContainer .scroll-down-btn',
         type: 'scale',
         style: 'opacity',
         from: 1,
