@@ -30,7 +30,7 @@
   position: fixed;
   width: 150%;
   height: 100%;
-  background: white;
+  background: $primary-colour;
   z-index: 2000;
   transition: ease-in-out .3s;
   transform: translateX(-130%);

@@ -32,7 +32,7 @@ container.delay( 1010 ).queue(function(){
 setTimeout (function() {
     setupJsPlugins();
     console.log('Plugins have been Reinitialized.');
-}, 10);
+}, 1050);
 
 
 
