@@ -150,7 +150,7 @@
 }
 .projects .container .project {
   width: 30%;
-  height: 300px;
+  height: 400px;
   margin: 10px;
   background: #eee;
   border-bottom: solid 0px #f06856;
@@ -185,15 +185,45 @@
   width: 100%;
   height: 70%;
 }
+.projects .container .project .img-container img {
+  width: auto;
+  height: 100%;
+}
+@media (max-width: 1260px) {
+  .projects .container .project .img-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1145px) {
+  .projects .container .project .img-container img {
+    height: 100%;
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .projects .container .project .img-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .projects .container .project .img-container img {
+    width: auto;
+    height: 100%;
+  }
+}
 .projects .container .project h2 {
   font-size: 1.2rem;
   margin-left: 2rem;
+  margin-top: 30px;
 }
 .projects .container .project button {
   background: transparent;
   color: black;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-top: 0px;
+  opacity: 0.3;
 }
 
 .contact {

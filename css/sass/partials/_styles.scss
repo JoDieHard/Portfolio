@@ -189,7 +189,7 @@ $light-grey: #eee;
 
         .project {
             width: 30%;
-            height: 300px;
+            height: 400px;
             margin: 10px;
             background: $light-grey;
             border-bottom: solid 0px $primary-colour;
@@ -222,18 +222,46 @@ $light-grey: #eee;
                 background-size: cover;
                 width: 100%;
                 height: 70%;
+
+                img {
+                    width: auto;
+                    height: 100%;
+
+                    @media (max-width: $media-l) {              // MEDIUM BREAKPOINT CHANGE
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    @media (max-width: 1145px) {              // MEDIUM BREAKPOINT CHANGE
+                        height: 100%;
+                        width: auto;
+                    }
+
+                    @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    @media (max-width: $media-s) {              // MEDIUM BREAKPOINT CHANGE
+                        width: auto;
+                        height: 100%;
+                    }
+                }
             }
+
 
             h2 {
                 font-size: 1.2rem;
                 margin-left: 2rem;
+                margin-top: 30px;
             }
 
             button {
                 background: transparent;
                 color: black;
-                font-size: .8rem;
+                font-size: 1rem;
                 padding-top: 0px;
+                opacity: .3;
             }
         }
     }
