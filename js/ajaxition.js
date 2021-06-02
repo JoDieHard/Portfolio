@@ -44,7 +44,6 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
         setupJsPlugins();
         console.log('Plugins have been Reinitialized.');
         console.log(pageIndicatorPos.top);
-        pageIndicator.offset({ left: (pageIndicatorPos.left + linkClicked.width()) + 10, top: pageIndicatorPos.top });
 
         if (link === 'https://joseph-bowman.netmatters-scs.co.uk/#contact-me') {
         $('#pageContainer #contact-me')[0].scrollIntoView();
@@ -52,6 +51,8 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
             $('#top')[0].scrollIntoView();
         }
     }, 550);
+
+    pageIndicator.offset({ left: (pageIndicatorPos.left + linkClicked.width()) + 10, top: pageIndicatorPos.top });
 
 
 });
