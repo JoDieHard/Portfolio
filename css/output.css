@@ -49,16 +49,6 @@
   color: #f06856;
 }
 .side-menu .container ul .page-link :hover:after, .side-menu .container ul .current-page :after {
-  content: "";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  font-size: 0.5rem;
-  padding-left: 3px;
-  vertical-align: middle;
-  font-weight: 900;
-  margin-left: 10px;
-  margin-top: 3px;
   color: #f06856;
 }
 .side-menu .container ul .socials {

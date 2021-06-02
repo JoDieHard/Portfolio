@@ -93,7 +93,7 @@ $light-grey: #eee;
             }
 
             .page-link :hover:after, .current-page :after  {
-                @include hover-after;         
+                // @include hover-after;         
                 color: $primary-colour;
             }
 
