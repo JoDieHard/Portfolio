@@ -137,6 +137,15 @@ $light-grey: #eee;
 
 .cover-image {                            // COVER IMAGE 
         .container {
+
+                .intro-text {
+                    @media (max-width: $media-xs) {              // LARGE BREAKPOINT CHANGE 
+                        position: relative;
+                        top: -70px;
+                    }
+
+                }
+
                 a {
                     @include flexbox;
                     @include justify-content (center);
@@ -225,25 +234,10 @@ $light-grey: #eee;
                 height: 70%;
 
                 img {
-                    width: auto;
-                    height: 100%;
+                    width: 100%;
+                    height: auto;
 
-                    @media (max-width: $media-l) {              // MEDIUM BREAKPOINT CHANGE
-                        width: 100%;
-                        height: auto;
-                    }
-
-                    @media (max-width: 1145px) {              // MEDIUM BREAKPOINT CHANGE
-                        height: 100%;
-                        width: auto;
-                    }
-
-                    @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
-                        width: 100%;
-                        height: auto;
-                    }
-
-                    @media (max-width: $media-s) {              // MEDIUM BREAKPOINT CHANGE
+                    @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
                         width: auto;
                         height: 100%;
                     }
