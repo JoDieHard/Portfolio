@@ -93,8 +93,9 @@
   align-self: center;
   padding-bottom: 20px;
 }
-.cover-image .container a:hover {
+.cover-image .container a:hover, .cover-image .container a:focus {
   opacity: 85%;
+  outline: none;
 }
 .cover-image .container a .scrollButton {
   display: -ms-flexbox;
@@ -269,6 +270,10 @@
   font-weight: 400;
   color: #f06856;
   overflow: auto;
+}
+.contact .container .contact-info .c-text:focus {
+  outline: none;
+  text-decoration: underline;
 }
 @media (max-width: 992px) {
   .contact .container .contact-info .c-text {
@@ -457,13 +462,17 @@
 .footer .container .scrollButton :visited, .footer .container .scrollButton :link {
   text-decoration: none;
 }
-.footer .container .scrollButton:hover {
+.footer .container .scrollButton:hover, .footer .container .scrollButton:focus {
   opacity: 0.5;
 }
 .footer .container a {
   display: inline-flex;
   text-align: center;
   margin: 0px auto 30px auto;
+}
+.footer .container a:focus {
+  opacity: 0.5;
+  outline: none;
 }
 
 body {

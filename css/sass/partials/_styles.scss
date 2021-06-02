@@ -146,8 +146,9 @@ $light-grey: #eee;
                     align-self: center;
                     padding-bottom: 20px;
 
-                    &:hover {
+                    &:hover, &:focus {
                         opacity: 85%;
+                        outline: none;
                     }
 
                 .scrollButton {
@@ -315,6 +316,11 @@ $light-grey: #eee;
                 font-weight: 400;
                 color: $primary-colour;
                 overflow: auto;
+
+                &:focus {
+                    outline: none;
+                    text-decoration: underline;
+                }
 
                 @media (max-width: $media-m ) {              // EXTRA SMALL BREAKPOINT CHANGE
                     display: none;
@@ -526,7 +532,7 @@ $light-grey: #eee;
                 text-decoration: none;
             }
 
-            &:hover {
+            &:hover, &:focus {
                 opacity: 0.5;
             }
         }
@@ -535,6 +541,11 @@ $light-grey: #eee;
             display: inline-flex;
             text-align: center;
             margin: 0px auto 30px auto;
+
+            &:focus {
+                opacity: 0.5;
+                outline: none;
+            }
         }
     }
 }
