@@ -45,3 +45,23 @@
 #pageContainer.in::before {
   transform: translateX(-30%);
 }
+
+// !! NEW !! Page Indicator for menu CSS
+
+#pageIndicator {
+  color: $primary-colour;
+  display: inline;
+  font-size: 1.3rem;
+  position: relative;
+  left: 150px;
+  top: 201px;
+  width: 30px;
+  height: 30px;
+
+  transition: cubic-bezier(.31,-0.54,.74,1.55) .5s;
+
+  i {
+    transform: translateY( -3px );
+  }
+
+}

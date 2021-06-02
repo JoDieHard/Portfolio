@@ -6,7 +6,10 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
         const linkContent = link + ' .ajaxition';
         const container = $('#pageContainer');
         // const menu = $('#menu');
-        // const linkClicked = $(this);
+        const linkClicked = $(this);
+
+        const pageIndicator = $('#pageIndicator');
+        let pageIndicatorPos = linkClicked.offset();
 
     container.delay( 50 ).queue(function(){   // Adds class to Transition Psuedo-Element 
         container.addClass('in');
@@ -24,11 +27,15 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
         // Loads new HTML to page
         container.load(linkContent);
         console.log(link + ' has been loaded.');  
+        $('#menu ul').each(function () {
+            $('li').removeClass('current-page');
+        });
     }, 200);
 
     // Removes class from Transition Psuedo Element
     container.delay( 500 ).queue(function(){
         container.removeClass('in');
+        linkClicked.parent().addClass('current-page');
         container.dequeue();
     });
 
@@ -36,6 +43,8 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
     setTimeout (function() {
         setupJsPlugins();
         console.log('Plugins have been Reinitialized.');
+        console.log(pageIndicatorPos.top);
+        pageIndicator.offset({ left: (pageIndicatorPos.left + linkClicked.width()) + 10, top: pageIndicatorPos.top });
 
         if (link === 'https://joseph-bowman.netmatters-scs.co.uk/#contact-me') {
         $('#pageContainer #contact-me')[0].scrollIntoView();
