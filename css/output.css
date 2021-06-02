@@ -208,6 +208,11 @@
   margin-left: 2rem;
   margin-top: 30px;
 }
+@media (max-width: 767px) {
+  .projects .container .project h2 {
+    margin-top: 15px;
+  }
+}
 .projects .container .project button {
   background: transparent;
   color: black;

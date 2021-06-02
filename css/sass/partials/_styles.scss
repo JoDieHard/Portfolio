@@ -254,6 +254,10 @@ $light-grey: #eee;
                 font-size: 1.2rem;
                 margin-left: 2rem;
                 margin-top: 30px;
+
+                @media (max-width: $media-s) {              // MEDIUM BREAKPOINT CHANGE
+                   margin-top: 15px;
+                }
             }
 
             button {
