@@ -146,17 +146,86 @@
   margin-top: 10px;
 }
 .projects .container .project {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
   width: 30%;
   height: 400px;
   margin: 10px;
   background: #eee;
   border-bottom: solid 0px #f06856;
   cursor: pointer;
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  background: #eee url("../assets/img/placeholder.jpg") no-repeat center;
+  background-size: cover;
+  box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.1);
+}
+.projects .container .project i {
+  opacity: 0;
+  font-size: 3.5rem;
+  color: white;
+  z-index: 11;
+  padding: 20px;
+  border: solid white 3px;
+  border-radius: 50%;
+  margin-top: 80px;
+  transition: 0.3s ease-in-out;
+}
+.projects .container .project p {
+  font-size: 1rem;
+  color: white;
+  z-index: 11;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.projects .container .project::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
 }
 .projects .container .project:hover {
   transform: scale(1.05);
   border-bottom: solid 5px #f06856;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+}
+.projects .container .project:hover .prjct-img {
+  opacity: 0;
+  transform: scale(1.05);
+}
+.projects .container .project:hover .prjct-mp4 {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.projects .container .project:hover i {
+  opacity: 0.8;
+  font-size: 4rem;
+  padding: 30px;
+  border-width: 7px;
+}
+.projects .container .project:hover p {
+  opacity: 1;
+}
+.projects .container .project:hover::after {
+  opacity: 0.3;
+}
+.projects .container .project:hover .prjct-text {
+  transform: translateY(40px);
 }
 @media (max-width: 1260px) {
   .projects .container .project {
@@ -174,35 +243,42 @@
     height: 300px;
   }
 }
-.projects .container .project .img-container {
-  overflow: hidden;
-  position: relative;
-  background: #eee url("../assets/img/placeholder.jpg") no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 70%;
-}
-.projects .container .project .img-container img {
-  width: 100%;
-  height: auto;
+.projects .container .project .prjct-mp4 {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  top: 0;
 }
 @media (max-width: 450px) {
-  .projects .container .project .img-container img {
+  .projects .container .project .prjct-mp4 {
     width: auto;
     height: 100%;
   }
 }
-.projects .container .project h2 {
+.projects .container .project .prjct-img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.projects .container .prjct-text {
+  position: relative;
+  bottom: -60px;
+  width: 100%;
+  background: #f06856;
+  z-index: 12;
+  padding: 5px 0px 15px;
+  transition: cubic-bezier(0.31, -0.54, 0.74, 1.55) 0.5s;
+}
+.projects .container .prjct-text h2 {
   font-size: 1.2rem;
   margin-left: 2rem;
-  margin-top: 30px;
+  color: white;
 }
-@media (max-width: 767px) {
-  .projects .container .project h2 {
-    margin-top: 15px;
-  }
-}
-.projects .container .project button {
+.projects .container .prjct-text button {
   background: transparent;
   color: black;
   font-size: 1rem;

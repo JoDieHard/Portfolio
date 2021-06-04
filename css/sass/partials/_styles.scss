@@ -198,17 +198,100 @@ $light-grey: #eee;
         margin-top: 10px;
 
         .project {
+
+            @include flexbox;
+            @include justify-content(center);
+            @include align-items(center);
+            @include flex-direction(column);
+
             width: 30%;
             height: 400px;
             margin: 10px;
             background: $light-grey;
             border-bottom: solid 0px $primary-colour;
             cursor: pointer;
-            transition: .1s ease-in-out;
+            transition: .3s ease-in-out;
 
+            overflow: hidden;
+            position: relative;
+            background: $light-grey url("../assets/img/placeholder.jpg") no-repeat center;
+            background-size: cover;
+            box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.1);
+
+            i {
+                opacity: 0;
+                font-size: 3.5rem;
+                color: white;
+                z-index: 11;
+                // width: 30px;
+                // height: 30px;
+                padding: 20px;
+                border: solid white 3px;
+                border-radius: 50%;
+                margin-top: 80px;
+
+                transition: .3s ease-in-out;
+            }
+
+            p {
+                font-size: 1rem;
+                color: white;
+                z-index: 11;
+                margin-top: 20px;
+                opacity: 0;
+
+                transition: .5s ease-in-out;
+            }
+
+            &::after {
+                content: " ";
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                opacity: 0;
+                background-color: black;
+                position: absolute;
+                top: 0;
+                z-index: 10;
+
+                transition: .3s ease-in-out;
+            }
+
+            // This is the Hover Styling for Projects 
             &:hover {
                 transform: scale(1.05);
                 border-bottom: solid 5px $primary-colour;
+                box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2);
+
+                .prjct-img {
+                    opacity: 0;
+                    transform: scale(1.05);
+                }
+
+                .prjct-mp4 {
+                    opacity: 1;
+                    transform: scale(1.05);
+                }
+
+                i {
+                    opacity: 0.8;
+                    font-size: 4rem;
+                    padding: 30px;
+                    border-width: 7px;
+                }
+
+                p {
+                    opacity: 1;
+                }
+
+                &::after {
+                    opacity: .3;
+                }
+
+                .prjct-text {
+                    // bottom: -120px;
+                    transform: translateY(40px);
+                }
             }
 
             @media (max-width: $media-l) {              // LARGE BREAKPOINT CHANGE 
@@ -225,33 +308,47 @@ $light-grey: #eee;
                 height: 300px;   
             }
 
-            .img-container {
-                overflow: hidden;
-                position: relative;
-                background: $light-grey url("../assets/img/placeholder.jpg") no-repeat center;
-                background-size: cover;
-                width: 100%;
-                height: 70%;
+            .prjct-mp4 {
 
-                img {
-                    width: 100%;
-                    height: auto;
+                width: auto;
+                height: 100%;
+                position: absolute;
+                transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                top: 0;
 
                     @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
                         width: auto;
                         height: 100%;
                     }
                 }
+
+                .prjct-img {
+                    width: auto;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                } 
             }
 
+            .prjct-text {
 
+                position: relative;
+                bottom: -60px;
+                width: 100%;
+                background: $primary-colour;
+                z-index: 12;
+                padding: 5px 0px 15px;
+
+                transition: cubic-bezier(.31,-0.54,.74,1.55) .5s;
             h2 {
                 font-size: 1.2rem;
                 margin-left: 2rem;
-                margin-top: 30px;
+                color: white;
 
                 @media (max-width: $media-s) {              // MEDIUM BREAKPOINT CHANGE
-                   margin-top: 15px;
+                //    margin-top: 15px;
                 }
             }
 
@@ -262,6 +359,7 @@ $light-grey: #eee;
                 padding-top: 0px;
                 opacity: .3;
             }
+        
         }
     }
 }
