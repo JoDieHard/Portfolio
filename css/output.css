@@ -335,7 +335,7 @@
   color: #f06856;
   overflow: auto;
 }
-.contact .container .contact-info .c-text:focus {
+.contact .container .contact-info .c-text:focus, .contact .container .contact-info .c-text:hover {
   outline: none;
   text-decoration: underline;
 }

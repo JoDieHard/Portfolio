@@ -409,7 +409,7 @@ $light-grey: #eee;
                 color: $primary-colour;
                 overflow: auto;
 
-                &:focus {
+                &:focus, &:hover {
                     outline: none;
                     text-decoration: underline;
                 }
