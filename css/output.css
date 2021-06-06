@@ -1,4 +1,13 @@
 @charset "UTF-8";
+pre {
+  background: #282828;
+  margin: 0px 100px;
+}
+pre code {
+  font-family: monospace;
+  color: white;
+}
+
 .side-menu {
   position: fixed;
   left: 0px;
@@ -179,6 +188,11 @@
   margin-top: 80px;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 450px) {
+  .projects .container .project i {
+    transform: scale(0.8);
+  }
+}
 .projects .container .project p {
   font-size: 1rem;
   color: white;
@@ -186,6 +200,12 @@
   margin-top: 20px;
   opacity: 0;
   transition: 0.5s ease-in-out;
+}
+@media (max-width: 450px) {
+  .projects .container .project p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
 }
 .projects .container .project::after {
   content: " ";
@@ -217,6 +237,9 @@
   font-size: 4rem;
   padding: 30px;
   border-width: 7px;
+}
+.projects .container .project:hover i:hover {
+  opacity: 1;
 }
 .projects .container .project:hover p {
   opacity: 1;
@@ -284,6 +307,16 @@
   font-size: 1rem;
   padding-top: 0px;
   opacity: 0.3;
+}
+@media (max-width: 992px) {
+  .projects .container .prjct-text {
+    bottom: -105px;
+  }
+}
+@media (max-width: 450px) {
+  .projects .container .prjct-text {
+    bottom: -20px;
+  }
 }
 
 .contact {

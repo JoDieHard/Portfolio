@@ -1,3 +1,14 @@
+pre {
+    background: rgb(40, 40, 40);
+    margin: 0px 100px;
+
+    code {
+        font-family: monospace;
+        color: white;
+    }
+}
+
+
 // Side Menu Page Indicator Mixin 
             @mixin hover-after($icon:"\f054") {
                 content: $icon;
@@ -231,6 +242,10 @@ $light-grey: #eee;
                 margin-top: 80px;
 
                 transition: .3s ease-in-out;
+
+                @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                    transform: scale(0.8);
+                }
             }
 
             p {
@@ -241,6 +256,11 @@ $light-grey: #eee;
                 opacity: 0;
 
                 transition: .5s ease-in-out;
+
+                @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                    font-size: .8rem;
+                    margin-top: 5px;
+                }
             }
 
             &::after {
@@ -278,6 +298,10 @@ $light-grey: #eee;
                     font-size: 4rem;
                     padding: 30px;
                     border-width: 7px;
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
 
                 p {
@@ -358,6 +382,14 @@ $light-grey: #eee;
                 font-size: 1rem;
                 padding-top: 0px;
                 opacity: .3;
+            }
+
+            @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
+                bottom: -105px;
+            }
+
+            @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                bottom: -20px;
             }
         
         }

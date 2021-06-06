@@ -56,6 +56,43 @@
             <div class="box-section placeholder">
             <h1>Coming Soon...</h1>
             </div>
+
+            <pre>
+                <code>
+        const menuJS = function () {
+
+            const menuLinks = $('.page-link');
+            const menu = $('#menu');
+            const wrap = $('#pageContainer');
+            let isRunning;
+            
+            menu.on('click tap', function(event){
+                if ( isRunning ) {
+                return;
+            
+                } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+                return;   
+                } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
+                $(this).removeClass('active');
+                wrap.delay( 350 ).queue(function(){
+                    wrap.removeClass('active');
+                    wrap.dequeue();
+                });
+            
+                } else {  // ELSE CLOSE MENU
+                $(this).delay( 350 ).queue(function(){
+                    $(this).addClass('active');
+                    $(this).dequeue();
+                });
+                wrap.addClass('active');          
+                }
+            
+                isRunning = true;
+                setTimeout(function(){ isRunning = false; }, 400 );
+        });
+                </code>
+            </pre>
+
         </div>
 
 <!-- --------------------------------------------------------------------------------------- -->

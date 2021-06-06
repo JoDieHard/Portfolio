@@ -53,6 +53,5 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
     }, 550);
 
     pageIndicator.offset({ left: (pageIndicatorPos.left + linkClicked.width()) + 10, top: pageIndicatorPos.top });
-
-
+    
 });
