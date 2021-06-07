@@ -185,6 +185,7 @@ pre code {
   padding: 20px;
   border: solid white 3px;
   border-radius: 50%;
+  margin-top: -10px;
   transition: 0.3s ease-in-out;
 }
 @media (max-width: 450px) {
@@ -626,6 +627,9 @@ body {
 .box-section h1 {
   color: #f06856;
   line-height: 1.7rem;
+}
+.box-section h2 {
+  color: #f06856;
 }
 .box-section a {
   opacity: 40%;
