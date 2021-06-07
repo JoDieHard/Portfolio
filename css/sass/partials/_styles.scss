@@ -239,7 +239,7 @@ $light-grey: #eee;
                 padding: 20px;
                 border: solid white 3px;
                 border-radius: 50%;
-                margin-top: 80px;
+                // margin-top: 80px;
 
                 transition: .3s ease-in-out;
 
@@ -263,7 +263,7 @@ $light-grey: #eee;
                 }
             }
 
-            &::after {
+            &::after {                  // Overlay using Psuedo Element
                 content: " ";
                 width: 100%;
                 height: 100%;
@@ -314,7 +314,7 @@ $light-grey: #eee;
 
                 .prjct-text {
                     // bottom: -120px;
-                    transform: translateY(40px);
+                    transform: translateY(60px);
                 }
             }
 
@@ -358,8 +358,8 @@ $light-grey: #eee;
 
             .prjct-text {
 
-                position: relative;
-                bottom: -60px;
+                position: absolute;
+                bottom: -15px;
                 width: 100%;
                 background: $primary-colour;
                 z-index: 12;
@@ -393,6 +393,23 @@ $light-grey: #eee;
             }
         
         }
+
+        .prjct-desc {
+            position: absolute;
+            bottom: 0px;
+            max-width: 80%;
+
+            text-align: center;
+            line-height: 1.4rem;
+            background:rgba(0, 0, 0, .4);
+            padding: 7.5px;
+
+            @media (max-width: $media-xs) {          // MEDIUM BREAKPOINT CHANGE
+                display: none;
+            }
+            
+        }
+
     }
 }
 //------------------------------------------------------

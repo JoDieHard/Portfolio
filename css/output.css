@@ -185,7 +185,6 @@ pre code {
   padding: 20px;
   border: solid white 3px;
   border-radius: 50%;
-  margin-top: 80px;
   transition: 0.3s ease-in-out;
 }
 @media (max-width: 450px) {
@@ -248,7 +247,7 @@ pre code {
   opacity: 0.3;
 }
 .projects .container .project:hover .prjct-text {
-  transform: translateY(40px);
+  transform: translateY(60px);
 }
 @media (max-width: 1260px) {
   .projects .container .project {
@@ -288,8 +287,8 @@ pre code {
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .projects .container .prjct-text {
-  position: relative;
-  bottom: -60px;
+  position: absolute;
+  bottom: -15px;
   width: 100%;
   background: #f06856;
   z-index: 12;
@@ -316,6 +315,20 @@ pre code {
 @media (max-width: 450px) {
   .projects .container .prjct-text {
     bottom: -20px;
+  }
+}
+.projects .container .prjct-desc {
+  position: absolute;
+  bottom: 0px;
+  max-width: 80%;
+  text-align: center;
+  line-height: 1.4rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 7.5px;
+}
+@media (max-width: 450px) {
+  .projects .container .prjct-desc {
+    display: none;
   }
 }
 
