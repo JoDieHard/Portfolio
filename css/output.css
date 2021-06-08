@@ -599,7 +599,13 @@ pre {
 }
 
 .fh {
-  height: auto;
+  height: auto !important;
+}
+
+@media (max-width: 450px) {
+  .fh-mob {
+    height: auto !important;
+  }
 }
 
 .box-section {

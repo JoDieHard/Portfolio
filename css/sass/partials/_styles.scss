@@ -719,7 +719,13 @@ height: auto !important;
 }
 
 .fh {       // This is a Full Height Fix
-    height: auto;
+    height: auto !important;
+}
+
+.fh-mob {
+    @media (max-width: $media-xs) {              // SMALL BREAKPOINT CHANGE
+        height: auto !important;
+    }
 }
 
 .box-section {
