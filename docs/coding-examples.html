@@ -3,6 +3,7 @@
 <head>
     <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="../js/animsition/dist/css/animsition.min.css">    animsition.css -->
+    <link href="../js/prism/prism.css" rel="stylesheet"> <!-- This is Prim.JS CSS -->
     <link rel="stylesheet" href="../css/output.css">
 
     <meta charset="UTF-8">
@@ -11,7 +12,56 @@
     <title>Joseph Bowman's Portfolio | Coding Examples</title>
     <link rel="shortcut icon" type="image/png" href="../assets/jFavicon.png">
     <script src="https://unpkg.com/scrollreveal"></script>
+
 </head>
+
+    <body>
+        <div class="secondary-wrapper ajaxition">
+            <!-- <div class="box-section placeholder">
+            <h1>Coming Soon...</h1> -->
+                <div class="box-section">
+                    <h1>Coding Example</h1>
+            <h2>This is an example of the JavaScript I wrote to control the navigation menu on this website.</h2>
+
+            <main>
+                <pre>
+                    <code class="language-js" id="code-eg">
+const menuJS = function () {
+
+    const menuLinks = $('.page-link');
+    const menu = $('#menu');
+    const wrap = $('#pageContainer');
+    let isRunning;
+    
+    menu.on('click tap', function(event){
+        if ( isRunning ) {
+        return;
+    
+        } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+        return;   
+        } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
+        $(this).removeClass('active');
+        wrap.delay( 350 ).queue(function(){
+            wrap.removeClass('active');
+            wrap.dequeue();
+        });
+    
+        } else {  // ELSE CLOSE MENU
+        $(this).delay( 350 ).queue(function(){
+            $(this).addClass('active');
+            $(this).dequeue();
+        });
+        wrap.addClass('active');          
+        }
+    
+        isRunning = true;
+        setTimeout(function(){ isRunning = false; }, 400 );
+});
+                    </code>
+                </pre>
+            </main>
+            </div>
+        </div>
 
 <!--------  MAIN NAVIGATION SIDEBAR  ------------------------------------------------------>
 
@@ -51,55 +101,12 @@
     </div>
 </main-nav>
 
-    <body>
-        <div class="secondary-wrapper ajaxition"  style="height:100%">
-            <div class="box-section placeholder">
-            <h1>Coming Soon...</h1>
-            </div>
-
-            <!-- <pre>
-                <code>
-        const menuJS = function () {
-
-            const menuLinks = $('.page-link');
-            const menu = $('#menu');
-            const wrap = $('#pageContainer');
-            let isRunning;
-            
-            menu.on('click tap', function(event){
-                if ( isRunning ) {
-                return;
-            
-                } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
-                return;   
-                } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
-                $(this).removeClass('active');
-                wrap.delay( 350 ).queue(function(){
-                    wrap.removeClass('active');
-                    wrap.dequeue();
-                });
-            
-                } else {  // ELSE CLOSE MENU
-                $(this).delay( 350 ).queue(function(){
-                    $(this).addClass('active');
-                    $(this).dequeue();
-                });
-                wrap.addClass('active');          
-                }
-            
-                isRunning = true;
-                setTimeout(function(){ isRunning = false; }, 400 );
-        });
-                </code>
-            </pre> -->
-
-        </div>
-
 <!-- --------------------------------------------------------------------------------------- -->
 
        <!-- jQuery -->        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
        <!-- Choreographer --> <script src="../js/choreographer-js/dist/choreographer.min.js"></script>
        <!-- TypewriterJS -->  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+       <!--  Prism.JS -->     <script src="../js/prism/prism.js"></script>
        <!-- JS File -->       <script type="text/javascript" src="../js/plugins.js"></script>
 
     </body>

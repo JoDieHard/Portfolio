@@ -2,6 +2,9 @@
 // This can be used to RE-INITIALIZE all JavaScript when the page is reloaded by AJAX.
 const setupJsPlugins = function() {
 
+  // Prism JS Call 
+  Prism.highlightAll();
+
 // Scroll Reveal Plugin Functions ------------------------------
 ScrollReveal().reveal('#pageContainer .project', { delay: 250, interval: 8, reset: false });
 ScrollReveal().reveal('#pageContainer .contact', { delay: 250, reset: false });
@@ -152,8 +155,7 @@ typewriterTwo
   });
 */
 
-
-};
+};            //--------------- End of setupJSPlugins funciton
   
 
 

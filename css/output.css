@@ -1,13 +1,7 @@
 @charset "UTF-8";
 pre {
-  background: #282828;
-  margin: 0px 100px;
+  height: 400px;
 }
-pre code {
-  font-family: monospace;
-  color: white;
-}
-
 .side-menu {
   position: fixed;
   left: 0px;
@@ -586,8 +580,8 @@ pre code {
   outline: none;
 }
 
-body {
-  height: 100%;
+.secondary-body {
+  height: auto !important;
 }
 
 .secondary-wrapper {
@@ -596,11 +590,16 @@ body {
   background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
   background-size: cover;
   transition: ease-in-out 0.25s;
+  height: 100%;
 }
 @media (max-width: 767px) {
   .secondary-wrapper {
     margin: 0px auto 0px auto;
   }
+}
+
+.fh {
+  height: auto;
 }
 
 .box-section {
@@ -969,6 +968,9 @@ button:active {
 
 body {
   margin: 0px;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {

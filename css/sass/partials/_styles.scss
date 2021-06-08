@@ -1,10 +1,12 @@
+// Code Block Styling 
 pre {
-    background: rgb(40, 40, 40);
-    margin: 0px 100px;
+    // background: rgb(40, 40, 40);
+    // margin: 0px 100px;
+    height: 400px;
 
     code {
-        font-family: monospace;
-        color: white;
+        // font-family: monospace;
+        // color: white;
     }
 }
 
@@ -693,9 +695,11 @@ $light-grey: #eee;
 
 //----------------  OTHER PAGE STYLES -----------------------------------------------
 
-body {
-    height: 100%;
+.secondary-body {
+height: auto !important;
 }
+
+
 
 .secondary-wrapper {
 
@@ -704,12 +708,18 @@ body {
     padding: 50px 0px;
     background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
     background-size: cover;
+
     transition: ease-in-out .25s;
+    height: 100%;
 
     @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
         margin: 0px auto 0px auto;
     }
     
+}
+
+.fh {       // This is a Full Height Fix
+    height: auto;
 }
 
 .box-section {
