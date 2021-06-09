@@ -647,7 +647,7 @@ $success: #2ecc71;
                     background: $primary-colour;
                     // border: solid black 2px;
                     border: none;
-                    border: 1px solid transparent;
+                    border: 2px solid transparent;
                     padding: 1rem;
                     // margin-left: 105px;
                     width: 50%;
@@ -771,7 +771,9 @@ height: auto !important;
     // margin: 0px auto 0px 336px;
     margin: 0px auto;
     padding: 50px 0px;
-    background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
+    // background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
+    background-image:   linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 33, 209, 179, 0.5 ) 40% ),
+                                url(../assets/img/mountain.jpg);
     background-size: cover;
 
     transition: ease-in-out .25s;

@@ -551,7 +551,7 @@
   display: inline-block;
   background: #21d1b3;
   border: none;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 1rem;
   width: 50%;
   margin: 15px 5px 0px;
@@ -638,7 +638,7 @@
 .secondary-wrapper {
   margin: 0px auto;
   padding: 50px 0px;
-  background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
+  background-image: linear-gradient(to top, white, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   transition: ease-in-out 0.25s;
   height: 100%;
@@ -904,7 +904,7 @@ button:active {
 .wrapper .cover-image .container {
   height: 100vh;
   padding: 500px auto;
-  background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
+  background-image: linear-gradient(to top, white, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   background-position: 0%;
   text-align: center;
