@@ -42,6 +42,7 @@ $(' #menu').on('click', '.ajaxition-link', function( event ){
     // Re-Initialize Plugins
     setTimeout (function() {
         setupJsPlugins();
+        validation();
         console.log('Plugins have been Reinitialized.');
         console.log(pageIndicatorPos.top);
 
