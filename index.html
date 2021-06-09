@@ -171,14 +171,45 @@
                     <p>I will respond to your email as soon as possible. <br> Alternatively, fill the form below to send me a message from here!</p>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form">
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                        <input type="text" placeholder="E-Mail">
-                        <input type="text" placeholder="Subject">
-                        <textarea name="Message" placeholder="Message..." form="contact-form"></textarea>
-                        <!-- <input type="text" placeholder="Message..."> -->
-                        <input type="submit" value="Submit">
+                    <form id="contact-form" novalidate>
+                        <div class="form-input">
+                            <label for="fName">First Name:</label>
+                            <input type="text" placeholder="First Name" name="fName" id="fName">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-exclamation-circle error"></i>
+                            <small class="errorMsg">Error Message</small>
+
+                        </div>
+                        <div class="form-input">
+                            <label for="lName">Last Name:</label>
+                            <input type="text" placeholder="Last Name" name="lName" id="lName">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-exclamation-circle error"></i>
+                            <small class="errorMsg">Error Message</small>
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email:</label>
+                            <input type="email" placeholder="E-Mail" name="email" id="email" >
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-exclamation-circle error"></i>
+                            <small class="errorMsg">Error Message</small>
+                        </div>
+                        <div class="form-input">
+                            <label for="subject">Subject:</label>
+                            <input type="text" placeholder="Subject" name="subject" id="subject">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-exclamation-circle error"></i>
+                            <small class="errorMsg">Error Message</small>
+                        </div>
+                        <div class="form-input">
+                            <label for="message">Message:</label>
+                            <textarea name="Message" placeholder="Message..." form="contact-form" name="message" id="message"></textarea>
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-exclamation-circle error"></i>
+                            <small class="errorMsg">Error Message</small>
+                        </div>
+
+                        <input type="submit" value="Submit" id="fSubmit">
                     </form>
                     
                 </div>
@@ -246,9 +277,10 @@
        <!-- Choreographer --> <script src="js/choreographer-js/dist/choreographer.min.js"></script>
        <!-- TypewriterJS -->  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
        <!--  Prism.JS -->     <script src="js/prism/prism.js"></script>
-       <!-- animsition.js <script src="js/animsition/dist/js/animsition.min.js"></script> -->
+
        <!-- JS File -->       <script type="text/javascript" src="js/plugins.js"></script>
-       <!-- AJAXition.js -->       <script type="text/javascript" src="js/ajaxition.js"></script>
+       <!-- AJAXition.js -->  <script type="text/javascript" src="js/ajaxition.js"></script>
+       <!-- Validation.js --> <script type="text/javascript" src="js/validation.js"></script>
 
     </body>
 </html>
