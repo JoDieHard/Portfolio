@@ -558,7 +558,7 @@ $success: #2ecc71;
                     }
 
                     input, textarea {
-                        flex-grow: 2;
+                        @include flex-grow(2);
                         height: 50px;
                         padding: 15px 15px;
                         resize: none;
@@ -600,12 +600,12 @@ $success: #2ecc71;
 
                 .form-input:nth-child(1), .form-input:nth-child(2) {                // Custom form layout for large screens --------
                     width: auto;
-                    flex-grow: 1;
+                    @include flex-grow(1);
                     // margin-bottom: 32.5px;
                     @include flex-direction(column);
 
-                    @media ( max-width: 1050px) {
-                        flex-grow: 3;
+                    @media ( max-width: 1120px) {
+                        @include flex-grow(3);
                         width: 100%;
                     }
 
@@ -628,13 +628,13 @@ $success: #2ecc71;
                     // margin-left: 100px;
                     margin-right: 20px;
 
-                    @media ( max-width: 1050px) {
+                    @media ( max-width: 1120px) {
                         margin-right: 0px;
                     }
                 }
 
                 .form-input:nth-child(3), .form-input:nth-child(4), .form-input:nth-child(5) {
-                    flex-grow: 3;
+                    @include flex-grow(3);
                 }                                // End of Custom Form Layout for Large Screens ----------------------------------
 
                 .form-input:nth-child(5) {
