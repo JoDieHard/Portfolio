@@ -1,15 +1,3 @@
-// Code Block Styling 
-pre {
-    // background: rgb(40, 40, 40);
-    // margin: 0px 100px;
-    height: 400px;
-
-    code {
-        // font-family: monospace;
-        // color: white;
-    }
-}
-
 
 // Side Menu Page Indicator Mixin 
             @mixin hover-after($icon:"\f054") {
@@ -28,8 +16,12 @@ pre {
 
 //----------------  COLOUR VARIABLES -----------------------------------------------
 
-$primary-colour: #f06856;
+$primary-colour: /*#1807F6*/ #21d1b3;
+$primary-colour-dark: /*#d95c4c*/ #18a38c;
 $light-grey: #eee;
+
+$error: #f53b26;
+$success: #2ecc71;
 
 //----------------------------------------------------------------------------------
 
@@ -132,7 +124,7 @@ $light-grey: #eee;
                     
 
                     &:hover {
-                        color: #d95c4c;
+                        color: $primary-colour-dark;
                         transform: scale(1.1);
                     }
                 }
@@ -434,9 +426,14 @@ $light-grey: #eee;
 
 
         .contact-info {
-            width: 400px;
-            padding: 0px 47px 50px;
+            width: 600px;
+            // padding: 0px 47px 50px;
+            padding: 40px;
+            margin-left: 40px;
+            margin-right: 40px;
             line-height: 1.5rem;
+
+            border-right: solid 2px rgba(0,0,0, 0.1);
             // display: flex;
             // flex-direction: column;
             @include flexbox;
@@ -480,7 +477,7 @@ $light-grey: #eee;
                 transition: ease-in-out .25s;
                 display: none;
                 &:hover {
-                    background: #d95c4c;
+                    background: $primary-colour-dark;
                 }
 
                 i {
@@ -499,20 +496,23 @@ $light-grey: #eee;
 
             @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
                 text-align: center; 
+                margin-left: 0px;
+                padding: 0px 40px;
+                border: none;
             }
 
             @media (max-width: 380px ) {              // CUSTOM 380px BREAKPOINT CHANGE
-                :nth-child(4) {
-                    // transform: translateX(-17.5px);
-                }
+                // :nth-child(4) {
+                //     // transform: translateX(-17.5px);
+                // }
             }
             
         }
 
         .contact-form {
-            margin-right: 35px;
+            margin-right: 50px;
 
-            @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
+            @media (max-width: $media-l) {              // MEDIUM BREAKPOINT CHANGE
                 margin: 0px 38px;       
             }
 
@@ -521,7 +521,7 @@ $light-grey: #eee;
                 width: 70%;
             }        //IE11 specific media query
         
-            form {
+            form {                                  // This is the form styling 
                 @include flexbox;
                 @include flex-direction(row);
                 @include flex-wrap(wrap);
@@ -533,72 +533,112 @@ $light-grey: #eee;
                     @include flex($f-basis: 100%);      // ALL FLEXBASIS HAVE BEEN REPLACED WITH THIS VENDOR FRIENDLY MIXIN.
                 }
 
-                
+                .form-input {                               //----- Initial Form Styling starts here
+                    width: 100%;
+                    height: 60px;
+                    padding: 5px;
+                    position: relative;
+                    margin: 10px 0px;
 
-                :nth-child(1) {
-                    // flex-basis: 46.5%;
-                    @include flex($f-basis: 46.5%);
+                    @include flexbox;
+                    @include flex-direction(row);
+                    @include flex-wrap(nowrap);
+                    @include align-items(flex-start);
+                    @include justify-content(space-between);
 
-                    @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                        // flex-basis: 95.5%;
-                        @include flex($f-basis: 95.5%); 
+                    label {
+                        // padding: 10px;
+                        width: 85px;
+                        color: $primary-colour;
+                        margin-right: 15px;
+                        text-align: right;
+                        margin-top: 5px;
+                        cursor: pointer;
+                        display: none; // Removes Lables because I didn't like them...  -----------------<<<<<<<
                     }
 
-                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) { 
-                        @include flex($f-basis: 95.5%);
-                    }        //IE11 specific media query
-                }
+                    input, textarea {
+                        flex-grow: 2;
+                        height: 50px;
+                        padding: 15px 15px;
+                        resize: none;
+                        outline: none;
+                        border: solid 2px transparent;
+                        border-radius: 3px;
+                        border-bottom-color: $primary-colour;
+                        // margin-top: 10px;
 
-                :nth-child(2) {
-                    // flex-basis: 46.75%;
-                    @include flex($f-basis: 46.75%);
+                        transition: ease-in-out .25s;
 
-                    @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                        // flex-basis: 95.5%; 
-                        @include flex($f-basis: 95.5%);
+                        &:hover, &:focus {
+                            // background: $primary-colour-dark;
+                            outline: none;
+                            border: 2px solid $primary-colour-dark;
+                        }
                     }
 
-                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1325px) { 
-                        @include flex($f-basis: 95.5%);
-                    }        //IE11 specific media query
+                    textarea {
+                        height: 200px;
+                        // margin-top: 100px;
+                    }
 
-                    
+                    i {
+                        position: absolute;
+                        right: 15px;
+                        bottom: 22px;
+                        visibility: hidden;
+                    }
+
+                    small {
+                        position: absolute;
+                        bottom: -13px;
+                        right: 5px;
+                        color: $error;
+                        visibility: hidden;
+                    }
                 }
 
-                :nth-child(3) {
-                    // flex-basis: 95.5%;
-                    @include flex($f-basis: 95.5%);
+                .form-input:nth-child(1), .form-input:nth-child(2) {                // Custom form layout for large screens --------
+                    width: auto;
+                    flex-grow: 1;
+                    // margin-bottom: 32.5px;
+                    @include flex-direction(column);
+
+                    @media ( max-width: 1050px) {
+                        flex-grow: 3;
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .errorMsg {
+                        bottom: -13px;
+                        right: 5px;
+                    }
+
+                    // i {
+                    //     right: 15px;
+                    //     // top: 45px;
+                    // }
                 }
 
-                :nth-child(4) {
-                    // flex-basis: 95.5%;
-                    @include flex($f-basis: 95.5%);
+                .form-input:nth-child(1) {
+                    // margin-left: 100px;
+                    margin-right: 20px;
+
+                    @media ( max-width: 1050px) {
+                        margin-right: 0px;
+                    }
                 }
 
-                :nth-child(5) {
-                    // flex-basis: 95.5%;
-                    @include flex($f-basis: 95.5%);
-                    font-size: 0.9rem;
-                    height: 200px;
-                    padding: 15px;
-                    margin: 10px;
+                .form-input:nth-child(3), .form-input:nth-child(4), .form-input:nth-child(5) {
+                    flex-grow: 3;
+                }                                // End of Custom Form Layout for Large Screens ----------------------------------
 
-                    border: none;
-                    border-radius: 4px;
-                    background: white;
-                    resize: none;           //This removes resize in bottom right
-    
-                }
-
-                input[type="text"] {
-                    padding: 15px;
-                    margin: 10px;
-                    border: 2px solid transparent;
-                    // border: none;
-                    border-radius: 4px;
-                    background: white;
-                    font-size: .9rem;
-                    transition: ease-in-out .25s;
+                .form-input:nth-child(5) {
+                    height: 212.5px;
                 }
 
                 input[type="submit"] {
@@ -607,10 +647,11 @@ $light-grey: #eee;
                     background: $primary-colour;
                     // border: solid black 2px;
                     border: none;
-                    border: 2px solid transparent;
+                    border: 1px solid transparent;
                     padding: 1rem;
-                    margin: 10px;
-                    width: 150px;
+                    // margin-left: 105px;
+                    width: 50%;
+                    margin: 15px 5px  0px;
                     border-radius: 4px;
                     cursor: pointer;
 
@@ -621,23 +662,47 @@ $light-grey: #eee;
 
                     transition: ease-in-out .25s;
 
-                    &:hover, &:focus {
-                        background: #d95c4c;
-                        outline: none;
-                        border: 2px solid #d95c4c;
+                    @media ( max-width: $media-l ) {
+                        width: 100%;
                     }
 
-                    @media (max-width: $media-m) {              // 1325px CUSTOM BREAKPOINT CHANGE
-                        margin: 10px auto; 
+                    &:hover, &:focus {
+                        background: $primary-colour-dark;
+                        outline: none;
+                        border: 2px solid $primary-colour-dark;
+                    }
+                }                                                       //------- Initial Form Styling Ends Here
+
+                // This is the Form Inputs' SUCCESS Styling
+
+                .form-input.success {
+
+                    i.success {
+                        visibility: visible;
+                        color: $success;
+                    }
+
+                    input, textarea {
+                        border-color: $success;
                     }
                 }
+                
+                // This is the Form Inputs' ERROR Styling 
 
-                input[type="text"]:focus, textarea:focus {
-                    // transform: scale(1.025);
-                    // transition: ease-in-out .25s;
-                    outline: none;
-                    border: 2px solid $primary-colour;
-                    
+                .form-input.error {
+
+                    i.error {
+                        visibility: visible;
+                        color: $error;
+                    }
+
+                    small {
+                        visibility: visible;
+                    }
+
+                    input, textarea {
+                        border-color: $error;
+                    }
                 }
 
             }
