@@ -1,3 +1,4 @@
+const validation = function () {
 
 const form = $('form#contact-form');
 const fName = $('#fName');
@@ -89,3 +90,7 @@ function setSuccessFor(input, msg) {
 }
 
 //------------------------------------------------------
+
+};
+
+validation();

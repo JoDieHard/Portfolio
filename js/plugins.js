@@ -155,6 +155,9 @@ typewriterTwo
   });
 */
 
+
+validation();
+
 };            //--------------- End of setupJSPlugins funciton
   
 
