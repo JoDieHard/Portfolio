@@ -527,7 +527,7 @@ $success: #2ecc71;
                 @include flex-wrap(wrap);
                 padding: 20px auto;
 
-                @media (max-width: 1325px) {              // 1325px CUSTOM BREAKPOINT CHANGE
+                @media ( max-width: $media-l ) {              // LARGE BREAKPOINT CHANGE
                     // flex-basis: 100%; 
 
                     @include flex($f-basis: 100%);      // ALL FLEXBASIS HAVE BEEN REPLACED WITH THIS VENDOR FRIENDLY MIXIN.
@@ -604,7 +604,7 @@ $success: #2ecc71;
                     // margin-bottom: 32.5px;
                     @include flex-direction(column);
 
-                    @media ( max-width: 1120px) {
+                    @media ( max-width: $media-l) {
                         @include flex-grow(3);
                         width: 100%;
                     }
@@ -628,7 +628,7 @@ $success: #2ecc71;
                     // margin-left: 100px;
                     margin-right: 20px;
 
-                    @media ( max-width: 1120px) {
+                    @media ( max-width: $media-l) {
                         margin-right: 0px;
                     }
                 }
