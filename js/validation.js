@@ -79,6 +79,13 @@ function setErrorFor(input, msg) {
     // Add Error Class
     formControl.addClass('error');
     formControl.removeClass('success');
+    
+    // Removes Error after 5 seconds 
+    formControl.delay( (10 * 1000) ).queue(function(){   
+        formControl.removeClass('error');
+        formControl.dequeue();
+    });
+
 }
 
 function setSuccessFor(input, msg) {
