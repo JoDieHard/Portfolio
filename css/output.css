@@ -339,7 +339,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-@media (max-width: 992px) {
+@media (max-width: 1115px) {
   .contact .container {
     -ms-flex-direction: column;
     -moz-flex-direction: column;
@@ -380,7 +380,7 @@
   outline: none;
   text-decoration: underline;
 }
-@media (max-width: 992px) {
+@media (max-width: 1115px) {
   .contact .container .contact-info .c-text {
     display: none;
   }
@@ -401,7 +401,7 @@
 .contact .container .contact-info .c-button i {
   padding-left: 10px;
 }
-@media (max-width: 992px) {
+@media (max-width: 1115px) {
   .contact .container .contact-info .c-button {
     display: block;
     align-self: center;
@@ -412,7 +412,7 @@
     width: 100%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1115px) {
   .contact .container .contact-info {
     text-align: center;
     margin-left: 0px;
@@ -968,11 +968,6 @@ button:active {
   width: 100%;
 }
 
-.animsition-overlay-slide {
-  z-index: 1000;
-  background-color: #f06856;
-}
-
 #pageContainer {
   height: 100%;
   margin: 0px auto 0px 336px;
@@ -1018,6 +1013,14 @@ button:active {
   transform: translateY(-3px);
 }
 
+@media (min-width: 1261px) and (max-width: 1325px) {
+  #pageContainer:not(.active) .form-input:nth-child(1) {
+    margin-right: 0px;
+    width: 100%;
+    -ms-flex: 3;
+    flex-grow: 3;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;

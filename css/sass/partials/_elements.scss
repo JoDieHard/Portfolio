@@ -1,14 +1,14 @@
 
 //  overlay option
  
-.animsition-overlay-slide {
-  z-index: 1000;
-  background-color: #f06856;
+// .animsition-overlay-slide {
+//   z-index: 1000;
+//   background-color: #f06856;
 
-  // @media (max-width: $media-m ) {         // SMALL BREAKPOINT
-  //   opacity: 0;                        // This is only because Animsition isn't working on iOS
-  // }
-}
+//   // @media (max-width: $media-m ) {         // SMALL BREAKPOINT
+//   //   opacity: 0;                        // This is only because Animsition isn't working on iOS
+//   // }
+// }
 
 
 
@@ -64,4 +64,12 @@
     transform: translateY( -3px );
   }
 
+}
+
+@media ( min-width: 1261px ) and ( max-width: 1325px ) {
+  #pageContainer:not(.active) .form-input:nth-child(1) {  // This fixes Form breaking when the side menu is open between 1261px & 1325px
+    margin-right: 0px;
+    width: 100%;
+    @include flex-grow(3);
+  }
 }

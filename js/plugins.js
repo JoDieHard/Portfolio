@@ -96,14 +96,12 @@ typewriterTwo
         from: 1,
         to: 0,
       }
-
       // {
-      //   range: [450, 550],
-      //   selector: '.intro-text, .scroll-down-btn',
-      //   type: 'scale',
-      //   style: 'opacity',
-      //   from: 1,
-      //   to: 0
+      //   range: [-1, 250],
+      //   selector: '#pageContainer .scroll-down-btn .scrollButton',
+      //   type: 'change',
+      //   style: 'color',
+      //   to: '#21d1b3', 
       // }
     ]
   })
