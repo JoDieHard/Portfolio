@@ -77,8 +77,8 @@ typewriterTwo
         selector: '#pageContainer .intro-text',
         type: 'scale',
         style: 'transform:scale',
-        from: 1,
-        to: 1.5,
+        from: .9,
+        to: 1.4,
       },
       {
         range: [500, 600],
@@ -200,8 +200,35 @@ menu.on('click tap', function(event){
   setTimeout(function(){ isRunning = false; /* console.log( isRunning ); */ }, 400 );
 });
 
+//---------------------- THIS IS THE FUNCTION THAT CLOSES THE MENU IF PAGE IS CLICKED --------------------------------------|
+wrap.on('mouseenter touchstart', function(event){
+  // console.log(event.target);
+  if ( isRunning ) {
+    return;
+  } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+    return;   
+  } else if ( menu.hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
+    return;
+    console.log('menu is closed.');
+  } else {
+    wrap.addClass('active');
+    console.log('menu is open.');
+    menu.delay( 350 ).queue(function(){
+      menu.addClass('active');
+      menu.dequeue();
+    });
+  }
+  isRunning = true;
+  setTimeout(function(){ isRunning = false; /* console.log( isRunning ); */ }, 400 );
+}); // ----------------------------------------------------------------------------------------------------------------------|
+
 };
 
 menuJS();
 setupJsPlugins();
 // setupTypewriter();
+
+
+// wrap.on('click', function(e){
+//   console.log(e);
+// });
