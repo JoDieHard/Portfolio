@@ -75,8 +75,7 @@
             height: 100vh;
             padding: 500px auto;
 
-            background-image:   linear-gradient( to top, rgba(75, 75, 75, 1), rgba( 33, 209, 179, 0.5 ) 40% ),
-                                url(../assets/img/mountain.jpg);
+            background-image:   $background-image;
             // filter: saturate(0%);
             background-size: cover;
             background-position: 0%;
