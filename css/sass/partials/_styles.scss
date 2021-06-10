@@ -242,7 +242,7 @@ $success: #2ecc71;
 
                 transition: .3s ease-in-out;
 
-                @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                @media (max-width: $media-m) {         // EXTRA SMALL BREAKPOINT CHANGE
                     transform: scale(0.8);
                 }
             }
@@ -301,10 +301,23 @@ $success: #2ecc71;
                     &:hover {
                         opacity: 1;
                     }
+
+                    @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                        font-size: 3.3rem;
+                        padding: 22.5px;
+                        transform: scale(0.5) translateY(-160px);
+
+                    }
+                }
+                @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+                    .view-prjct {
+                        transform: translateY(-105px);
+                    }
                 }
 
                 p {
                     opacity: 1;
+                    // transform: translateY(-84px);
                 }
 
                 &::after {
@@ -313,7 +326,9 @@ $success: #2ecc71;
 
                 .prjct-text {
                     // bottom: -120px;
-                    transform: translateY(60px);
+                    @media (min-width: $media-m) {              // EXTRA SMALL BREAKPOINT CHANGE 
+                        transform: translateY(60px);
+                    }
                 }
             }
 
@@ -387,7 +402,7 @@ $success: #2ecc71;
                 bottom: -105px;
             }
 
-            @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
+            @media (max-width: $media-m) {         // EXTRA SMALL BREAKPOINT CHANGE
                 bottom: -20px;
             }
         
@@ -403,8 +418,9 @@ $success: #2ecc71;
             background:rgba(0, 0, 0, .4);
             padding: 7.5px;
 
-            @media (max-width: $media-xs) {          // MEDIUM BREAKPOINT CHANGE
-                display: none;
+            @media (max-width: $media-m) {          // MEDIUM BREAKPOINT CHANGE
+                // display: none;
+                bottom: 53px;
             }
             
         }
