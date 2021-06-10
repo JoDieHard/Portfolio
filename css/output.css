@@ -953,6 +953,7 @@ button:active {
 }
 .wrapper .projects .container {
   padding: 50px auto;
+  padding-top: 50px;
 }
 .wrapper .contact {
   margin-top: 10px;
