@@ -56,6 +56,7 @@
     // position: absolute;
     // left: 336px;
     // padding-left: 336px;
+    background: $background-colour;           // Page BG colour 
 
     transition: ease-in-out .25s;
 
@@ -74,7 +75,7 @@
             height: 100vh;
             padding: 500px auto;
 
-            background-image:   linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 33, 209, 179, 0.5 ) 40% ),
+            background-image:   linear-gradient( to top, rgba(75, 75, 75, 1), rgba( 33, 209, 179, 0.5 ) 40% ),
                                 url(../assets/img/mountain.jpg);
             // filter: saturate(0%);
             background-size: cover;

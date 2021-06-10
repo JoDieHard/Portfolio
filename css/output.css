@@ -596,7 +596,7 @@
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
-  background: white;
+  background: #4b4b4b;
   padding-top: 30px;
 }
 .footer .container .scrollButton {
@@ -606,7 +606,7 @@
   -moz-flex-direction: column;
   flex-direction: column;
   background: transparent;
-  color: black;
+  color: white;
   text-decoration: none;
   opacity: 0.25;
 }
@@ -885,6 +885,7 @@ button:active {
 
 .wrapper {
   width: 100%;
+  background: #4b4b4b;
   transition: ease-in-out 0.25s;
   display: -ms-flexbox;
   display: flex;
@@ -904,7 +905,7 @@ button:active {
 .wrapper .cover-image .container {
   height: 100vh;
   padding: 500px auto;
-  background-image: linear-gradient(to top, white, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
+  background-image: linear-gradient(to top, #4b4b4b, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   background-position: 0%;
   text-align: center;

@@ -19,9 +19,12 @@
 $primary-colour: /*#1807F6*/ #21d1b3;
 $primary-colour-dark: /*#d95c4c*/ #18a38c;
 $light-grey: #eee;
+$background-colour: #4b4b4b;
 
 $error: #f53b26;
 $success: #2ecc71;
+
+
 
 //----------------------------------------------------------------------------------
 
@@ -717,7 +720,8 @@ $success: #2ecc71;
     @include justify-content(center);
 
     // background: rgb(73, 70, 70);
-    background: white;
+    // background: white;
+    background: $background-colour;
     padding-top: 30px;
 
     .container {
@@ -727,7 +731,7 @@ $success: #2ecc71;
             @include flex-direction(column);
             background: transparent;
             // color: white;
-            color: black;
+            color: white;
             text-decoration: none;
             opacity: 0.25;
 
