@@ -272,7 +272,7 @@
 }
 @media (min-width: 992px) and (-ms-high-contrast: none), (min-width: 992px) and (-ms-high-contrast: active) {
   .projects .container .project:hover .prjct-text {
-    transform: translateX(-50%);
+    transform: translateY(60px) translateX(-50%);
   }
 }
 @media (max-width: 1260px) {
@@ -319,7 +319,7 @@
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .projects .container .prjct-text, .projects .container .prjct-desc, .projects .container .prjct-mp4, .projects .container .prjct-img {
+  .projects .container .prjct-text, .projects .container .prjct-desc, .projects .container .prjct-mp4, .projects .container .prjct-img, .projects .container:after {
     transform: translateX(-50%);
   }
   .projects .container .prjct-desc {
@@ -556,11 +556,6 @@
   right: 5px;
   color: #f53b26;
   visibility: hidden;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .contact .container .contact-form form .form-input {
-    margin-bottom: 40px;
-  }
 }
 .contact .container .contact-form form .form-input:nth-child(1), .contact .container .contact-form form .form-input:nth-child(2) {
   width: auto;
