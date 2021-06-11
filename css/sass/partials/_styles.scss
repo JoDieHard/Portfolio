@@ -796,9 +796,9 @@ $success: #2ecc71;
 
 //----------------  OTHER PAGE STYLES -----------------------------------------------
 
-.secondary-body {
-height: auto !important;
-}
+// .secondary-body {
+// height: auto !important;
+// }
 
 
 
@@ -806,20 +806,20 @@ height: auto !important;
 
     // margin: 0px auto 0px 336px;
     margin: 0px auto;
-    padding: 50px 0px;
+    padding: 50px 0px 200px;
     // background: rgba(200, 200, 200, 0.2) url(../assets/img/mountain.jpg);
     background-image:   $background-image;
     background-size: cover;
 
     transition: ease-in-out .25s;
-    height: 100%;
+    // height: 100%;
 
     @media (max-width: $media-s) {              // SMALL BREAKPOINT CHANGE
         margin: 0px auto 0px auto;
     }
 
     @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
-        padding: 5px 0px;
+        padding: 5px 0px 200px;
     }
     
 }
@@ -906,7 +906,7 @@ height: auto !important;
     @include justify-content(center);
 
     margin-top: 80px;
-    margin-bottom: auto;
+    margin-bottom: 100px;
 
     @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
         margin-top: 40px;
@@ -933,6 +933,21 @@ height: auto !important;
         &:hover {
             transform: rotate3d(0, 0, 1, 15deg) scale(1.1);
         }
+    }
+}
+
+.back-btn, .back-btn:link, .back-btn:visited {
+    color: white; 
+    background: $primary-colour;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 50px auto auto;
+    width: 150px;
+    @include flexbox;
+    @include justify-content(space-evenly);
+
+    &:hover {
+        background-color: $primary-colour-dark;
     }
 }
 

@@ -18,7 +18,7 @@
 
 body {
     margin: 0px;
-    height: auto;
+    // height: auto;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -33,8 +33,8 @@ a {
 
 html {
     scroll-behavior: smooth;
-
-    @media (min-width: $media-m ) {
-        height: 100%;
-    }
+    // height: 100%;
+    // @media (min-width: $media-m ) {
+    //     height: 100%;
+    // }
 }

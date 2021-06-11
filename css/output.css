@@ -661,17 +661,12 @@
   outline: none;
 }
 
-.secondary-body {
-  height: auto !important;
-}
-
 .secondary-wrapper {
   margin: 0px auto;
-  padding: 50px 0px;
+  padding: 50px 0px 200px;
   background-image: linear-gradient(to top, #18a38c, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   transition: ease-in-out 0.25s;
-  height: 100%;
 }
 @media (max-width: 767px) {
   .secondary-wrapper {
@@ -680,7 +675,7 @@
 }
 @media (max-width: 450px) {
   .secondary-wrapper {
-    padding: 5px 0px;
+    padding: 5px 0px 200px;
   }
 }
 
@@ -759,7 +754,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 80px;
-  margin-bottom: auto;
+  margin-bottom: 100px;
 }
 @media (max-width: 992px) {
   .img-box {
@@ -785,6 +780,22 @@
 }
 .img-box img:hover {
   transform: rotate3d(0, 0, 1, 15deg) scale(1.1);
+}
+
+.back-btn, .back-btn:link, .back-btn:visited {
+  color: white;
+  background: #21d1b3;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 50px auto auto;
+  width: 150px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.back-btn:hover, .back-btn:link:hover, .back-btn:visited:hover {
+  background-color: #18a38c;
 }
 
 button {
@@ -1054,7 +1065,6 @@ button:active {
 }
 
 #pageContainer {
-  height: 100%;
   margin: 0px auto 0px 336px;
   transition: ease-in-out 0.25s;
 }
@@ -1128,7 +1138,6 @@ button:active {
 
 body {
   margin: 0px;
-  height: auto;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -1143,9 +1152,4 @@ a {
 
 html {
   scroll-behavior: smooth;
-}
-@media (min-width: 992px) {
-  html {
-    height: 100%;
-  }
 }
