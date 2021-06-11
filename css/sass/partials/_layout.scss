@@ -4,10 +4,10 @@
     right: -45px;
     top: -20px;
     // top: 40vh;
-    font-size: 1.5em;
+    font-size: 1.8em;
     opacity: 0;
     transition: ease-in-out .2s;
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .menu-icon.fa-times {
@@ -24,7 +24,12 @@
 
 .side-menu.active .container {
     .menu-icon.fa-bars {
-    opacity: 0.4;
+    opacity: 1;
+        @media (max-width: $media-xs) { 
+            transform: translateX(70px);
+            background:rgba(0, 0, 0, .6);
+            padding: 12.5px;
+        }
     }
     .menu-icon.fa-times {
         opacity: 0;
@@ -71,6 +76,10 @@
 .side-menu.active {
     transform: translateX(-285px);
     background: #262626;
+
+    @media ( max-width: $media-xs ) {               // EXTRA SMALL BREAKPOINT CHANGE
+        transform: translateX(-340px);
+      }
 }
 
 .side-menu.active:hover {

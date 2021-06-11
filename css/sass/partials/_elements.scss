@@ -23,10 +23,16 @@
   @media (max-width: $media-m) {              // MEDIUM BREAKPOINT CHANGE
     margin: 0px auto 0px 50px;
 }
+@media ( max-width: $media-xs ) {
+  margin: 0px auto 0px 0px;
+}
 }
 
 #pageContainer.active {
   margin: 0px auto 0px 50px;
+  @media ( max-width: $media-xs ) {
+    margin: 0px auto 0px 0px;
+  }
 }
 
 // Page Transition CSS
@@ -40,6 +46,10 @@
   z-index: 14;
   transition: ease-in-out .3s;
   transform: translateX(-130%);
+
+  @media ( max-width: $media-xs ) {
+    z-index: 100;
+  }
 }
 
 #pageContainer.in::before {
