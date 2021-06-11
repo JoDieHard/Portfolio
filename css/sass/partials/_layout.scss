@@ -141,7 +141,7 @@
                     margin: 450px auto 20px;
                 }        //IE11 specific media query
 
-                @media (max-width: $media-xs) {
+                @media (max-width: $media-xs) {  // EXTRA SMALL MEDIA BREAKPOINT
                     font-size: 1.5rem;
                 }
             }
@@ -154,10 +154,14 @@
     }
 
     .projects {
+        
         .container {
             padding: 50px auto;
             padding-top: 50px;
-            
+        }
+
+        @media ( max-width: $media-xs ) {       // EXTRA SMALL MEDIA BREAKPOINT
+            overflow-x: hidden;
         }
     }
 

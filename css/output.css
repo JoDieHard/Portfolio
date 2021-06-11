@@ -239,9 +239,19 @@
     transform: scale(0.5) translateY(-160px);
   }
 }
+@media (min-width: 1260px) and (max-width: 1560px) {
+  .projects .container .project:hover i {
+    transform: translateY(-30px);
+  }
+}
 @media (max-width: 450px) {
   .projects .container .project:hover .view-prjct {
     transform: translateY(-105px);
+  }
+}
+@media (min-width: 1260px) and (max-width: 1560px) {
+  .projects .container .project:hover .view-prjct {
+    transform: translateY(-30px);
   }
 }
 .projects .container .project:hover p {
@@ -1010,6 +1020,11 @@ button:active {
 .wrapper .projects .container {
   padding: 50px auto;
   padding-top: 50px;
+}
+@media (max-width: 450px) {
+  .wrapper .projects {
+    overflow-x: hidden;
+  }
 }
 .wrapper .contact {
   margin-top: 10px;

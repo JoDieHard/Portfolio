@@ -306,12 +306,20 @@ $success: #2ecc71;
                         font-size: 3.3rem;
                         padding: 22.5px;
                         transform: scale(0.5) translateY(-160px);
+                    }
 
+                    @media (min-width: $media-l) and ( max-width: 1560px ) {         // EXTRA LARGE BREAKPOINT CHANGE
+                        transform: translateY(-30px);
                     }
                 }
-                @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
-                    .view-prjct {
+
+                .view-prjct {
+                    @media (max-width: $media-xs) {         // EXTRA SMALL BREAKPOINT CHANGE
                         transform: translateY(-105px);
+                    }
+
+                    @media (min-width: $media-l) and ( max-width: 1560px ) {         // EXTRA LARGE BREAKPOINT CHANGE
+                        transform: translateY(-30px);
                     }
                 }
 
