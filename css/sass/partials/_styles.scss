@@ -335,6 +335,10 @@ $success: #2ecc71;
 
                 &::after {
                     opacity: .3;
+                    // IE11 specific media query -------------------------------------------------------------------------
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                        transform: translateX(-50%);
+                    } // IE11 specific media query -----------------------------------------------------------------------
                 }
 
                 .prjct-text {
@@ -393,7 +397,7 @@ $success: #2ecc71;
             }
             // IE11 specific media query -------------------------------------------------------------------------
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
-                .prjct-text, .prjct-desc, .prjct-mp4, .prjct-img, &:after  {
+                .prjct-text, .prjct-desc, .prjct-mp4, .prjct-img, &::after  {
                     transform: translateX(-50%);
                 }
                 .prjct-desc {

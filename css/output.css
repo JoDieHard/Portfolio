@@ -265,6 +265,11 @@
 .projects .container .project:hover::after {
   opacity: 0.3;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .projects .container .project:hover::after {
+    transform: translateX(-50%);
+  }
+}
 @media (min-width: 992px) {
   .projects .container .project:hover .prjct-text {
     transform: translateY(60px);
@@ -319,7 +324,7 @@
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .projects .container .prjct-text, .projects .container .prjct-desc, .projects .container .prjct-mp4, .projects .container .prjct-img, .projects .container:after {
+  .projects .container .prjct-text, .projects .container .prjct-desc, .projects .container .prjct-mp4, .projects .container .prjct-img, .projects .container::after {
     transform: translateX(-50%);
   }
   .projects .container .prjct-desc {
