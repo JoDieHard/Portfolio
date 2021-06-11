@@ -292,6 +292,12 @@
   top: 0;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+@media (max-width: 450px) {
+  .projects .container .project {
+    width: 100%;
+    margin: 5px 0px;
+  }
+}
 .projects .container .prjct-text {
   position: absolute;
   bottom: -15px;
@@ -698,6 +704,11 @@
   color: #21d1b3;
   line-height: 1.7rem;
 }
+@media (max-width: 450px) {
+  .box-section h1 {
+    font-size: 1.5rem;
+  }
+}
 .box-section h2 {
   color: #21d1b3;
   font-size: 1.2em;
@@ -854,7 +865,7 @@ button:active {
     }
 }
 */
-.menu-icon {
+.menu-icon.fa-bars {
   position: absolute;
   right: -45px;
   top: -20px;
@@ -864,8 +875,21 @@ button:active {
   color: white;
 }
 
-.side-menu.active .container .menu-icon {
-  opacity: 0.2;
+.menu-icon.fa-times {
+  position: relative;
+  left: 210px;
+  top: -10px;
+  font-size: 1.5em;
+  opacity: 0.3;
+  transition: ease-in-out 0.2s;
+  color: black;
+}
+
+.side-menu.active .container .menu-icon.fa-bars {
+  opacity: 0.4;
+}
+.side-menu.active .container .menu-icon.fa-times {
+  opacity: 0;
 }
 
 .side-menu {
@@ -880,6 +904,14 @@ button:active {
       background: white;
       border-bottom: solid 5px $primary-colour;
   } */
+}
+@media (max-width: 450px) {
+  .side-menu:not(.active) {
+    width: 100%;
+  }
+  .side-menu .container .menu-icon.fa-times {
+    transform: translateX(20px);
+  }
 }
 .side-menu .container {
   width: 200px;
@@ -900,6 +932,11 @@ button:active {
 .side-menu.active:hover {
   background: #666666;
   cursor: pointer;
+}
+@media (max-width: 450px) {
+  .side-menu.active:hover {
+    background: #262626;
+  }
 }
 
 .wrapper {

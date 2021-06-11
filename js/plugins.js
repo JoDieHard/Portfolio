@@ -201,15 +201,19 @@ menu.on('click tap', function(event){
 });
 
 //---------------------- THIS IS THE FUNCTION THAT CLOSES THE MENU IF PAGE IS CLICKED --------------------------------------|
-wrap.on('mouseenter touchstart', function(event){
+wrap.on('mouseenter touchstart swiperight', function(event){
+  // console.log(event.type);
   // console.log(event.target);
   if ( isRunning ) {
     return;
   } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
     return;   
-  } else if ( menu.hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
-    return;
-    console.log('menu is closed.');
+  } else if ( menu.hasClass('active') && event.type == 'swiperight' ) {   // This was supposed to open the menu if the pageContainer is swiped right 
+    menu.removeClass('active');
+    wrap.delay( 350 ).queue(function(){
+      wrap.removeClass('active');
+      wrap.dequeue();
+    });
   } else {
     wrap.addClass('active');
     console.log('menu is open.');

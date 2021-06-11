@@ -368,6 +368,11 @@ $success: #2ecc71;
                     top: 0;
                     transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
                 } 
+
+                @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
+                    width: 100%;
+                    margin: 5px 0px;
+                }
             }
 
             .prjct-text {
@@ -840,12 +845,18 @@ height: auto !important;
     h1 {
         color: $primary-colour;
         line-height: 1.7rem;
+
+        @media (max-width: $media-xs) {              // MEDIUM BREAKPOINT CHANGE
+            font-size: 1.5rem;
+        }
     }
 
     h2 {
         color: $primary-colour;
         font-size: 1.2em;
         line-height: 1.4rem;
+
+
     }
 
     a {
