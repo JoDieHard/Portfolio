@@ -382,6 +382,16 @@ $success: #2ecc71;
                     margin: 5px 0px;
                 }
             }
+            // IE11 specific media query -------------------------------------------------------------------------
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                .prjct-text, .prjct-desc, .prjct-mp4, .prjct-img  {
+                    transform: translateX(-50%);
+                }
+                .prjct-desc {
+                    width: 100%;
+                }
+            } // IE11 specific media query -----------------------------------------------------------------------
+
 
             .prjct-text {
 

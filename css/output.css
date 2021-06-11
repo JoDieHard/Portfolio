@@ -308,6 +308,14 @@
     margin: 5px 0px;
   }
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .projects .container .prjct-text, .projects .container .prjct-desc, .projects .container .prjct-mp4, .projects .container .prjct-img {
+    transform: translateX(-50%);
+  }
+  .projects .container .prjct-desc {
+    width: 100%;
+  }
+}
 .projects .container .prjct-text {
   position: absolute;
   bottom: -15px;
