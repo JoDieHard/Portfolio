@@ -290,6 +290,11 @@ $success: #2ecc71;
                 .prjct-mp4 {
                     opacity: 1;
                     transform: scale(1.05);
+
+                    // IE11 specific media query -------------------------------------------------------------------------
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                        transform: translateX(-50%);
+                    } // IE11 specific media query -----------------------------------------------------------------------
                 }
 
                 i {
@@ -336,6 +341,10 @@ $success: #2ecc71;
                     // bottom: -120px;
                     @media (min-width: $media-m) {              // EXTRA SMALL BREAKPOINT CHANGE 
                         transform: translateY(60px);
+                        // IE11 specific media query -------------------------------------------------------------------------
+                        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                                transform: translateX(-50%);
+                        } // IE11 specific media query -----------------------------------------------------------------------
                     }
                 }
             }
@@ -640,6 +649,11 @@ $success: #2ecc71;
                         color: $error;
                         visibility: hidden;
                     }
+                            // THIS IS MY FIRST ATTTEMPT AT FIXING IE11 FORM FIELDS...
+                    // IE11 specific media query -------------------------------------------------------------------------
+                        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                            margin-bottom: 40px;
+                    } // IE11 specific media query -----------------------------------------------------------------------
                 }
 
                 .form-input:nth-child(1), .form-input:nth-child(2) {                // Custom form layout for large screens --------
