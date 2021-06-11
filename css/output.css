@@ -1144,3 +1144,8 @@ a {
 html {
   scroll-behavior: smooth;
 }
+@media (min-width: 992px) {
+  html {
+    height: 100%;
+  }
+}
