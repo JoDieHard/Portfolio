@@ -274,7 +274,7 @@ $success: #2ecc71;
                 z-index: 10;
 
                 transition: .3s ease-in-out;
-                
+
                 // IE11 specific media query -------------------------------------------------------------------------
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
                     transform: translateX(-50%);
@@ -766,6 +766,12 @@ $success: #2ecc71;
                         border-color: $error;
                     }
                 }
+
+                // IE11 specific media query -------------------------------------------------------------------------
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                    flex-direction: column;
+                    @include flex-direction(column);
+                } // IE11 specific media query -----------------------------------------------------------------------
 
             }
         }

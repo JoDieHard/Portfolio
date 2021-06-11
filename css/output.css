@@ -648,6 +648,14 @@
 .contact .container .contact-form form .form-input.error input, .contact .container .contact-form form .form-input.error textarea {
   border-color: #f53b26;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .contact .container .contact-form form {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
 .footer {
   display: -ms-flexbox;
