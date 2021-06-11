@@ -970,6 +970,7 @@ button:active {
 }
 .wrapper .cover-image .container {
   height: 100vh;
+  min-height: 785px;
   padding: 500px auto;
   background-image: linear-gradient(to top, #18a38c, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
