@@ -581,7 +581,15 @@ $success: #2ecc71;
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: $media-l) { 
                 margin-right: 30px;
                 width: 70%;
-            }        //IE11 specific media query
+
+                @media ( max-width: $media-l ) {            // IE11 LARGE BREAKPOINT CHANGE
+                    width: 100%;
+                    margin-right: 70px;
+                }
+                @media ( min-width: $media-m ) and ( max-width: $media-l ) { // IE11 MEDIUM TO LARGE BREAKPOINT CHANGE
+                    margin-right: 40px
+                }
+            }        //IE11 specific media query -------------------------------------------------------------
         
             form {                                  // This is the form styling 
                 @include flexbox;
@@ -658,6 +666,12 @@ $success: #2ecc71;
                         color: $error;
                         visibility: hidden;
                     }
+                    // IE11 specific media query -------------------------------------------------------------------------
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                        height: 0px;
+                        min-height: 60px;
+                    } // IE11 specific media query -----------------------------------------------------------------------
+
                 }
 
                 .form-input:nth-child(1), .form-input:nth-child(2) {                // Custom form layout for large screens --------
@@ -689,6 +703,11 @@ $success: #2ecc71;
                 .form-input:nth-child(1) {
                     // margin-left: 100px;
                     margin-right: 20px;
+
+                    // IE11 specific media query -------------------------------------------------------------------------
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and ( min-width: $media-l ) { 
+                        margin-right: 0px;
+                    } // IE11 specific media query -----------------------------------------------------------------------
 
                     @media ( max-width: $media-l) {
                         margin-right: 0px;
@@ -733,6 +752,10 @@ $success: #2ecc71;
                         outline: none;
                         border: 2px solid $primary-colour-dark;
                     }
+                    // IE11 specific media query -------------------------------------------------------------------------
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                        transform: translate(-5px, 150px);
+                    } // IE11 specific media query -----------------------------------------------------------------------
                 }                                                       //------- Initial Form Styling Ends Here
 
                 // This is the Form Inputs' SUCCESS Styling
@@ -769,13 +792,33 @@ $success: #2ecc71;
 
                 // IE11 specific media query -------------------------------------------------------------------------
                 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+                    min-height: 580px;
                     flex-direction: column;
                     @include flex-direction(column);
+
+                    @media ( max-width: $media-m ) {
+                        margin-right: 70px;
+                    }
+                    @media ( max-width: $media-s ) {
+                        // transform: translateX(50px);
+                        margin-right: 60px;
+                    }
+
                 } // IE11 specific media query -----------------------------------------------------------------------
 
             }
         }
     }
+
+    // IE11 specific media query -------------------------------------------------------------------------
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+        // height: 0px;
+        min-height: 650px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        // overflow-y: auto;
+    } // IE11 specific media query -----------------------------------------------------------------------
 }
 
 //------------------------------------------------------
