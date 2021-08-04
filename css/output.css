@@ -1024,7 +1024,7 @@ button:active {
 */
 .menu-icon.fa-bars {
   position: absolute;
-  right: -45px;
+  right: -47px;
   top: -20px;
   font-size: 1.8em;
   opacity: 0;
@@ -1072,6 +1072,7 @@ button:active {
 @media (max-width: 450px) {
   .side-menu:not(.active) {
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   .side-menu .container .menu-icon.fa-times {
     transform: translateX(20px);
