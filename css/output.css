@@ -42,14 +42,14 @@
   padding: 10px 0px;
 }
 .side-menu .container ul li :hover {
-  color: #21d1b3;
+  color: #262626;
   cursor: pointer;
 }
 .side-menu .container ul .current-page {
-  color: #21d1b3;
+  color: #262626;
 }
 .side-menu .container ul .page-link :hover:after, .side-menu .container ul .current-page :after {
-  color: #21d1b3;
+  color: #262626;
 }
 .side-menu .container ul .socials {
   display: -ms-flexbox;
@@ -61,7 +61,7 @@
   justify-content: center;
   width: 200px;
   margin: 10px 15px;
-  color: #21d1b3;
+  color: #262626;
   margin-left: 0px;
 }
 @media (max-width: 767px) {
@@ -74,7 +74,7 @@
   transition: 0.2s ease-in-out;
 }
 .side-menu .container ul .socials li:hover {
-  color: #18a38c;
+  color: black;
   transform: scale(1.1);
 }
 .side-menu .container ul span {
@@ -159,7 +159,7 @@
   height: 400px;
   margin: 10px;
   background: #eee;
-  border-bottom: solid 0px #21d1b3;
+  border-bottom: solid 0px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   overflow: hidden;
@@ -219,7 +219,7 @@
 }
 .projects .container .project:hover {
   transform: scale(1.05);
-  border-bottom: solid 5px #21d1b3;
+  border-bottom: solid 5px;
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
 }
 .projects .container .project:hover .prjct-img {
@@ -342,7 +342,6 @@
   position: absolute;
   bottom: -15px;
   width: 100%;
-  background: #21d1b3;
   z-index: 12;
   padding: 5px 0px 15px;
   transition: cubic-bezier(0.31, -0.54, 0.74, 1.55) 0.5s;
@@ -382,6 +381,69 @@
   .projects .container .prjct-desc {
     bottom: 53px;
   }
+}
+
+.project:nth-of-type(1):hover {
+  border-color: #926fb1 !important;
+}
+
+.project:nth-of-type(2):hover {
+  border-color: #ff0040 !important;
+}
+
+.project:nth-of-type(3):hover {
+  border-color: #2d2d2d !important;
+}
+
+.project:nth-of-type(4):hover {
+  border-color: #e3504b !important;
+}
+
+.project:nth-of-type(5):hover {
+  border-color: #f4bb7a !important;
+}
+
+.project:nth-of-type(6):hover {
+  border-color: #619dc0 !important;
+}
+
+.project:nth-of-type(3) {
+  background: #eee url("../assets/eg-screens/ess/ess_2.png") no-repeat center !important;
+  background-size: cover !important;
+}
+
+.project:nth-of-type(5) {
+  background: #eee url("../assets/eg-screens/mw/mw_1.png") no-repeat center !important;
+  background-size: cover !important;
+}
+
+.project:nth-of-type(6) {
+  background: #eee url("../assets/eg-screens/eg/eg_1.png") no-repeat center !important;
+  background-size: cover !important;
+}
+
+.project:nth-of-type(1) .prjct-text {
+  background: #926fb1 !important;
+}
+
+.project:nth-of-type(2) .prjct-text {
+  background: #ff0040 !important;
+}
+
+.project:nth-of-type(3) .prjct-text {
+  background: #2d2d2d !important;
+}
+
+.project:nth-of-type(4) .prjct-text {
+  background: #e3504b !important;
+}
+
+.project:nth-of-type(5) .prjct-text {
+  background: #f4bb7a !important;
+}
+
+.project:nth-of-type(6) .prjct-text {
+  background: #619dc0 !important;
 }
 
 .contact {
@@ -424,7 +486,7 @@
 .contact .container .contact-info h2 {
   font-size: 2rem;
   font-weight: 600;
-  color: #21d1b3;
+  color: #262626;
 }
 @media (max-width: 450px) {
   .contact .container .contact-info h2 {
@@ -435,7 +497,7 @@
 .contact .container .contact-info .c-text {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #21d1b3;
+  color: #262626;
   overflow: auto;
 }
 .contact .container .contact-info .c-text:focus, .contact .container .contact-info .c-text:hover {
@@ -452,13 +514,13 @@
   margin: 10px 10px 10px 0px;
   width: 190px;
   border-radius: 3px;
-  background: #21d1b3;
+  background: #262626;
   color: white;
   transition: ease-in-out 0.25s;
   display: none;
 }
 .contact .container .contact-info .c-button:hover {
-  background: #18a38c;
+  background: black;
 }
 .contact .container .contact-info .c-button i {
   padding-left: 10px;
@@ -532,7 +594,7 @@
 }
 .contact .container .contact-form form .form-input label {
   width: 85px;
-  color: #21d1b3;
+  color: #262626;
   margin-right: 15px;
   text-align: right;
   margin-top: 5px;
@@ -548,12 +610,12 @@
   outline: none;
   border: solid 2px transparent;
   border-radius: 3px;
-  border-bottom-color: #21d1b3;
+  border-bottom-color: #262626;
   transition: ease-in-out 0.25s;
 }
 .contact .container .contact-form form .form-input input:hover, .contact .container .contact-form form .form-input input:focus, .contact .container .contact-form form .form-input textarea:hover, .contact .container .contact-form form .form-input textarea:focus {
   outline: none;
-  border: 2px solid #18a38c;
+  border: 2px solid black;
 }
 .contact .container .contact-form form .form-input textarea {
   height: 200px;
@@ -622,7 +684,7 @@
 .contact .container .contact-form form input[type=submit] {
   -webkit-appearance: none;
   display: inline-block;
-  background: #21d1b3;
+  background: #262626;
   border: none;
   border: 2px solid transparent;
   padding: 1rem;
@@ -642,9 +704,9 @@
   }
 }
 .contact .container .contact-form form input[type=submit]:hover, .contact .container .contact-form form input[type=submit]:focus {
-  background: #18a38c;
+  background: black;
   outline: none;
-  border: 2px solid #18a38c;
+  border: 2px solid black;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .contact .container .contact-form form input[type=submit] {
@@ -701,7 +763,7 @@
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #18a38c;
+  background: #262626;
   padding-top: 30px;
 }
 .footer .container .scrollButton {
@@ -739,7 +801,7 @@
 .secondary-wrapper {
   margin: 0px auto;
   padding: 50px 0px 200px;
-  background-image: linear-gradient(to top, #18a38c, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
+  background-image: linear-gradient(to top, #262626, rgba(38, 38, 38, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   transition: ease-in-out 0.25s;
 }
@@ -762,7 +824,7 @@
   border-radius: 2px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   line-height: 1.2rem;
-  border-bottom: solid #21d1b3 5px;
+  border-bottom: solid #262626 5px;
 }
 @media (max-width: 992px) {
   .box-section {
@@ -776,7 +838,7 @@
   }
 }
 .box-section h1 {
-  color: #21d1b3;
+  color: #262626;
   line-height: 1.7rem;
 }
 @media (max-width: 450px) {
@@ -785,7 +847,7 @@
   }
 }
 .box-section h2 {
-  color: #21d1b3;
+  color: #262626;
   font-size: 1.2em;
   line-height: 1.4rem;
 }
@@ -808,7 +870,7 @@
   bottom: 2px;
 }
 .box-section a:hover {
-  color: #21d1b3;
+  color: #262626;
   opacity: 100%;
 }
 .box-section pre {
@@ -859,7 +921,7 @@
 
 .back-btn, .back-btn:link, .back-btn:visited {
   color: white;
-  background: #21d1b3;
+  background: #262626;
   padding: 10px;
   border-radius: 3px;
   margin: 50px auto auto;
@@ -870,7 +932,7 @@
   justify-content: space-evenly;
 }
 .back-btn:hover, .back-btn:link:hover, .back-btn:visited:hover {
-  background-color: #18a38c;
+  background-color: black;
 }
 
 button {
@@ -1048,7 +1110,7 @@ button:active {
 
 .wrapper {
   width: 100%;
-  background: #18a38c;
+  background: #262626;
   transition: ease-in-out 0.25s;
   display: -ms-flexbox;
   display: flex;
@@ -1068,7 +1130,7 @@ button:active {
   height: 100vh;
   min-height: 785px;
   padding: 500px auto;
-  background-image: linear-gradient(to top, #18a38c, rgba(33, 209, 179, 0.5) 40%), url(../assets/img/mountain.jpg);
+  background-image: linear-gradient(to top, #262626, rgba(38, 38, 38, 0.5) 40%), url(../assets/img/mountain.jpg);
   background-size: cover;
   background-position: 0%;
   text-align: center;
@@ -1126,7 +1188,7 @@ button:active {
 .wrapper .contact {
   margin-top: 10px;
   background: #eee;
-  border-bottom: solid #21d1b3 5px;
+  border-bottom: solid #262626 5px;
   width: 100%;
 }
 .wrapper .contact .container {
@@ -1167,7 +1229,7 @@ button:active {
   position: fixed;
   width: 150%;
   height: 100%;
-  background: #21d1b3;
+  background: #262626;
   z-index: 14;
   transition: ease-in-out 0.3s;
   transform: translateX(-130%);
@@ -1183,7 +1245,7 @@ button:active {
 }
 
 #pageIndicator {
-  color: #21d1b3;
+  color: #262626;
   display: inline;
   font-size: 1.3rem;
   position: relative;
