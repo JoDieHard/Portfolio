@@ -96,62 +96,14 @@ typewriterTwo
         from: 1,
         to: 0,
       }
-      // {
-      //   range: [-1, 250],
-      //   selector: '#pageContainer .scroll-down-btn .scrollButton',
-      //   type: 'change',
-      //   style: 'color',
-      //   to: '#21d1b3', 
-      // }
     ]
   })
-  
-//   function breakpointS(windowX) {
-//   window.addEventListener('scroll', () => {
-
-//     if (!windowX.matches) { // If media query matches
-//     choreographer.runAnimationsAt(window.pageYOffset)
-//     }
-//   })
-// };
-
-//   const windowX = window.matchMedia("(max-width: 400px)");
-//   breakpointS(windowX) // Call listener function at run time
-// windowX.addListener(breakpointS) // Attach listener function on state changes
 
 
-  window.addEventListener('scroll', () => {
+
+  window.addEventListener('scroll', function () {
     headerAnim.runAnimationsAt(window.pageYOffset)
   });
-
-
-/*
-// Animsition Plugin Functions ------------------------------
-  $(document).ready(function() {
-    $(".animsition-overlay").animsition({
-      inClass: 'overlay-slide-in-top',
-      outClass: 'overlay-slide-out-top',
-      inDuration: 1500,
-      outDuration: 800,
-      linkElement: '.animsition-link',
-      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-      loading: true,
-      loadingParentElement: 'body', //animsition wrapper element
-      loadingClass: 'animsition-loading',
-      loadingInner: '', // e.g '<img src="loading.svg" />'
-      timeout: false,
-      timeoutCountdown: 5000,
-      onLoadEvent: true,
-      browser: [ 'animation-duration', '-webkit-animation-duration'],
-      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-      overlay : true,
-      overlayClass : 'animsition-overlay-slide',
-      overlayParentElement : 'body',
-      transition: function(url){ window.location.href = url; }
-    });
-  });
-*/
 
 };            //--------------- End of setupJSPlugins funciton
   

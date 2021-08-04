@@ -178,6 +178,7 @@
   border-radius: 50%;
   margin-top: -10px;
   transition: 0.3s ease-in-out;
+  transition-delay: 0.2s;
 }
 @media (max-width: 992px) {
   .projects .container .project i {
@@ -191,6 +192,7 @@
   margin-top: 20px;
   opacity: 0;
   transition: 0.5s ease-in-out;
+  transition-delay: 0.2s;
 }
 @media (max-width: 450px) {
   .projects .container .project p {
@@ -384,9 +386,13 @@
 
 .contact {
   margin: 0px auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .contact .container {
-  width: 100%;
+  width: 93%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -406,9 +412,7 @@
 }
 .contact .container .contact-info {
   width: 600px;
-  padding: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding: 40px 40px 40px 0px;
   line-height: 1.5rem;
   border-right: solid 2px rgba(0, 0, 0, 0.1);
   display: -ms-flexbox;
@@ -473,17 +477,12 @@
 @media (max-width: 1115px) {
   .contact .container .contact-info {
     text-align: center;
-    margin-left: 0px;
-    padding: 0px 40px;
     border: none;
   }
 }
-.contact .container .contact-form {
-  margin-right: 50px;
-}
-@media (max-width: 1260px) {
+@media (min-width: 1115px) {
   .contact .container .contact-form {
-    margin: 0px 38px;
+    margin-left: 50px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 1260px) {
@@ -495,12 +494,6 @@
 @media (-ms-high-contrast: none) and (max-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) and (max-width: 1260px) {
   .contact .container .contact-form {
     width: 100%;
-    margin-right: 70px;
-  }
-}
-@media (-ms-high-contrast: none) and (min-width: 992px) and (max-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) and (min-width: 992px) and (max-width: 1260px) {
-  .contact .container .contact-form {
-    margin-right: 40px;
   }
 }
 .contact .container .contact-form form {
@@ -1070,7 +1063,6 @@ button:active {
 }
 .wrapper .cover-image {
   overflow: hidden;
-  z-index: 100;
 }
 .wrapper .cover-image .container {
   height: 100vh;
