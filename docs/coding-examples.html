@@ -1,116 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="../js/animsition/dist/css/animsition.min.css">    animsition.css -->
-    <link href="../js/prism/prism.css" rel="stylesheet"> <!-- This is Prim.JS CSS -->
-    <link rel="stylesheet" href="../css/normalise.css"> <!-- This normalises default visuals on all browsers -->
-    <link rel="stylesheet" href="../css/output.css">
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Bowman's Portfolio | Coding Examples</title>
-    <link rel="shortcut icon" type="image/png" href="../assets/jFavicon.png">
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-</head>
-
-    <body>
-        <div class="secondary-wrapper ajaxition fh-mob">
-            <!-- <div class="box-section placeholder">
-            <h1>Coming Soon...</h1> -->
-                <div class="box-section">
-                    <h1>Coding Example</h1>
-            <h2>This is an example of the jQuery I wrote to control the navigation menu on this website.</h2>
-
-            <main>
-                <pre>
-                    <code class="language-js" id="code-eg">
+<!DOCTYPE html><html lang="en"><head> <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script> <link href="../js/prism/prism.css" rel="stylesheet"> <link rel="stylesheet" href="../css/normalise.css"> <link rel="stylesheet" href="../css/output.css"> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Joseph Bowman's Portfolio | Coding Examples</title> <link rel="shortcut icon" type="image/png" href="../assets/jFavicon.png"> <script src="https://unpkg.com/scrollreveal"></script></head> <body> <div class="secondary-wrapper ajaxition fh-mob"><!-- <div class="box-section placeholder"> <h1>Coming Soon...</h1> --> <div class="box-section"> <h1>Coding Example</h1> <h2>This is an example of the jQuery I wrote to control the navigation menu on this website.</h2> <main> <pre>
+    <code class="language-js" id="code-eg">
 const menuJS = function () {
 
-    const menuLinks = $('.page-link');
-    const menu = $('#menu');
-    const wrap = $('#pageContainer');
-    let isRunning;
-    
-    menu.on('click tap', function(event){
-        if ( isRunning ) {
-        return;
-    
-        } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
-        return;   
-        } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
-        $(this).removeClass('active');
-        wrap.delay( 350 ).queue(function(){
-            wrap.removeClass('active');
-            wrap.dequeue();
-        });
-    
-        } else {  // ELSE CLOSE MENU
-        $(this).delay( 350 ).queue(function(){
-            $(this).addClass('active');
-            $(this).dequeue();
-        });
-        wrap.addClass('active');          
-        }
-    
-        isRunning = true;
-        setTimeout(function(){ isRunning = false; }, 400 );
+const menuLinks = $('.page-link');
+const menu = $('#menu');
+const wrap = $('#pageContainer');
+let isRunning;
+
+menu.on('click tap', function(event){
+if ( isRunning ) {
+return;
+
+} else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+return;   
+} else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
+$(this).removeClass('active');
+wrap.delay( 350 ).queue(function(){
+wrap.removeClass('active');
+wrap.dequeue();
 });
-                        </code>
-                    </pre>
-                </main>
-            </div>
-            <a class="back-btn ajaxition-link" href="https://joseph-bowman.netmatters-scs.co.uk/"><i class="fas fa-undo-alt"></i>Return</a> <!--  Return Home Button -->
-        </div>
 
-<!--------  MAIN NAVIGATION SIDEBAR  ------------------------------------------------------>
+} else {  // ELSE CLOSE MENU
+$(this).delay( 350 ).queue(function(){
+$(this).addClass('active');
+$(this).dequeue();
+});
+wrap.addClass('active');          
+}
 
-<main-nav class="side-menu active" id="menu">
-    <div class="container">
-        <i class="fas fa-bars menu-icon"></i>
-        <i class="fas fa-times menu-icon"></i>
-        <span class="profile-img"> </span>
-        <ul>
-            <li class="page-link">
-                <a class="animsition-link" href="https://joseph-bowman.netmatters-scs.co.uk/">My Portfolio</a>
-            </li>
-
-            <li class="page-link">
-                <a class="animsition-link" href="../docs/about-me.html">About Me</a>
-            </li>
-
-            <li class="page-link current-page">
-                <a class="animsition-link" href="../docs/coding-examples.html">Coding Examples</a>
-            </li>
-
-            <li class="page-link">
-                <a class="animsition-link" href="../docs/scs-scion.html">SCS Scheme</a>
-            </li>
-
-            <li class="page-link">
-                <a class="animsition-link" href="https://joseph-bowman.netmatters-scs.co.uk/#contact-me">Contact Me</a>
-            </li>
-
-            <ul class="socials">
-                <a href="https://www.facebook.com/joseph.bowman.3781995/" target="_blank"> <li> <i class="fab fa-facebook-f"></i> </li> </a>
-                <a href="https://www.instagram.com/hrzndesign/" target="_blank"> <li> <i class="fab fa-instagram"></i> </li> </a>
-                <a href="https://twitter.com/JoDieHard" target="_blank"> <li> <i class="fab fa-twitter"></i> </li> </a>
-                <!-- <a href="#"> <li> <i class="fab fa-linkedin-in"></i> </li> </a> -->
-            </ul>
-        </ul>
-
-    </div>
-</main-nav>
-
-<!-- --------------------------------------------------------------------------------------- -->
-
-       <!-- jQuery -->        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-       <!-- Choreographer --> <script src="../js/plugins/choreographer-js/dist/choreographer.min.js"></script>
-       <!-- TypewriterJS -->  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-       <!--  Prism.JS -->     <script src="../js/plugins/prism/prism.js"></script>
-       <!-- JS File -->       <script type="text/javascript" src="../js/main/minified/pluginsMin.js"></script>
-
-    </body>
-</html>
+isRunning = true;
+setTimeout(function(){ isRunning = false; }, 400 );
+});
+        </code>
+    </pre> </main> </div><a class="back-btn ajaxition-link" href="https://joseph-bowman.netmatters-scs.co.uk/"><i class="fas fa-undo-alt"></i>Return</a> </div><main-nav class="side-menu active" id="menu"> <div class="container"> <i class="fas fa-bars menu-icon"></i> <i class="fas fa-times menu-icon"></i> <span class="profile-img"> </span> <ul> <li class="page-link"> <a class="animsition-link" href="https://joseph-bowman.netmatters-scs.co.uk/">My Portfolio</a> </li><li class="page-link"> <a class="animsition-link" href="../docs/about-me.html">About Me</a> </li><li class="page-link current-page"> <a class="animsition-link" href="../docs/coding-examples.html">Coding Examples</a> </li><li class="page-link"> <a class="animsition-link" href="../docs/scs-scion.html">SCS Scheme</a> </li><li class="page-link"> <a class="animsition-link" href="https://joseph-bowman.netmatters-scs.co.uk/#contact-me">Contact Me</a> </li><ul class="socials"> <a href="https://www.facebook.com/joseph.bowman.3781995/" target="_blank"> <li> <i class="fab fa-facebook-f"></i> </li></a> <a href="https://www.instagram.com/hrzndesign/" target="_blank"> <li> <i class="fab fa-instagram"></i> </li></a> <a href="https://twitter.com/JoDieHard" target="_blank"> <li> <i class="fab fa-twitter"></i> </li></a> </ul> </ul> </div></main-nav> <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="../js/plugins/choreographer-js/dist/choreographer.min.js"></script> <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> <script src="../js/plugins/prism/prism.js"></script> <script type="text/javascript" src="../js/main/minified/pluginsMin.js"></script> </body></html>

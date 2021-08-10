@@ -46,6 +46,7 @@ $('html').on('click', '.ajaxition-link', function( event ){
     setTimeout (function() {
         setupJsPlugins();
         validation();
+        typewriter();
         // console.log('Plugins have been Reinitialized.');
         // console.log(pageIndicatorPos.top);
 
