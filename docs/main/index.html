@@ -3,9 +3,10 @@
 <head>
     <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="js/animsition/dist/css/animsition.min.css">    animsition.css -->
-    <link href="js/prism/prism.css" rel="stylesheet"> <!-- This is Prim.JS CSS -->
+    <link href="js/plugins/prism/prism.css" rel="stylesheet"> <!-- This is Prim.JS CSS -->
     <link rel="stylesheet" href="css/normalise.css"> <!-- This normalises default visuals on all browsers -->
     <link rel="stylesheet" href="css/output.css">
+    <link href="js/plugins/modal/modal.css" rel="stylesheet"> <!-- This is Modal Styling -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,20 @@
     <body>
         <div class="active" id="pageContainer">
         <div class="wrapper ajaxition">
+
+        <!--------  MODAL SECTION --------------------------------------------------------------->
+        <div class="modalContainer">
+            <div class="modal">
+                <div class="modalContent"></div>
+                <div class="modalControls">
+                    <button id="modal-prev">Previous</button>
+                    <div class="modal-imgs"></div>
+                    <button id="modal-next">Next</button>
+                    <button id="modal-close">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------- -->
 
         <!--------  COVER IMAGE SECTION --------------------------------------------------------------->
         <div class="overflow">
@@ -75,7 +90,7 @@
                 </a>
 
                 <!-- Project 3  -->
-                <a class="project" href="#" target="_blank">
+                <a class="project">
 
                     <i class="fas fa-share"></i>
                     <p class="view-prjct">Click to view project</p>
@@ -94,7 +109,7 @@
                 </a>
 
                 <!-- Project 4 -->
-                <a class="project" href="#" target="_blank">
+                <a class="project">
 
                     <i class="fas fa-share"></i>
                     <p class="view-prjct">Click to view project</p>
@@ -113,7 +128,7 @@
                 </a>
 
                 <!-- Project 5 -->
-                <a class="project" href="#" target="_blank">
+                <a class="project">
 
                     <i class="fas fa-share"></i>
                     <p class="view-prjct">Click to view project</p>
@@ -132,7 +147,7 @@
                 </a>
 
                 <!-- Project 6 -->
-                <a class="project" href="#" target="_blank">
+                <a class="project">
 
                     <i class="fas fa-share"></i>
                     <p class="view-prjct">Click to view project</p>
@@ -281,6 +296,7 @@
        <!-- AJAXition.js -->  <script type="text/javascript" src="js/main/minified/ajaxitionMin.js"></script>
        <!-- Validation.js --> <script type="text/javascript" src="js/main/minified/validationMin.js"></script>
        <!-- Typewriter.js --> <script type="text/javascript" src="js/main/typewriter.js"></script>
+       <!-- Modal.js --> <script type="text/javascript" src="js/plugins/modal/modal.js"></script>
 
     </body>
 </html>

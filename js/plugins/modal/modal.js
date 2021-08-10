@@ -68,10 +68,12 @@ $('#modal-close').on('click', function (e) {
 // Array for Project Images 
 
 const projects = [
-    [ 'assets/eg/eg.png', 'assets/eg/eg_1.png', 'assets/eg/eg_2.png' ],
-    [ 'assets/ess/ess.png', 'assets/ess/ess_1.png', 'assets/ess/ess_2.png', 'assets/ess/ess_3.png' ],
-    [ 'assets/mw/mw.png', 'assets/mw/mw_1.png', 'assets/mw/mw_2.png' ],
-    [ 'assets/spaced/spaced.png', 'assets/spaced/spaced_1.png', 'assets/spaced/spaced_2.png', 'assets/spaced/spaced_3.png' ]
+    [],
+    [],
+    [ 'js/plugins/modal/assets/ess/ess.png', 'js/plugins/modal/assets/ess/ess_1.png', 'js/plugins/modal/assets/ess/ess_2.png', 'js/plugins/modal/assets/ess/ess_3.png' ],
+    [ 'js/plugins/modal/assets/spaced/spaced.png', 'js/plugins/modal/assets/spaced/spaced_1.png', 'js/plugins/modal/assets/spaced/spaced_2.png', 'js/plugins/modal/assets/spaced/spaced_3.png' ],
+    [ 'js/plugins/modal/assets/mw/mw.png', 'js/plugins/modal/assets/mw/mw_1.png', 'js/plugins/modal/assets/mw/mw_2.png' ],
+    [ 'js/plugins/modal/assets/eg/eg.png', 'js/plugins/modal/assets/eg/eg_1.png', 'js/plugins/modal/assets/eg/eg_2.png' ]
 ];
 
 const loadContent = function( targetProject ) {
