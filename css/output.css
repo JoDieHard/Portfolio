@@ -1051,6 +1051,7 @@ button:active {
     transform: translateX(70px);
     background: rgba(0, 0, 0, 0.6);
     padding: 12.5px;
+    right: -45px;
   }
 }
 .side-menu.active .container .menu-icon.fa-times {
