@@ -11,6 +11,16 @@ const prevBtn = $('#modal-prev');
 
 let carouselPos = 0;
 
+// Array for Project Images 
+const projects = [
+    [],
+    [],
+    [ 'js/plugins/modal/assets/ess/ess.png', 'js/plugins/modal/assets/ess/ess_1.png', 'js/plugins/modal/assets/ess/ess_2.png', 'js/plugins/modal/assets/ess/ess_3.png' ],
+    [ 'js/plugins/modal/assets/spaced/spaced.png', 'js/plugins/modal/assets/spaced/spaced_1.png', 'js/plugins/modal/assets/spaced/spaced_2.png', 'js/plugins/modal/assets/spaced/spaced_3.png' ],
+    [ 'js/plugins/modal/assets/mw/mw.png', 'js/plugins/modal/assets/mw/mw_1.png', 'js/plugins/modal/assets/mw/mw_2.png' ],
+    [ 'js/plugins/modal/assets/eg/eg.png', 'js/plugins/modal/assets/eg/eg_1.png', 'js/plugins/modal/assets/eg/eg_2.png' ]
+];
+
 
 // Hide Modal on load
 $( document ).ready( function () {
@@ -33,6 +43,9 @@ project.on('click', function (e) {
 
     //Open Modal
     if ( container.hasClass('active') ) {
+        return;
+    } else if (  !projects[ $( this ).index() ].length ) {
+        // console.log('array is empty');
         return;
     } else {
         // console.log( $(this).index() );
@@ -64,17 +77,6 @@ $('#modal-close').on('click', function (e) {
 
 
 //----------------------------------------------------
-
-// Array for Project Images 
-
-const projects = [
-    [],
-    [],
-    [ 'js/plugins/modal/assets/ess/ess.png', 'js/plugins/modal/assets/ess/ess_1.png', 'js/plugins/modal/assets/ess/ess_2.png', 'js/plugins/modal/assets/ess/ess_3.png' ],
-    [ 'js/plugins/modal/assets/spaced/spaced.png', 'js/plugins/modal/assets/spaced/spaced_1.png', 'js/plugins/modal/assets/spaced/spaced_2.png', 'js/plugins/modal/assets/spaced/spaced_3.png' ],
-    [ 'js/plugins/modal/assets/mw/mw.png', 'js/plugins/modal/assets/mw/mw_1.png', 'js/plugins/modal/assets/mw/mw_2.png' ],
-    [ 'js/plugins/modal/assets/eg/eg.png', 'js/plugins/modal/assets/eg/eg_1.png', 'js/plugins/modal/assets/eg/eg_2.png' ]
-];
 
 const loadContent = function( targetProject ) {
     for ( let i = 0; i < projects[targetProject].length; i++ )  {
