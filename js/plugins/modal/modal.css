@@ -217,82 +217,6 @@ img[class^="modalThumb"] {
     outline: solid 1px rgba( 255, 255, 255, 0.3 );
 }
 
-/* Medium Breakpoint */
-@media ( max-width: 992px ) {
-    
-    img[class^="modalThumb"] {
-        height: 55px;
-    }
-
-    .modal {
-        margin: 0px 10px 20px;
-    }
-
-    .modalControls button:nth-of-type(3) {
-        margin: 225px 40px 0px 0px;
-
-    }
-
-    .modalControls button {
-        height: 55px;
-    }
-
-    #modal-close {
-        margin-top: 140px;
-    }
-
-    img[class^="modalImage"] {
-        margin-bottom: 220px !important;
-    }
-
-    .modalControls {
-        bottom: 185px; 
-    }
-}
-
-@media ( max-width: 450px ) { 
-    .modal-imgs {
-        display: none;
-    }
-
-    .modalControls {
-        bottom: 350px;
-    }
-
-    #modal-next {
-        right: 0px;
-    }
-
-    #modal-prev {
-        left: 0px;
-    }
-
-    #modal-next, #modal-prev {
-        position: absolute;
-        margin: 0px;
-    }
-
-    #modal-close {
-        margin-top: 300px;
-    }
-    img[class^="modalImage"] {
-        margin-bottom: 230px !important;
-    }
-}
-
-@media ( max-width: 320px ) { 
-    #modal-next, #modal-prev {
-        bottom: -15%; 
-    }
-
-    img[class^="modalImage"] {
-        margin-bottom: 170px !important;
-    }
-    .modalControls {
-        bottom: 285px;
-    }
-}
-
 img[class^="modalThumb"]:hover {
     transform: scale(1.1);
     opacity: 0.85;
@@ -333,4 +257,101 @@ img[class^="modalImage"] {
 }
 .modalImageBox:nth-of-type(5) {
     transform: translate3d(400%, 0px, 0px);
+}
+
+
+
+
+/* BREAKPOINTS */
+
+/* Large Breakpoint */
+@media ( max-width: 1260px ) { 
+    img[class^="modalImage"] {
+        margin-bottom: 235px ;
+    }
+
+    .modalControls {
+        bottom: 200px;
+    }
+
+    .modal {
+        margin: 0px 20px 50px;
+    }
+}
+
+/* Medium Breakpoint */
+@media ( max-width: 992px ) {
+    
+    img[class^="modalThumb"] {
+        height: 55px;
+    }
+
+    .modal {
+        margin: 0px 10px 20px;
+    }
+
+    .modalControls button:nth-of-type(3) {
+        margin: 225px 40px 0px 0px;
+
+    }
+
+    .modalControls button {
+        height: 55px;
+    }
+
+    #modal-close {
+        margin-top: 140px;
+    }
+
+    img[class^="modalImage"] {
+        margin-bottom: 220px ;
+    }
+
+    .modalControls {
+        bottom: 185px; 
+    }
+}
+
+/* Extra Small Breakpoint */
+@media ( max-width: 450px ) { 
+    .modal-imgs {
+        display: none;
+    }
+
+    .modalControls {
+        bottom: 350px;
+    }
+
+    #modal-next {
+        right: 0px;
+    }
+
+    #modal-prev {
+        left: 0px;
+    }
+
+    #modal-next, #modal-prev {
+        position: absolute;
+        margin: 0px;
+    }
+
+    #modal-close {
+        margin-top: 300px;
+    }
+    img[class^="modalImage"] {
+        margin-bottom: 230px ;
+    }
+}
+
+@media ( max-width: 320px ) { 
+    #modal-next, #modal-prev {
+        bottom: -15%; 
+    }
+
+    img[class^="modalImage"] {
+        margin-bottom: 170px ;
+    }
+    .modalControls {
+        bottom: 285px;
+    }
 }
