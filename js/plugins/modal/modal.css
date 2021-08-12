@@ -4,19 +4,19 @@
 /* Open Animations  */
 
 @-webkit-keyframes openModal {
-    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150);  }
-    25% { opacity: 1; height: 0px; width: 0px; }
-    50% { height: 0px; width: 100%; }
-    65% { height: 90vh; border-color: rgb(150, 150, 150); }
-    100% { height: 90vh; border-color: transparent; }
+    0% { opacity: 0; /* height: 0px; width: */ 0px; border-color: rgb(150, 150, 150);  }
+    25% { opacity: 1; /* height: 0px; width: 0px; */ }
+    50% { /* height: 0px; width: 100%; */ }
+    65% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
+    100% { /* height: 90vh; */ border-color: transparent; }
 }
 
 @keyframes openModal {
-    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150);  }
-    25% { opacity: 1; height: 0px; width: 0px; }
-    50% { height: 0px; width: 100%; }
-    65% { height: 90vh; border-color: rgb(150, 150, 150); }
-    100% { height: 90vh; border-color: transparent; }
+    0% { opacity: 0; /* height: 0px; width: 0px; */ border-color: rgb(150, 150, 150); transform: scaled3d( 0, 0, 1 );  }
+    25% { opacity: 1; /* height: 0px; width: 0px; */ transform: scaled3d( 0, 0, 1 ); }
+    50% { /* height: 0px; width: 100%; */ transform: scaled3d( 1, 0, 1 ); }
+    65% { /* height: 90vh; */ border-color: rgb(150, 150, 150); transform: scaled3d( 1, 1, 1 ); }
+    100% { /* height: 90vh; */ border-color: transparent; transform: scaled3d( 1, 1, 1 ); }
 }
 
 @-webkit-keyframes openModalItems {
@@ -35,22 +35,22 @@
 
 @-webkit-keyframes closeModal {
     0% { border-color: transparent }
-    35% { height: 90vh; border-color: rgb(150, 150, 150); }
-    50% { height: 50px;  }
-    55% { height: 0px; width: 100%; opacity: 1;  }
-    75% { width: 0px; height: 0px; }
+    35% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
+    50% { /* height: 50px; */  }
+    55% { /* height: 0px; width: 100%; */ opacity: 1;  }
+    75% { /* width: 0px; height: 0px; */ }
     95% {   opacity: 0;  }
-    100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
+    100% { /* width: 0px; height: 0px; */ border-color: rgb(150, 150, 150); }
 }
 
 @keyframes closeModal {
     0% { border-color: transparent }
-    35% { height: 90vh; border-color: rgb(150, 150, 150); }
-    50% { height: 50px;  }
-    55% { height: 0px; width: 100%; opacity: 1;  }
-    75% { width: 0px; height: 0px; }
+    35% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
+    50% { /* height: 50px; */ }
+    55% { /* height: 0px; width: 100%; */ opacity: 1;  }
+    75% { /* width: 0px; height: 0px; */ }
     95% {   opacity: 0;  }
-    100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
+    100% { /* width: 0px; height: 0px; */ border-color: rgb(150, 150, 150); }
 }
 
 @-webkit-keyframes closeModalItems {
@@ -232,6 +232,7 @@
     left: 0px;
     width: 100%;
     background: transparent;
+    z-index: 60;
 
 }
 
@@ -256,10 +257,11 @@
 #modal-close {
     background: rgba(202, 0, 61, 0.7);
     margin: 0px auto;
-    position: fixed;
-    margin-top: 165px;
-    /* top: 0px;
-    right: 0px; */
+    position: absolute;
+    /* margin-top: 165px; */
+    top: 105px;
+    right: 100px;
+    left: 100px;
     width: 100px;
     height: 50px;
 }
@@ -433,7 +435,7 @@ img[class^="modalImage"] {
         bottom: 365px;
     }    
     #modal-close {
-        margin-top: 350px ;
+        /* margin-top: 350px ; */
     }
 }
 
@@ -445,7 +447,7 @@ img[class^="modalImage"] {
     }
 
     #modal-close {
-        margin-top: 300px;
+        /* margin-top: 300px; */
     }
     img[class^="modalImage"] {
         margin-bottom: 230px ;
