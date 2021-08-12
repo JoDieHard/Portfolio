@@ -4,30 +4,30 @@
 /* Open Animations  */
 
 @-webkit-keyframes openModal {
-    0% { opacity: 0; /* height: 0px; width: */ 0px; border-color: rgb(150, 150, 150);  }
-    25% { opacity: 1; /* height: 0px; width: 0px; */ }
-    50% { /* height: 0px; width: 100%; */ }
-    65% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
-    100% { /* height: 90vh; */ border-color: transparent; }
+    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150); }
+    25% { opacity: 1; height: 0px; width: 0px;  }
+    50% { height: 0px; width: 100%; transform: scale3d( 1, 0, 1 ); }
+    65% { height: 100%; border-color: rgb(150, 150, 150); }
+    100% { height: 100%; border-color: transparent;  }
 }
 
 @keyframes openModal {
-    0% { opacity: 0; /* height: 0px; width: 0px; */ border-color: rgb(150, 150, 150); transform: scaled3d( 0, 0, 1 );  }
-    25% { opacity: 1; /* height: 0px; width: 0px; */ transform: scaled3d( 0, 0, 1 ); }
-    50% { /* height: 0px; width: 100%; */ transform: scaled3d( 1, 0, 1 ); }
-    65% { /* height: 90vh; */ border-color: rgb(150, 150, 150); transform: scaled3d( 1, 1, 1 ); }
-    100% { /* height: 90vh; */ border-color: transparent; transform: scaled3d( 1, 1, 1 ); }
+    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150);  }
+    25% { opacity: 1; height: 0px; width: 0px; }
+    50% { height: 0px; width: 100%;  }
+    65% { height: 100%; border-color: rgb(150, 150, 150);  }
+    100% { height: 100%; border-color: transparent;  }
 }
 
 @-webkit-keyframes openModalItems {
     0% { opacity: 0; }
-    70% { opacity: 0; }
+    /* 70% { opacity: 0; } */
     100% { opacity: 1; }
 }
 
 @keyframes openModalItems {
     0% { opacity: 0; }
-    70% { opacity: 0; }
+    /* 70% { opacity: 0; } */
     100% { opacity: 1; }
 }
 
@@ -35,34 +35,34 @@
 
 @-webkit-keyframes closeModal {
     0% { border-color: transparent }
-    35% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
-    50% { /* height: 50px; */  }
-    55% { /* height: 0px; width: 100%; */ opacity: 1;  }
-    75% { /* width: 0px; height: 0px; */ }
+    35% { height: 100%; border-color: rgb(150, 150, 150); }
+    50% { height: 50px;  }
+    55% { height: 0px; width: 100%; opacity: 1;  }
+    75% { width: 0px; height: 0px; }
     95% {   opacity: 0;  }
-    100% { /* width: 0px; height: 0px; */ border-color: rgb(150, 150, 150); }
+    100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
 }
 
 @keyframes closeModal {
     0% { border-color: transparent }
-    35% { /* height: 90vh; */ border-color: rgb(150, 150, 150); }
-    50% { /* height: 50px; */ }
-    55% { /* height: 0px; width: 100%; */ opacity: 1;  }
-    75% { /* width: 0px; height: 0px; */ }
+    35% { height: 100%; border-color: rgb(150, 150, 150); }
+    50% { height: 50px; }
+    55% { height: 0px; width: 100%; opacity: 1;  }
+    75% { width: 0px; height: 0px; }
     95% {   opacity: 0;  }
-    100% { /* width: 0px; height: 0px; */ border-color: rgb(150, 150, 150); }
+    100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
 }
 
 @-webkit-keyframes closeModalItems {
     0% { opacity: 1; }
-    30% { opacity: 0; }
-    100% { opacity: 0; }
+    /* 30% { opacity: 0; } */
+    80% { opacity: 0; }
 }
 
 @keyframes closeModalItems {
     0% { opacity: 1; }
-    30% { opacity: 0; }
-    100% { opacity: 0; }
+    /* 30% { opacity: 0; } */
+    80% { opacity: 0; }
 }
 
 @-webkit-keyframes closeModalContainer {
@@ -109,10 +109,11 @@
 
 .modal {
 
-    background: transparent;
+    /* background: transparent; */
+    background-color: transparent;
     width: 100%;
-    height: 90vh;
-    margin: 0px 108px 50px;
+    height: 100%;
+    margin: 0px 60px;
     z-index: 50;
     overflow: hidden;
 
@@ -120,6 +121,9 @@
     border-bottom: solid 1px;
     border-color: rgb(150, 150, 150);
     /* border: solid 2px rgb(95, 95, 95); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -139,8 +143,8 @@
             animation-duration: 1.2s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s; /* This delay should match the lenght of the project hover animation */
+    -webkit-animation-delay: 0.3;
+            animation-delay: 0.3s; /* This delay should match the lenght of the project hover animation */
     border-color: transparent;
 }
 
@@ -152,8 +156,8 @@
             animation-duration: 1.2s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s; /* This delay should match the lenght of the project hover animation */
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; /* This delay should match the lenght of the project hover animation */
 }
 
 /* Close Animations */
@@ -195,9 +199,10 @@
 
 .modalContent {
     width: 100%;
-    height: 100%;
+    height: max-content;
     background: transparent;
-    /* overflow: hidden; */
+    margin-bottom: 15px;
+    /* overflow-x: hidden; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -217,7 +222,7 @@
 .modalControls {
     background: white;
     max-height: 200px;
-    height: 10%;
+    height: max-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -227,7 +232,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
+    position: static;
     bottom: 90px;
     left: 0px;
     width: 100%;
@@ -236,7 +241,7 @@
 
 }
 
-.modalControls button {
+.modalControls button, #modal-close {
     background: rgba(0,0,0, 0.7);
     color: white;
     padding: 10px;
@@ -256,12 +261,7 @@
 
 #modal-close {
     background: rgba(202, 0, 61, 0.7);
-    margin: 0px auto;
-    position: absolute;
-    /* margin-top: 165px; */
-    top: 105px;
-    right: 100px;
-    left: 100px;
+    margin: 15px auto 0px;
     width: 100px;
     height: 50px;
 }
@@ -322,12 +322,12 @@ img[class^="modalImage"] {
     width: 100%;
     max-width: 1215px;
     background: white;
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
 }
 
 .modalImageBox {
     width: 100%; 
-    height: 100%;
+    height: max-content;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -344,6 +344,7 @@ img[class^="modalImage"] {
 .modalImageBox:nth-of-type(1) {
     -webkit-transform: translate3d(0%, 0px, 0px);
             transform: translate3d(0%, 0px, 0px);
+            position: relative;
 }
 .modalImageBox:nth-of-type(2) {
     -webkit-transform: translate3d(100%, 0px, 0px);
@@ -370,7 +371,6 @@ img[class^="modalImage"] {
 /* Large Breakpoint */
 @media ( max-width: 1260px ) { 
     img[class^="modalImage"] {
-        margin-bottom: 235px ;
         width: 85%;
     }
 
@@ -394,25 +394,8 @@ img[class^="modalImage"] {
         margin: 0px 10px 20px;
     }
 
-    .modalControls button:nth-of-type(3) {
-        margin: 225px 40px 0px 0px;
-
-    }
-
     .modalControls button {
         height: 55px;
-    }
-
-    #modal-close {
-        margin-top: 140px;
-    }
-
-    img[class^="modalImage"] {
-        margin-bottom: 220px ;
-    }
-
-    .modalControls {
-        bottom: 185px; 
     }
 }
 /* Custom Small  Breakpoint  */
@@ -420,49 +403,82 @@ img[class^="modalImage"] {
     .modal-imgs {
         display: none;
     }
-    #modal-next {
-        right: 0px;
+    #modal-close {
+        margin-top: 0px;
     }
 
-    #modal-prev {
-        left: 0px;
-    }
-    #modal-next, #modal-prev {
+    #modal-prev, #modal-next {
         position: absolute;
+        top: calc( 42.5% - 65px );
         margin: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        height: 20%;
     }
-    .modalControls {
-        bottom: 365px;
-    }    
-    #modal-close {
-        /* margin-top: 350px ; */
-    }
+    #modal-prev { left: 0px;  }
+    #modal-next { right: 0px; }
 }
 
-/* Extra Small Breakpoint */
-@media ( max-width: 450px ) { 
+/* Landscape Breakpoints */
 
-    .modalControls {
-        bottom: 350px;
-    }
+@media only screen and (orientation: landscape)
+                   and ( hover: none )  {
+        .modal { margin: 0px; }
+        }
 
-    #modal-close {
-        /* margin-top: 300px; */
-    }
-    img[class^="modalImage"] {
-        margin-bottom: 230px ;
-    }
+@media only screen and (orientation: landscape)
+                   and ( hover: none )
+                   and (max-device-width: 830px)  {
+        .modal-imgs {
+            display: none;
+        }
+        #modal-close {
+            margin-top: 0px;
+            position: absolute;
+            right: 20px;
+        }
+
+        #modal-prev, #modal-next {
+            position: absolute;
+            margin: 0px;
+            background-color: transparent;
+            border-color: transparent;
+            height: 70%;
+            top: 12%;
+        }
+        #modal-prev { left: 0px;  }
+        #modal-next { right: 0px; }
+
+        img[class^="modalImage"] {
+            width: 65%;
+        }
+        .modalContent, .modal { margin: 0px; }
+        
 }
 
-@media ( max-width: 320px ) { 
-    #modal-next, #modal-prev {
-        bottom: -15%; 
-    }
+@media only screen and (max-device-width: 830px) 
+                   and ( hover: none )
+                   and (orientation: landscape) {
+                    #modal-prev, #modal-next { top: 12%; }
+                    #modal-close { bottom: 38px; }
+                   }
 
-    img[class^="modalImage"] {
-        margin-bottom: 170px ;
-    }
-    .modalControls {
-        bottom: 285px;
-    }
+@media only screen and (max-device-width: 815px) 
+                   and ( hover: none )
+                   and (orientation: landscape) {
+                    #modal-prev, #modal-next { top: 12%; }
+                    #modal-close { bottom: 22px; }
+                   }
+
+@media only screen and (max-device-width: 736px) 
+                   and ( hover: none )
+                   and (orientation: landscape) {
+                    #modal-prev, #modal-next { top: 12.5%; }
+                    #modal-close { top: 0px; right: 10px; left: 10px; }
+}
+
+@media only screen and (max-device-width: 570px)
+                   and ( hover: none ) 
+                   and (orientation: landscape) {
+                    #modal-close { /* background-color: transparent; border-color: transparent; */ height: 45px;  }
 }
