@@ -60,7 +60,7 @@ $('html').on('click', '.ajaxition-link', function( event ){
     // This checks if a back button is clicked
     if ( $(this).hasClass('back-btn') ) {                       
         pageIndicator.animate({ top: 200, left: 151.766 });
-        console.log('You clicked the return button');    
+        // console.log('You clicked the return button');    
     } else { //Else move to the link that has been clicked
         pageIndicator.offset({ left: (pageIndicatorPos.left + linkClicked.width()) + 10, top: pageIndicatorPos.top });
     };

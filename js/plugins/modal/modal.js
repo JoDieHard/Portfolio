@@ -1,7 +1,7 @@
 
 const project = $('.project');
 const modal = $('.modal');
-const container = $('.modalContainer');
+const container = $('#modalContainer');
 const modalContent = $( '.modal-imgs' );
 const content = $( '.modalContent' );
 const body = $(' body ');
@@ -70,7 +70,10 @@ $('#modal-close').on('click', function (e) {
             container.css('pointerEvents', 'none');
             $('.modal-imgs').empty();
             content.empty();
-            body.css('overflowY', 'auto'); // Enables scrolling when modal is closed
+            if ( $('#menu').hasClass('active') ) {
+                body.css('overflowY', 'auto'); // Enables scrolling when modal is closed
+            }
+            
         }, 1250);
     }
 });
@@ -103,7 +106,7 @@ $('#modal-prev').on('click', function () {
         carouselPos = (content.children().length - 1);
     } else if ( carouselPos >= 1 && carouselPos <=  content.children().length ) {
         carouselPos--;
-        console.log(carouselPos);
+        // console.log(carouselPos);
     }
     changeSlide();
 });
@@ -111,7 +114,7 @@ $('#modal-prev').on('click', function () {
 $('#modal-next').on('click', function () {
     if ( carouselPos >= 0 && carouselPos <=  (content.children().length - 2) ) { 
         carouselPos++;
-        console.log(carouselPos);
+        // console.log(carouselPos);
     } else {
         carouselPos = 0;
     };
@@ -123,7 +126,7 @@ const thumbNav = function () {
     $(' img[class^="modalThumb"] ').on('click', function () {
         let select = $( this ).index();
 
-        console.log( $( this ).index() + 'Thumnail clicked!' );
+        // console.log( $( this ).index() + 'Thumnail clicked!' );
         carouselPos = select;
         changeSlide();
     });

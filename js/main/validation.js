@@ -13,7 +13,7 @@ const rgx = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 form.on('submit', function(event) {
     event.preventDefault();
     checkInputs();
-    console.log(fName.val().trim());
+    // console.log(fName.val().trim());
 });
 
 function checkInputs() {
