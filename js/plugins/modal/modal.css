@@ -3,13 +3,15 @@
 
 /* Open Animations  */
 
+
 @-webkit-keyframes openModal {
-    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150); }
-    25% { opacity: 1; height: 0px; width: 0px;  }
-    50% { height: 0px; width: 100%; transform: scale3d( 1, 0, 1 ); }
-    65% { height: 100%; border-color: rgb(150, 150, 150); }
+    0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150);  }
+    25% { opacity: 1; height: 0px; width: 0px; }
+    50% { height: 0px; width: 100%;  }
+    65% { height: 100%; border-color: rgb(150, 150, 150);  }
     100% { height: 100%; border-color: transparent;  }
 }
+
 
 @keyframes openModal {
     0% { opacity: 0; height: 0px; width: 0px; border-color: rgb(150, 150, 150);  }
@@ -19,11 +21,13 @@
     100% { height: 100%; border-color: transparent;  }
 }
 
+
 @-webkit-keyframes openModalItems {
     0% { opacity: 0; }
     /* 70% { opacity: 0; } */
     100% { opacity: 1; }
 }
+
 
 @keyframes openModalItems {
     0% { opacity: 0; }
@@ -33,15 +37,17 @@
 
 /* Close Animations  */
 
+
 @-webkit-keyframes closeModal {
     0% { border-color: transparent }
     35% { height: 100%; border-color: rgb(150, 150, 150); }
-    50% { height: 50px;  }
+    50% { height: 50px; }
     55% { height: 0px; width: 100%; opacity: 1;  }
     75% { width: 0px; height: 0px; }
     95% {   opacity: 0;  }
     100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
 }
+
 
 @keyframes closeModal {
     0% { border-color: transparent }
@@ -53,11 +59,13 @@
     100% { width: 0px; height: 0px; border-color: rgb(150, 150, 150); }
 }
 
+
 @-webkit-keyframes closeModalItems {
     0% { opacity: 1; }
     /* 30% { opacity: 0; } */
     80% { opacity: 0; }
 }
+
 
 @keyframes closeModalItems {
     0% { opacity: 1; }
@@ -65,10 +73,12 @@
     80% { opacity: 0; }
 }
 
+
 @-webkit-keyframes closeModalContainer {
     50% { opacity: 1; }
     100% { opacity: 0; }
 }
+
 
 @keyframes closeModalContainer {
     50% { opacity: 1; }
@@ -121,9 +131,16 @@
     border-bottom: solid 1px;
     border-color: rgb(150, 150, 150);
     /* border: solid 2px rgb(95, 95, 95); */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 
@@ -199,6 +216,8 @@
 
 .modalContent {
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     background: transparent;
     margin-bottom: 15px;
@@ -222,6 +241,8 @@
 .modalControls {
     background: white;
     max-height: 200px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -327,6 +348,8 @@ img[class^="modalImage"] {
 
 .modalImageBox {
     width: 100%; 
+    height: -webkit-max-content; 
+    height: -moz-max-content; 
     height: max-content;
     position: absolute;
     display: -webkit-box;
