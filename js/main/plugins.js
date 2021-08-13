@@ -95,8 +95,15 @@ menu.on('click tap', function(event){
   if ( isRunning ) {
     return;
 
-  } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
+  } else if ( event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
     return;   
+  } else if ( event.target.nodeName == 'A' ) {
+    $(this).delay( 350 ).queue(function(){
+      $(this).addClass('active');
+      $( 'body' ).css("overflowY", "auto"); //Allows page to be scrolled again
+      $(this).dequeue();
+    });
+    wrap.addClass('active');       
   } else if ( $(this).hasClass('active')) { // IF MENU IS ACTIVE THEN CLOSE MENU.
     $(this).removeClass('active');
     $( 'body' ).css("overflowY", "hidden");  // Stops scrolling when menu is open
