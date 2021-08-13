@@ -126,7 +126,7 @@ menu.on('click tap', function(event){
 wrap.on('mouseenter touchstart swiperight', function(event){
   // console.log(event.type);
   // console.log(event.target);
-  if ( isRunning ) {
+  if ( isRunning || $('#modalContainer').hasClass('active') ) {
     return;
   } else if ( event.target.nodeName == 'A' || event.target.nodeName == 'SPAN' ) {  // IF A MENU ELEMENT IS CLICKED, DO NOTHING.
     return;   
@@ -138,7 +138,7 @@ wrap.on('mouseenter touchstart swiperight', function(event){
     });
   } else {
     wrap.addClass('active');
-    console.log('menu is open.');
+    // console.log('menu is open.');
     menu.delay( 350 ).queue(function(){
       menu.addClass('active');
       $( 'body' ).css("overflowY", "auto"); //Allows page to be scrolled again

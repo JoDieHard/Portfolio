@@ -75,7 +75,7 @@
     100% { opacity: 0; }
 }
 
-.modalContainer {
+#modalContainer {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -99,7 +99,7 @@
     font-family: 'Comfortaa', sans-serif;
 }
 
-.modalContainer.active {
+#modalContainer.active {
     opacity: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -136,7 +136,7 @@
 
 /* Open Animations */
 
-.modalContainer.active .modal {
+#modalContainer.active .modal {
     -webkit-animation-name: openModal;
             animation-name: openModal;
     -webkit-animation-duration: 1.2s;
@@ -148,8 +148,8 @@
     border-color: transparent;
 }
 
-.modalContainer.active .modalContent, 
-.modalContainer.active .modalControls {
+#modalContainer.active .modalContent, 
+#modalContainer.active .modalControls {
     -webkit-animation-name: openModalItems;
             animation-name: openModalItems;
     -webkit-animation-duration: 1.2s;
@@ -161,7 +161,7 @@
 }
 
 /* Close Animations */
-.modalContainer:not(.active) .modal {
+#modalContainer:not(.active) .modal {
     -webkit-animation-name: closeModal;
             animation-name: closeModal;
     -webkit-animation-duration: 1.2s;
@@ -170,8 +170,8 @@
             animation-fill-mode: forwards;
 }
 
-.modalContainer:not(.active) .modalContent, 
-.modalContainer:not(.active) .modalControls {
+#modalContainer:not(.active) .modalContent, 
+#modalContainer:not(.active) .modalControls {
     -webkit-animation-name: closeModalItems;
             animation-name: closeModalItems;
     -webkit-animation-duration: 1.2s;
@@ -180,7 +180,7 @@
             animation-fill-mode: both;
 }
 
-.modalContainer:not(.active) {
+#modalContainer:not(.active) {
     -webkit-animation-name: closeModalContainer;
             animation-name: closeModalContainer;
     -webkit-animation-duration: 0.2s;
