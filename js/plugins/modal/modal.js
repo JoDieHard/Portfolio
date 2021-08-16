@@ -136,3 +136,5 @@ const thumbNav = function () {
 };
 
 };
+
+modalInit();
