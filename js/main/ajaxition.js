@@ -47,6 +47,7 @@ $('html').on('click', '.ajaxition-link', function( event ){
         setupJsPlugins();
         validation();
         typewriter();
+        modalInit();
         // console.log('Plugins have been Reinitialized.');
         // console.log(pageIndicatorPos.top);
 

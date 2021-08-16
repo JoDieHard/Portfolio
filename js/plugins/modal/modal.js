@@ -1,4 +1,6 @@
 
+const modalInit = function () {
+
 const project = $('.project');
 const modal = $('.modal');
 const container = $('#modalContainer');
@@ -130,5 +132,7 @@ const thumbNav = function () {
         carouselPos = select;
         changeSlide();
     });
+
+};
 
 };
