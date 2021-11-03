@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://kit.fontawesome.com/4e7c93723f.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="js/animsition/dist/css/animsition.min.css">    animsition.css -->
-    <link href="js/plugins/prism/prism.css" rel="stylesheet"> <!-- This is Prim.JS CSS -->
-    <link rel="stylesheet" href="css/normalise.css"> <!-- This normalises default visuals on all browsers -->
-    <link rel="stylesheet" href="css/output.css">
-    <link href="js/plugins/modal/modal.css" rel="stylesheet"> <!-- This is Modal Styling -->
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <title>Joseph Bowman's Portfolio</title>
-    <link rel="shortcut icon" type="image/png" href="assets/jFavicon.png">
-    <script src="https://unpkg.com/scrollreveal"></script>
-</head>
+<?php  include('php/contactForm.php'); ?>
+
+<html lang="en">
+    
+    <?php include('inc/head.php') ?>
 
     <body>
         <div class="active" id="pageContainer">
         <div class="wrapper ajaxition">
 
-        <!--------  MODAL SECTION --------------------------------------------------------------->
-        <div id="modalContainer">
-            <div class="modal">
-                <div class="modalContent"></div>
-                <div class="modalControls">
-                    <button id="modal-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="modal-imgs"></div>
-                    <button id="modal-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-                <button id="modal-close"><i class="fas fa-times"></i> Close </button>
+        <?php  include('inc/modal.php')  ?>
+        
+        <?php if ($contactSuccess) : ?>
+            <div class="success-msg"> 
+                    <p>Your Message has been sent!  </p>
+                    <i class="fas fa-times"> </i>       
             </div>
-        </div>
-        <!-- --------------------------------------------------------------------------------------- -->
+            <?php endif; ?>
 
-        <!--------  COVER IMAGE SECTION --------------------------------------------------------------->
+        <!--------  COVER IMAGE SECTION -------->
         <div class="overflow">
             <div class="cover-image" id="top">
                 <div class="container"> 
@@ -45,8 +30,7 @@
             </div>
         </div>
 
-        <!-- --------------------------------------------------------------------------------------- -->
-        <!--------  PROJECTS SECTION ------------------------------------------------------------------>
+        <!--------  PROJECTS SECTION ------->
 
         <section class="projects" id="my-portfolio">
             <div class="container" id="scroll-down">
@@ -168,11 +152,10 @@
             </div>
         </section>
 
-        <!-- --------------------------------------------------------------------------------------- -->
-
-        <!--------  CONTACT SECTION ------------------------------------------------------------------->
+        <!--------  CONTACT SECTION -------->
 
         <div class="contact" id="contact-me"> 
+
             <div class="container">
                 <div class="contact-info">
                     <h2>Get In Touch</h2>
@@ -184,8 +167,8 @@
                     <p>I will respond to your email as soon as possible. <br> Alternatively, fill the form below to send me a message from here!</p>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form" novalidate>
-                        <div class="form-input">
+                    <form action="index.php" method="POST" id="contact-form" novalidate>
+                        <div class="form-input <?php if ($fNameErr) :?> error" <?php elseif ($contactSuccess) : ?> success" <?php else : ?> " <?php endif;?> >
                             <label for="fName">First Name:</label>
                             <input type="text" placeholder="First Name" name="fName" id="fName">
                             <i class="fas fa-check-circle success"></i>
@@ -193,30 +176,30 @@
                             <small class="errorMsg">Error Message</small>
 
                         </div>
-                        <div class="form-input">
+                        <div class="form-input <?php if ($lNameErr) :?> error" <?php elseif ($contactSuccess) : ?> success" <?php else : ?> " <?php endif;?>>
                             <label for="lName">Last Name:</label>
                             <input type="text" placeholder="Last Name" name="lName" id="lName">
                             <i class="fas fa-check-circle success"></i>
                             <i class="fas fa-exclamation-circle error"></i>
                             <small class="errorMsg">Error Message</small>
                         </div>
-                        <div class="form-input">
+                        <div class="form-input <?php if ($emailErr) :?> error" <?php elseif ($contactSuccess) : ?> success"  <?php else : ?> " <?php endif;?>>
                             <label for="email">Email:</label>
                             <input type="email" placeholder="E-Mail" name="email" id="email" >
                             <i class="fas fa-check-circle success"></i>
                             <i class="fas fa-exclamation-circle error"></i>
                             <small class="errorMsg">Error Message</small>
                         </div>
-                        <div class="form-input">
+                        <div class="form-input <?php if ($subjectErr) :?> error" <?php elseif ($contactSuccess) : ?> success"  <?php else : ?> " <?php endif;?>>
                             <label for="subject">Subject:</label>
                             <input type="text" placeholder="Subject" name="subject" id="subject">
                             <i class="fas fa-check-circle success"></i>
                             <i class="fas fa-exclamation-circle error"></i>
                             <small class="errorMsg">Error Message</small>
                         </div>
-                        <div class="form-input">
+                        <div class="form-input <?php if ($msgErr) :?> error" <?php elseif ($contactSuccess) : ?> success"  <?php else : ?> " <?php endif;?>>
                             <label for="message">Message:</label>
-                            <textarea name="Message" placeholder="Message..." form="contact-form" name="message" id="message"></textarea>
+                            <textarea placeholder="Message..." form="contact-form" name="message" id="message"></textarea>
                             <i class="fas fa-check-circle success"></i>
                             <i class="fas fa-exclamation-circle error"></i>
                             <small class="errorMsg">Error Message</small>
@@ -229,74 +212,14 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container">
-                <a href="#top"> <div class="scrollButton"> <i class="fas fa-chevron-up"></i> Back To Top </div> </a>
-            </div>
-        </footer>
+        <?php  include('inc/footer.php')  ?>
 
         </div>
     </div>
 
-<!--------  MAIN NAVIGATION SIDEBAR  ------------------------------------------------------>
+    <?php  include('inc/menu.php');  ?>
 
-        <main-nav class="side-menu active" id="menu">
-            <div class="container">
-
-                <div id="pageIndicator"> <i class="fas fa-caret-right"></i> </div>
-
-                <i class="fas fa-bars menu-icon"></i>
-                <i class="fas fa-times menu-icon"></i>
-                <span class="profile-img"> </span>
-                <ul>
-                    <li class="page-link current-page">
-                        <a class="ajaxition-link homePageLink" href="https://joseph-bowman.netmatters-scs.co.uk/">My Portfolio</a>
-                    </li>
-
-                    <li class="page-link">
-                        <a class="ajaxition-link" href="docs/about-me.html">About Me</a>
-                    </li>
-
-                    <li class="page-link">
-                        <a class="ajaxition-link" href="docs/coding-examples.html">Coding Examples</a>
-                    </li>
-
-                    <li class="page-link">
-                        <a class="ajaxition-link" href="docs/scs-scion.html">SCS Scheme</a>
-                    </li>
-
-                    <li class="page-link">
-                        <a class="ajaxition-link" href="https://joseph-bowman.netmatters-scs.co.uk/#contact-me">Contact Me</a>
-                    </li>
-
-                    <li>
-                        <ul class="socials">
-                            <a href="https://www.facebook.com/joseph.bowman.3781995/" target="_blank"> <li> <i class="fab fa-facebook-f"></i> </li> </a>
-                            <a href="https://www.instagram.com/hrzndesign/" target="_blank"> <li> <i class="fab fa-instagram"></i> </li> </a>
-                            <a href="https://twitter.com/JoDieHard" target="_blank"> <li> <i class="fab fa-twitter"></i> </li> </a>
-                            <!-- <a href="#"> <li> <i class="fab fa-linkedin-in"></i> </li> </a> -->
-                        </ul>
-                    </li>
-
-                    <!-- <p><span> Click menu to close </span></p> -->
-                </ul>
-
-            </div>
-        </main-nav>
-
-<!-- --------------------------------------------------------------------------------------- -->
-
-        <!-- --------------------------------------------------------------------------------------- -->
-       <!-- jQuery -->        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-       <!-- Choreographer --> <script src="js/plugins/choreographer-js/dist/choreographer.min.js"></script>
-       <!-- TypewriterJS -->  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-       <!--  Prism.JS -->     <script src="js/plugins/prism/prism.js"></script>
-
-       <!-- JS File -->       <script type="text/javascript" src="js/main/minified/pluginsMin.js"></script>
-       <!-- AJAXition.js -->  <script type="text/javascript" src="js/main/minified/ajaxitionMin.js"></script>
-       <!-- Validation.js --> <script type="text/javascript" src="js/main/minified/validationMin.js"></script>
-       <!-- Typewriter.js --> <script type="text/javascript" src="js/main/typewriter.js"></script>
-       <!-- Modal.js --> <script type="text/javascript" src="js/plugins/modal/modal.js"></script>
+    <?php include('inc/scripts.php'); ?>
 
     </body>
 </html>

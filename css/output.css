@@ -446,6 +446,39 @@
   background: #619dc0 !important;
 }
 
+.success-msg {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  background-color: #2ecc71;
+}
+.success-msg p {
+  margin-left: auto;
+}
+.success-msg i {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.success-msg:hover {
+  background-color: #3fe484;
+}
+
 .contact {
   margin: 0px auto;
   display: -ms-flexbox;

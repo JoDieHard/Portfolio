@@ -503,11 +503,45 @@ $success: #2ecc71;
 
 //------------------------------------------------------
 
+.success-msg {
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+
+    color: white;
+    text-align: center;
+    background-color: #2ecc71;
+
+    p {
+        margin-left: auto;
+    }
+
+    i {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: #3fe484;
+    }
+} 
+
 .contact {                            // CONTACT SECTION
     margin: 0px auto;
 
     @include flexbox;
     @include justify-content(center);
+
+
 
     .container {
         width: 93%;
